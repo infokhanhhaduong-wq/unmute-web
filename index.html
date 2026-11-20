@@ -53,13 +53,15 @@ section{padding:88px 0}
 
 /* nav */
 .nav{position:sticky;top:0;z-index:20;background:var(--black);color:var(--white);border-bottom:1px solid #222}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.nav .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;min-height:64px;gap:0 16px}
 .nav img{height:26px;width:auto}
-.nav-links{display:none;gap:28px;font-size:15px}
-.nav-links a{text-decoration:none;color:var(--g300)}
+.nav-links{display:flex;gap:22px;font-size:15px;order:3;width:100%;overflow-x:auto;scrollbar-width:none;padding:2px 0 12px}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{text-decoration:none;color:var(--g300);white-space:nowrap;padding:6px 0}
 .nav-links a:hover{color:var(--white)}
+.nav-links a.nav-play{color:var(--white);font-weight:600}
 .nav .btn{min-height:40px;padding:0 18px;font-size:15px}
-@media(min-width:820px){.nav-links{display:flex}}
+@media(min-width:820px){.nav-links{order:0;width:auto;padding:0;gap:28px}}
 
 /* hero */
 .hero{background:var(--black);color:var(--white);padding:56px 0 96px;overflow:hidden}
@@ -234,6 +236,7 @@ footer a:hover{color:var(--white)}
     <a href="#top" aria-label="UNMUTE, về đầu trang"><img src="assets/logo-horizontal-white.png" alt="UNMUTE"></a>
     <div class="nav-links">
       <a href="#decks">Bộ bài</a>
+      <a href="/pha-bang/" class="nav-play" data-track="deck_selected" data-deck="pha-bang">Phá Băng</a>
       <a href="#how">Cách chơi</a>
       <a href="#safe">An toàn</a>
       <a href="#faq">Hỏi đáp</a>

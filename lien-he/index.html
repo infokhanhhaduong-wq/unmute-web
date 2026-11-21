@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Liên hệ | UNMUTE</title>
+<meta name="description" content="Liên hệ UNMUTE: hợp tác, góp ý câu hỏi, đặt bộ bài in hay chỉ để chào nhau. Email info.khanhhaduong@gmail.com, điện thoại +84 827 363 911.">
+<link rel="canonical" href="https://www.playunmute.com/lien-he/">
+<meta property="og:title" content="Liên hệ | UNMUTE">
+<meta property="og:description" content="Có ý tưởng, góp ý hay muốn hợp tác? Nhắn cho UNMUTE nhé.">
+<meta property="og:url" content="https://www.playunmute.com/lien-he/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" href="../assets/logo-icon.png">
+<link rel="apple-touch-icon" href="../assets/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#000;--white:#fff;--g600:#55525A;--g300:#B5B3BC;--g100:#E2E0E8;--g50:#F2F1F5;
+  --q:linear-gradient(180deg,#00FFFF,#FFE53B);
+  --spark:linear-gradient(135deg,#FF76E9,#007BFF);
+  --red:#C8141E;
+  --display:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif;
+  --body:'Be Vietnam Pro','Helvetica Neue',Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:110px}
+body{font-family:var(--body);font-size:17px;line-height:1.55;color:var(--black);background:var(--white);padding-top:env(safe-area-inset-top,0px)}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid #007BFF;outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.08}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 22px;border-radius:999px;font-family:var(--display);font-weight:800;font-size:16px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s ease}
+.btn:active{transform:scale(.97)}
+.btn-black{background:var(--black);color:var(--white)}
+.btn-white{background:var(--white);color:var(--black)}
+.btn-q{background:var(--q);color:var(--black)}
+.btn-ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+
+/* floating nav */
+.nav{position:sticky;top:0;z-index:30;height:0;padding:0 12px}
+.nav>.wrap{position:relative;top:12px;max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:14px;min-height:64px;padding:10px 10px 10px 18px;background:var(--white);border:1px solid var(--g100);border-radius:22px;box-shadow:0 12px 32px rgba(0,0,0,.14)}
+.nav img{height:26px;width:auto}
+.nav-sep{display:none;width:1px;height:28px;background:var(--g100)}
+.nav-links{display:flex;align-items:center;gap:18px;font-size:15px;font-weight:500;margin-left:auto}
+.nav-links a{text-decoration:none;color:var(--g600);white-space:nowrap}
+.nav-links a:hover,.nav-links a[aria-current]{color:var(--black)}
+.nav-links a[aria-current]{font-weight:700}
+.nav .btn{display:none;min-height:42px;padding:0 12px 0 18px;font-size:15px;border-radius:14px}
+.nav .btn svg{width:16px;height:16px}
+@media(min-width:720px){.nav-sep{display:block}.nav-links{margin-left:4px;gap:28px}.nav .btn{display:inline-flex;margin-left:auto}}
+
+/* hero */
+.hero{background:var(--black);color:var(--white);padding:136px 0 80px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:560px;height:560px;right:-200px;top:-220px;border-radius:50%;background:var(--spark);filter:blur(110px);opacity:.4;pointer-events:none}
+.hero .wrap{position:relative}
+.label{font-family:var(--display);font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.hero .label{color:var(--g300);display:block;margin-bottom:16px}
+.hero h1{font-size:clamp(46px,8.6vw,96px);letter-spacing:-.03em;max-width:12em}
+.hero h1 .q{background:var(--q);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lede{color:var(--g300);font-size:19px;max-width:34em;margin-top:20px}
+
+/* contact cards */
+.cards{display:grid;gap:16px;margin-top:-44px;position:relative;z-index:2}
+@media(min-width:820px){.cards{grid-template-columns:1fr 1fr}}
+.ccard{border-radius:28px;padding:28px;display:flex;flex-direction:column;gap:14px;box-shadow:0 24px 50px rgba(0,0,0,.12)}
+.ccard.mail{background:var(--white);border:1px solid var(--g100)}
+.ccard.phone{background:var(--black);color:var(--white)}
+.ccard .ico{width:52px;height:52px;border-radius:16px;display:grid;place-items:center}
+.ccard.mail .ico{background:var(--spark)}
+.ccard.phone .ico{background:var(--q)}
+.ccard .ico svg{width:26px;height:26px}
+.ccard .k{font-size:14px;color:var(--g600)}
+.ccard.phone .k{color:var(--g300)}
+.ccard .v{font-family:var(--display);font-weight:800;font-size:clamp(22px,3.4vw,30px);line-height:1.15;text-decoration:none;word-break:break-word}
+.ccard.mail .v{font-size:clamp(20px,2.4vw,26px);word-break:normal;overflow-wrap:anywhere}
+.ccard .v:hover{text-decoration:underline;text-underline-offset:4px}
+.ccard .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.ccard .copied{font-size:14px;min-height:1.4em;color:#0a7a3a}
+.ccard.phone .copied{color:#7CF0A6}
+
+/* reasons */
+section.block{padding:88px 0}
+.block h2{font-size:clamp(32px,5vw,46px);letter-spacing:-.01em;margin-bottom:12px}
+.block .sub{color:var(--g600);font-size:18px;max-width:36em;margin-bottom:36px}
+.topics{display:grid;gap:12px}
+@media(min-width:640px){.topics{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.topics{grid-template-columns:repeat(4,1fr)}}
+.topic{border-radius:22px;padding:22px;background:var(--g50);display:flex;flex-direction:column;gap:6px}
+.topic b{font-family:var(--display);font-size:19px}
+.topic span{color:var(--g600);font-size:15px}
+.topic i{width:12px;height:12px;border-radius:50%;margin-bottom:6px}
+
+/* form */
+.formwrap{background:var(--g50);padding:88px 0}
+.formbox{background:var(--white);border-radius:28px;padding:30px 24px;display:grid;gap:32px;border:1px solid var(--g100)}
+@media(min-width:900px){.formbox{grid-template-columns:.8fr 1.2fr;padding:48px}}
+.formbox h2{font-size:clamp(30px,4.4vw,40px);margin-bottom:12px}
+.formbox p{color:var(--g600)}
+.formbox .hint{margin-top:16px;font-size:15px}
+form{display:grid;gap:16px}
+.two{display:grid;gap:16px}
+@media(min-width:640px){.two{grid-template-columns:1fr 1fr}}
+label{display:grid;gap:6px;font-weight:600;font-size:15px}
+input,select,textarea{width:100%;border:2px solid var(--g100);border-radius:14px;padding:13px 15px;font-size:17px;background:var(--white);color:var(--black)}
+textarea{min-height:150px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--black)}
+.form-msg{font-size:15px;min-height:1.5em}
+.form-msg.err{color:#c4002f}
+.form-msg.ok{color:#0a7a3a}
+
+footer{background:var(--black);color:var(--g300);padding:44px 0 calc(44px + env(safe-area-inset-bottom,0px));font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;justify-content:space-between}
+footer img{height:24px;width:auto}
+footer nav{display:flex;gap:20px;flex-wrap:wrap}
+footer a{text-decoration:none}
+footer a:hover{color:var(--white)}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Chính">
+  <div class="wrap">
+    <a href="/" aria-label="UNMUTE, về trang chủ"><img src="../assets/logo-horizontal.png" alt="UNMUTE"></a>
+    <span class="nav-sep" aria-hidden="true"></span>
+    <div class="nav-links">
+      <a href="/#decks">Bộ bài</a>
+      <a href="/merry-crush/">Merry Crush</a>
+      <a href="/lien-he/" aria-current="page">Liên hệ</a>
+    </div>
+    <a class="btn btn-black" href="/merry-crush/">Chơi ngay<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+  </div>
+</nav>
+
+<main>
+<header class="hero">
+  <div class="wrap">
+    <span class="label">Liên hệ</span>
+    <h1>Mình nói chuyện chút nhé<span class="q">?</span></h1>
+    <p class="lede">Muốn hợp tác, góp ý một câu hỏi, đặt bộ bài in hay chỉ để chào nhau, cứ nhắn cho UNMUTE qua email hoặc điện thoại bên dưới.</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="cards">
+    <div class="ccard mail">
+      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></span>
+      <span class="k">Email</span>
+      <a class="v" href="mailto:info.khanhhaduong@gmail.com" data-track="contact_email">info.khanhhaduong@<wbr>gmail.com</a>
+      <div class="row">
+        <a class="btn btn-black" href="mailto:info.khanhhaduong@gmail.com">Gửi email</a>
+        <button class="btn btn-ghost" type="button" data-copy="info.khanhhaduong@gmail.com" data-out="cpMail">Sao chép</button>
+      </div>
+      <span class="copied" id="cpMail" role="status"></span>
+    </div>
+    <div class="ccard phone">
+      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+      <span class="k">Điện thoại</span>
+      <a class="v" href="tel:+84827363911" data-track="contact_phone">+84 827 363 911</a>
+      <div class="row">
+        <a class="btn btn-q" href="tel:+84827363911">Gọi ngay</a>
+        <button class="btn btn-ghost" type="button" data-copy="+84827363911" data-out="cpPhone">Sao chép</button>
+      </div>
+      <span class="copied" id="cpPhone" role="status"></span>
+    </div>
+  </div>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <h2>Bạn có thể nhắn về</h2>
+    <p class="sub">Không cần trang trọng. Viết như đang nói chuyện là được.</p>
+    <div class="topics">
+      <div class="topic"><i style="background:#EC2B7A"></i><b>Hợp tác</b><span>Thương hiệu, quán cà phê, sự kiện hay workshop muốn dùng UNMUTE.</span></div>
+      <div class="topic"><i style="background:#0040FF"></i><b>Góp ý câu hỏi</b><span>Một lá chưa ổn, hoặc một câu hỏi bạn muốn có trong bộ bài.</span></div>
+      <div class="topic"><i style="background:#C8141E"></i><b>Bộ bài in</b><span>Đặt trước hoặc hỏi về bản in của các bộ bài.</span></div>
+      <div class="topic"><i style="background:#FF8A20"></i><b>Chuyện khác</b><span>Báo lỗi trang web, chia sẻ khoảnh khắc chơi bài, hay chỉ để chào.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="formwrap" id="nhan-tin">
+  <div class="wrap">
+    <div class="formbox">
+      <div>
+        <h2>Viết nhanh vài dòng</h2>
+        <p>Điền form, bấm gửi, ứng dụng email của bạn sẽ mở sẵn thư gửi tới UNMUTE. Bạn xem lại rồi gửi đi là xong.</p>
+        <p class="hint">Hoặc nhắn thẳng tới <a href="mailto:info.khanhhaduong@gmail.com">info.khanhhaduong@gmail.com</a>.</p>
+      </div>
+      <form id="cform" novalidate>
+        <div class="two">
+          <label>Tên của bạn<input name="name" autocomplete="name" placeholder="Bạn tên gì?" required></label>
+          <label>Chủ đề
+            <select name="topic">
+              <option>Hợp tác</option>
+              <option>Góp ý câu hỏi</option>
+              <option>Bộ bài in</option>
+              <option>Chuyện khác</option>
+            </select>
+          </label>
+        </div>
+        <label>Lời nhắn<textarea name="msg" placeholder="Bạn muốn nói gì với UNMUTE?" required></textarea></label>
+        <button class="btn btn-black" type="submit">Mở email để gửi</button>
+        <p class="form-msg" id="fmsg" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="/" aria-label="UNMUTE, về trang chủ"><img src="../assets/logo-horizontal-white.png" alt="UNMUTE"></a>
+    <nav aria-label="Chân trang"><a href="/">Trang chủ</a><a href="/#decks">Các bộ bài</a><a href="/merry-crush/">Merry Crush ’26</a><a href="mailto:info.khanhhaduong@gmail.com">Email</a><a href="tel:+84827363911">+84 827 363 911</a></nav>
+    <span>© 2026 UNMUTE · Bớt khách sáo. Chân thành hơn.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var EMAIL='info.khanhhaduong@gmail.com';
+  function track(name, props){ try{ window.dataLayer=window.dataLayer||[]; window.dataLayer.push(Object.assign({event:name},props||{})); }catch(e){} }
+  document.querySelectorAll('[data-track]').forEach(function(el){ el.addEventListener('click', function(){ track(el.dataset.track); }); });
+
+  /* Sao chép email / số điện thoại */
+  document.querySelectorAll('[data-copy]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var out=document.getElementById(btn.dataset.out), val=btn.dataset.copy;
+      function done(ok){ out.textContent = ok ? 'Đã sao chép.' : 'Không sao chép được. Bạn giữ và chọn để copy nhé.'; setTimeout(function(){ out.textContent=''; }, 2500); }
+      if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(val).then(function(){ done(true); }, function(){ done(false); }); }
+      else { done(false); }
+    });
+  });
+
+  /* Form → mở ứng dụng email với nội dung đã điền */
+  var form=document.getElementById('cform'), msg=document.getElementById('fmsg');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name=form.name.value.trim(), topic=form.topic.value, text=form.msg.value.trim();
+    msg.className='form-msg';
+    if(!name || !text){ msg.className='form-msg err'; msg.textContent='Bạn điền tên và lời nhắn giúp mình nhé.'; (name?form.msg:form.name).focus(); return; }
+    var subject='[UNMUTE] '+topic+' — '+name;
+    var body=text+'\n\n— '+name;
+    track('contact_form_submit',{topic:topic});
+    window.location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    msg.className='form-msg ok'; msg.textContent='Đang mở ứng dụng email. Nếu không thấy gì, hãy gửi thẳng tới '+EMAIL+'.';
+  });
+})();
+</script>
+</body>
+</html>

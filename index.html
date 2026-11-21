@@ -180,6 +180,54 @@ section{padding:88px 0}
 .desk-only{display:none}
 @media(min-width:960px){.desk-only{display:block}}
  
+/* ===== HERO mới: dải bài chuyển động, Merry Crush ở giữa ===== */
+.hero.hx{padding-bottom:56px;position:relative}
+.hero .wrap.hx-head{display:block;text-align:center;max-width:900px}
+.hx-head h1{font-size:clamp(44px,8.4vw,96px);letter-spacing:-.03em;margin:0 auto 18px}
+.hx-head .lede{max-width:36em;margin:0 auto 28px}
+.hx-head .cta-row{justify-content:center}
+.hx-head .pill{margin-bottom:22px}
+.hx-stage{position:relative;margin-top:36px;height:var(--hx-h);--hx-c:210px;--hx-l:132px;--hx-m:100px;--hx-s:80px;--hx-gap:12px;--hx-h:420px;--px:0;--py:0;overflow:hidden}
+@media(min-width:700px){.hx-stage{--hx-c:260px;--hx-l:170px;--hx-m:130px;--hx-s:100px;--hx-gap:16px;--hx-h:500px}}
+@media(min-width:1100px){.hx-stage{--hx-c:300px;--hx-l:190px;--hx-m:140px;--hx-s:110px;--hx-gap:18px;--hx-h:570px}}
+.hx-stage::before{content:"";position:absolute;left:50%;top:47%;width:min(720px,120vw);height:420px;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(200,20,30,.55),rgba(200,20,30,0));pointer-events:none}
+.hx-line{position:absolute;left:0;right:0;top:47%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35) 15%,rgba(255,255,255,.35) 85%,transparent)}
+.hx-row{position:absolute;left:50%;top:47%;display:flex;align-items:center;gap:var(--hx-gap);transform:translate(-50%,-50%);width:max-content}
+.hx-slot{position:relative;flex:none;animation:hxIn .9s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--dl,0s)}
+@keyframes hxIn{from{opacity:0;transform:translateX(var(--from,0)) scale(.85)}}
+.hx-par{display:block;transform:translate(calc(var(--px)*var(--k,10)*1px),calc(var(--py)*var(--k,10)*1px));transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.hx-float{display:block;container-type:inline-size;animation:hxFloat var(--fd,6s) ease-in-out infinite;animation-delay:var(--fdl,0s)}
+@keyframes hxFloat{50%{transform:translateY(-10px)}}
+.hx-card{display:block;position:relative;width:100%;aspect-ratio:5/7;border-radius:7cqw;overflow:hidden;container-type:inline-size;text-decoration:none;box-shadow:0 24px 50px rgba(0,0,0,.45);transition:transform .25s ease,box-shadow .25s ease}
+.hx-card:hover,.hx-card:focus-visible{transform:translateY(-8px) rotate(-1.5deg);box-shadow:0 30px 60px rgba(0,0,0,.55)}
+.hx-slot.s .hx-float{width:var(--hx-s)}.hx-slot.m .hx-float{width:var(--hx-m)}.hx-slot.l .hx-float{width:var(--hx-l)}.hx-c .hx-float{container-type:normal}
+.hx-back{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6cqw;color:#fff}
+.hx-back svg{width:42cqw;height:42cqw}
+.hx-back span{position:absolute;bottom:7cqw;left:0;right:0;text-align:center;font-family:var(--display);font-weight:800;font-size:9cqw}
+.hx-front{display:flex;flex-direction:column;justify-content:space-between;padding:9cqw 9cqw 10cqw;text-align:left}
+.hx-front em{align-self:flex-start;font-style:normal;font-family:var(--display);font-weight:800;font-size:7.5cqw;padding:1.6cqw 4.5cqw;border-radius:999px}
+.hx-front b{font-family:var(--body);font-weight:800;font-size:10.5cqw;line-height:1.28}
+.hx-front small{font-family:var(--display);font-weight:500;font-size:6.5cqw;opacity:.8}
+.hx-c{z-index:2}
+.hx-mc{position:relative;width:var(--hx-c);aspect-ratio:5/7;perspective:1400px;cursor:pointer;border:0;background:none;padding:0;display:block}
+.hx-flip{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.hx-mc.flipped .hx-flip{transform:rotateY(180deg)}
+.hx-face{position:absolute;inset:0;overflow:hidden;border-radius:calc(28px * var(--s,.5));backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 34px 70px rgba(0,0,0,.55),0 0 0 2px rgba(255,255,255,.08);--s:.5}
+.hx-face.f{transform:rotateY(180deg)}
+.hx-face .mc-art{position:absolute;left:0;top:0;width:560px;height:784px;transform:scale(var(--s));transform-origin:0 0;overflow:hidden;font-family:var(--body);text-align:left}
+.hx-cap{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:16px;font-size:14px;color:var(--g300);white-space:nowrap}
+.hx-dots{display:flex;gap:5px}
+.hx-dots i{width:6px;height:6px;border-radius:50%;background:#444;transition:background .2s,width .2s}
+.hx-dots i.on{background:#fff;width:16px;border-radius:999px}
+.hx-promo{position:absolute;left:max(16px,calc(50% - 560px));bottom:8px;z-index:3;display:none;align-items:center;gap:14px;padding:10px 18px 10px 10px;border-radius:18px;background:#fff;color:#000;text-decoration:none;box-shadow:0 18px 40px rgba(0,0,0,.4);animation:hxIn .9s .9s cubic-bezier(.2,.8,.2,1) both;--from:-40px}
+@media(min-width:1100px){.hx-promo{display:flex}}
+.hx-promo .th{width:58px;height:58px;border-radius:12px;background:#C8141E;display:grid;place-items:center;flex:none}
+.hx-promo .th svg{width:30px;height:30px;fill:#fff}
+.hx-promo small{display:block;font-size:12px;font-weight:600;color:var(--g600)}
+.hx-promo b{display:block;font-family:var(--display);font-size:17px}
+.hx-promo span.go{font-size:13px;color:#C8141E;font-weight:700}
+@media(prefers-reduced-motion:reduce){.hx-slot,.hx-float,.hx-promo{animation:none}.hx-par{transform:none}}
+ 
 /* card demo */
 .demo{position:relative;max-width:360px;margin:0 auto;width:100%}
 .stack{position:relative;aspect-ratio:5/7;perspective:1400px}
@@ -427,9 +475,8 @@ footer a:hover{color:var(--white)}
 <main id="top">
  
 <!-- HERO -->
-<header class="hero">
-  <div class="wrap">
-    <div>
+<header class="hero hx">
+  <div class="wrap hx-head">
       <a class="pill pill-new" href="/merry-crush/" data-track="deck_selected" data-deck="merry-crush"><i>★</i>Mới: Merry Crush ’26 · bộ bài Noel</a>
       <h1>Hết chuyện để nói? Rút một lá.</h1>
       <p class="lede">Trò chơi thẻ bài trò chuyện cho buổi hẹn, hội bạn và sau giờ làm. <strong>Mở web trên điện thoại, đặt giữa bàn và bắt đầu</strong> — không cần tải app, không cần tài khoản.</p>
@@ -438,39 +485,137 @@ footer a:hover{color:var(--white)}
         <a class="btn btn-ghost" href="#decks">Xem 4 bộ bài</a>
       </div>
       <p class="fine">2–8 người chơi. Bỏ qua bất kỳ lá nào, không cần lý do.</p>
-      <p class="fine desk-only" style="margin-top:6px">Đang dùng máy tính? Mở playunmute.com trên điện thoại để đặt giữa bàn.</p>
+  </div>
+  <div class="hx-stage" id="hxStage">
+    <div class="hx-line" aria-hidden="true"></div>
+    <div class="hx-row">
+      <div class="hx-slot s" style="--dl:0.55s;--from:240px"><span class="hx-par" style="--k:26"><span class="hx-float" style="--fd:7s;--fdl:-1s"><a class="hx-card hx-front" href="/tinh-thuc/" aria-label="Bộ Tỉnh Thức: Kể ba điều nhỏ bạn thấy biết ơn hôm nay." style="background:linear-gradient(150deg,#0040FF,#158FDB);color:#fff" data-track="deck_selected" data-deck="tinh-thuc"><em style="background:#70FF40;color:#000">Dare</em><b>Kể ba điều nhỏ bạn thấy biết ơn hôm nay.</b><small>Tỉnh Thức</small></a></span></span></div><div class="hx-slot m" style="--dl:0.42s;--from:180px"><span class="hx-par" style="--k:20"><span class="hx-float" style="--fd:6.2s;--fdl:-3s"><a class="hx-card hx-back" href="/tan-ca/" aria-label="Bộ Tan Ca" style="background:linear-gradient(160deg,#FFD229,#FF8A20 60%,#FF4438);color:#000" data-track="deck_selected" data-deck="tan-ca"><svg viewBox="0 0 64 64" fill="none" stroke="#000" stroke-width="4" stroke-linecap="round" aria-hidden="true"><path d="M14 36a18 18 0 0 1 36 0" fill="#FFD229"/><path d="M4 36h56"/><rect x="20" y="44" width="24" height="13" rx="6.5" fill="#fff"/><circle cx="37.5" cy="50.5" r="3.5" fill="#FF4438" stroke="none"/></svg><span>Tan Ca</span></a></span></span></div><div class="hx-slot l" style="--dl:0.3s;--from:120px"><span class="hx-par" style="--k:14"><span class="hx-float" style="--fd:6.8s;--fdl:-2s"><a class="hx-card hx-front" href="/cham-gioi-han/" aria-label="Bộ Chạm Giới Hạn: Một quan điểm bạn có nhưng hiếm khi dám nói ra là gì?" style="background:#000;color:#fff;box-shadow:inset 0 0 0 2px #7B13FF" data-track="deck_selected" data-deck="cham-gioi-han"><em style="background:#fff;color:#000">Truth</em><b>Một quan điểm bạn có nhưng hiếm khi dám nói ra là gì?</b><small>Chạm Giới Hạn</small></a></span></span></div><div class="hx-slot l" style="--dl:0.18s;--from:70px"><span class="hx-par" style="--k:9"><span class="hx-float" style="--fd:5.6s;--fdl:-4s"><a class="hx-card hx-back" href="/pha-bang/" aria-label="Bộ Phá Băng" style="background:linear-gradient(135deg,#EC2B7A,#FE7BBF);color:#fff" data-track="deck_selected" data-deck="pha-bang"><svg viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round" aria-hidden="true"><path d="M8 8h22a6 6 0 0 1 6 6v10a6 6 0 0 1-6 6H18l-7 6v-6H8a6 6 0 0 1-6-6V14a6 6 0 0 1 6-6z"/><path d="M56 26H34a6 6 0 0 0-6 6v10a6 6 0 0 0 6 6h12l7 6v-6h3a6 6 0 0 0 6-6V32a6 6 0 0 0-6-6z" fill="#CEFF32" stroke="#CEFF32"/></svg><span>Phá Băng</span></a></span></span></div><div class="hx-slot hx-c" style="--dl:0s"><span class="hx-par" style="--k:4"><span class="hx-float" style="--fd:7s">
+        <button type="button" class="hx-mc" id="hxMc" aria-label="Lá bài Merry Crush. Chạm để lật">
+          <span class="hx-flip"><span class="hx-face b" id="hxBack"></span><span class="hx-face f" id="hxFront" aria-live="polite"></span></span>
+        </button>
+        <div class="hx-cap"><span id="hxCap">Merry Crush ’26 · chạm để lật</span><span class="hx-dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></span></div>
+      </span></span></div><div class="hx-slot l" style="--dl:0.18s;--from:-70px"><span class="hx-par" style="--k:9"><span class="hx-float" style="--fd:6.1s;--fdl:-1.5s"><a class="hx-card hx-front" href="/tan-ca/" aria-label="Bộ Tan Ca: Tóm tắt ngày hôm nay của bạn đúng ba từ." style="background:linear-gradient(160deg,#FFD229,#FF8A20 55%,#FF4438);color:#000" data-track="deck_selected" data-deck="tan-ca"><em style="background:#000;color:#fff">Dare</em><b>Tóm tắt ngày hôm nay của bạn đúng ba từ.</b><small>Tan Ca</small></a></span></span></div><div class="hx-slot l" style="--dl:0.3s;--from:-120px"><span class="hx-par" style="--k:14"><span class="hx-float" style="--fd:5.4s;--fdl:-3.2s"><a class="hx-card hx-back" href="/tinh-thuc/" aria-label="Bộ Tỉnh Thức" style="background:linear-gradient(135deg,#0040FF,#158FDB);color:#fff" data-track="deck_selected" data-deck="tinh-thuc"><svg viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" aria-hidden="true"><path d="M50 16A24 24 0 1 0 56 34"/><circle cx="32" cy="32" r="6" fill="#70FF40" stroke="none"/></svg><span>Tỉnh Thức</span></a></span></span></div><div class="hx-slot m" style="--dl:0.42s;--from:-180px"><span class="hx-par" style="--k:20"><span class="hx-float" style="--fd:6.6s;--fdl:-0.5s"><a class="hx-card hx-back" href="/cham-gioi-han/" aria-label="Bộ Chạm Giới Hạn" style="background:linear-gradient(135deg,#7B13FF,#400D64 70%,#000);color:#fff" data-track="deck_selected" data-deck="cham-gioi-han"><svg viewBox="0 0 64 64" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M44 10A24 24 0 1 0 56 30" stroke="#fff"/><path d="M38 4 20 34h12l-5 26 19-32H34l6-24z" fill="#FF82F3" stroke="#FF82F3"/></svg><span>Chạm Giới Hạn</span></a></span></span></div><div class="hx-slot s" style="--dl:0.55s;--from:-240px"><span class="hx-par" style="--k:26"><span class="hx-float" style="--fd:7.2s;--fdl:-2.4s"><a class="hx-card hx-front" href="/pha-bang/" aria-label="Bộ Phá Băng: Món ăn nào gợi cho bạn nhớ về nhà?" style="background:#fff;color:#000;box-shadow:inset 0 0 0 2px #FE7BBF" data-track="deck_selected" data-deck="pha-bang"><em style="background:#EC2B7A;color:#fff">Truth</em><b>Món ăn nào gợi cho bạn nhớ về nhà?</b><small>Phá Băng</small></a></span></span></div>
     </div>
- 
-    <div class="demo" aria-label="Thử rút bài">
-      <div class="stack">
-        <div class="ghost a" aria-hidden="true"></div>
-        <div class="ghost b" aria-hidden="true"></div>
-        <div class="card" id="card" role="button" tabindex="0" aria-label="Lật lá bài">
-          <div class="face back" aria-hidden="true">
-            <span class="big-q">?</span>
-            <span class="tap">Chạm để lật</span>
-          </div>
-          <div class="face front">
-            <div class="meta"><span class="tag" id="cardType">Truth</span><span id="cardCount">1 / 4</span></div>
-            <h3 id="cardQ" aria-live="polite"></h3>
-            <div class="meta"><span>Phá Băng · Chill</span><span class="mini-q" aria-hidden="true">?</span></div>
-          </div>
-        </div>
-        <div class="end" id="end">
-          <h3>Bạn đã rút hết lá thử.</h3>
-          <p class="fine">Bộ Phá Băng đầy đủ đang chờ ở bàn của bạn.</p>
-          <a class="btn btn-q" href="/pha-bang/" data-track="deck_selected" data-deck="pha-bang">Chơi đủ bộ Phá Băng</a>
-          <button class="btn btn-ghost" id="restart" type="button" style="color:var(--g300)">Rút lại từ đầu</button>
-        </div>
-      </div>
-      <div class="controls">
-        <button class="btn btn-ghost" id="skip" type="button">Bỏ qua</button>
-        <button class="btn btn-white" id="next" type="button">Lật lá bài</button>
-      </div>
-      <p class="demo-note" id="note">Lá thử từ bộ Phá Băng.</p>
-    </div>
+    <a class="hx-promo" href="/merry-crush/" data-track="deck_selected" data-deck="merry-crush">
+      <span class="th" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#mc-heart"/></svg></span>
+      <span><small>Mới ra mắt · Noel 2026</small><b>Merry Crush ’26</b><span class="go">Xem bộ bài ›</span></span>
+    </a>
   </div>
 </header>
+<template id="hx-f-T"><div class="mc-art" style="background:#FFFFFF;color:#121010">
+  <svg class="grainL" style="position:absolute;inset:0;width:100%;height:100%;opacity:.2;mix-blend-mode:multiply"><rect width="100%" height="100%" filter="url(#mc-grain)"/></svg>
+  <div style="position:absolute;top:30px;left:34px;display:flex;flex-direction:column;align-items:center;gap:4px;color:#C8141E"><span class="rk" style="font-family:'Archivo Black',sans-serif;font-size:56px;line-height:.9;letter-spacing:-.04em">A</span><svg width="32" height="32" fill="#C8141E"><use href="#mc-heart"/></svg></div>
+  <div style="position:absolute;bottom:30px;right:34px;display:flex;flex-direction:column;align-items:center;gap:4px;color:#C8141E;transform:rotate(180deg)"><span class="rk" style="font-family:'Archivo Black',sans-serif;font-size:56px;line-height:.9;letter-spacing:-.04em">A</span><svg width="32" height="32" fill="#C8141E"><use href="#mc-heart"/></svg></div>
+  <span style="position:absolute;top:40px;right:36px;font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.14em;padding:8px 16px;border-radius:999px;background:#C8141E;color:#FFFFFF">TRUTH</span>
+  <svg style="position:absolute;left:150px;top:0;width:260px;height:360px" viewBox="0 0 260 360">
+    <line x1="130" y1="0" x2="130" y2="92" stroke="#121010" stroke-width="2"/>
+    <path d="M118 92h24l-3 18h-18z" fill="#121010"/>
+    <circle cx="130" cy="88" r="7" fill="none" stroke="#121010" stroke-width="2.5"/>
+    <g transform="translate(30 104) scale(8.4)"><use href="#mc-heart" width="24" height="24" fill="#C8141E"/><path d="M4.2 9.6c.3-1.9 1.6-3 3.2-3" fill="none" stroke="#FFFFFF" stroke-width=".7" stroke-linecap="round"/></g>
+    <text x="130" y="232" text-anchor="middle" font-family="Mr Dafoe, cursive" font-size="64" fill="#FFFFFF" transform="rotate(-8 130 220)">crush</text>
+  </svg>
+  <div style="position:absolute;left:44px;right:44px;top:400px;display:flex;flex-direction:column;gap:16px">
+    <span style="font-size:13px;font-weight:600;letter-spacing:.14em;color:#5A524A">CÂU HỎI THẬT LÒNG</span>
+    <p class="q" style="font-size:32px;line-height:1.28;font-weight:800;letter-spacing:-.01em"></p>
+  </div>
+  <div style="position:absolute;left:44px;bottom:40px;display:flex;align-items:baseline;gap:14px"><span style="font-family:'Mr Dafoe',cursive;font-size:40px;line-height:1;color:#C8141E">Merry Crush</span><span class="no" style="font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.12em;color:#5A524A"></span></div>
+</div></template>
+<template id="hx-f-D"><div class="mc-art" style="background:#C8141E;color:#FFFFFF">
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.24;mix-blend-mode:multiply"><rect width="100%" height="100%" filter="url(#mc-grain)"/></svg>
+  <div style="position:absolute;top:30px;left:30px;display:flex;flex-direction:column;align-items:center;gap:4px"><span class="rk" style="font-family:'Archivo Black',sans-serif;font-size:52px;line-height:.9;letter-spacing:-.04em">10</span><svg width="30" height="30" fill="#FFFFFF"><use href="#mc-diamond"/></svg></div>
+  <div style="position:absolute;bottom:30px;right:30px;display:flex;flex-direction:column;align-items:center;gap:4px;transform:rotate(180deg)"><span class="rk" style="font-family:'Archivo Black',sans-serif;font-size:52px;line-height:.9;letter-spacing:-.04em">10</span><svg width="30" height="30" fill="#FFFFFF"><use href="#mc-diamond"/></svg></div>
+  <span style="position:absolute;top:40px;right:36px;font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.14em;padding:8px 16px;border-radius:999px;background:#121010;color:#FFFFFF">DARE</span>
+  <svg style="position:absolute;left:130px;top:54px;width:300px;height:320px" viewBox="0 0 300 320">
+    <path d="M150 0 L290 160 L150 320 L10 160 Z" fill="#FFFFFF"/>
+    <rect x="88" y="150" width="124" height="96" fill="#121010"/>
+    <rect x="80" y="128" width="140" height="30" fill="#121010"/>
+    <rect x="141" y="128" width="18" height="118" fill="#C8141E"/>
+    <path d="M150 128c-14-30-52-34-52-12 0 14 26 14 52 12z" fill="none" stroke="#C8141E" stroke-width="9" stroke-linejoin="round"/>
+    <path d="M150 128c14-30 52-34 52-12 0 14-26 14-52 12z" fill="none" stroke="#C8141E" stroke-width="9" stroke-linejoin="round"/>
+    <text x="150" y="292" text-anchor="middle" font-family="DM Mono, monospace" font-size="13" letter-spacing="3" fill="#C8141E">OPEN ME</text>
+  </svg>
+  <div style="position:absolute;left:44px;right:44px;top:410px;display:flex;flex-direction:column;gap:16px">
+    <span style="font-size:13px;font-weight:600;letter-spacing:.14em;color:#FBE3D9">THỬ THÁCH</span>
+    <p class="q" style="font-size:31px;line-height:1.28;font-weight:800;letter-spacing:-.01em"></p>
+  </div>
+  <div style="position:absolute;left:44px;bottom:40px;display:flex;align-items:baseline;gap:14px"><span style="font-family:'Mr Dafoe',cursive;font-size:40px;line-height:1">Merry Crush</span><span class="no" style="font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.12em;color:#FBE3D9"></span></div>
+</div></template>
+<template id="hx-f-M"><div class="mc-art" style="background:#121010;color:#FFFFFF">
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.12;mix-blend-mode:screen"><rect width="100%" height="100%" filter="url(#mc-grain)"/></svg>
+  <div style="position:absolute;top:30px;left:34px;display:flex;flex-direction:column;align-items:center;gap:4px"><span class="rk" style="font-family:'Archivo Black',sans-serif;font-size:56px;line-height:.9;letter-spacing:-.04em">K</span><svg width="32" height="32" fill="#FFFFFF"><use href="#mc-club"/></svg></div>
+  <div style="position:absolute;bottom:30px;right:34px;display:flex;flex-direction:column;align-items:center;gap:4px;transform:rotate(180deg)"><span class="rk" style="font-family:'Archivo Black',sans-serif;font-size:56px;line-height:.9;letter-spacing:-.04em">K</span><svg width="32" height="32" fill="#FFFFFF"><use href="#mc-club"/></svg></div>
+  <span style="position:absolute;top:40px;right:36px;font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.14em;padding:8px 16px;border-radius:999px;background:#C8141E;color:#FFFFFF">ASK FIRST</span>
+  <svg style="position:absolute;left:130px;top:0;width:300px;height:300px" viewBox="0 0 300 300"><use href="#mc-mistletoe"/></svg>
+  <div style="position:absolute;left:0;right:0;top:300px;text-align:center;font-family:'Mr Dafoe',cursive;font-size:54px;line-height:1;transform:rotate(-6deg)">under here?</div>
+  <div style="position:absolute;left:44px;right:44px;top:410px;display:flex;flex-direction:column;gap:16px">
+    <span style="font-size:13px;font-weight:600;letter-spacing:.14em;color:#B9B0A2">DƯỚI CÀNH TẦM GỬI</span>
+    <p class="q" style="font-size:30px;line-height:1.3;font-weight:800;letter-spacing:-.01em"></p>
+  </div>
+  <div style="position:absolute;left:44px;bottom:40px;display:flex;align-items:baseline;gap:14px"><span style="font-family:'Mr Dafoe',cursive;font-size:40px;line-height:1">Merry Crush</span><span class="no" style="font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.12em;color:#B9B0A2"></span></div>
+</div></template>
+<template id="hx-f-W"><div class="mc-art" style="background:#C8141E;color:#FFFFFF">
+  <div style="position:absolute;left:0;top:0;width:560px;height:360px;background:#121010;overflow:hidden">
+    <div style="position:absolute;left:-18px;top:270px;font-family:'Archivo Black',sans-serif;font-size:200px;line-height:.8;letter-spacing:-.06em;color:#C8141E;white-space:nowrap">WISH</div>
+    <svg style="position:absolute;inset:0;width:560px;height:360px" viewBox="0 0 560 360"><g fill="#FFFFFF"><use href="#mc-star" width="24" height="24" transform="translate(300 70) scale(2.2)"/><use href="#mc-star" width="24" height="24" transform="translate(420 140) scale(1.1)"/><use href="#mc-star" width="24" height="24" transform="translate(220 150) scale(.8)"/></g><path d="M180 60 C 240 90, 270 100, 300 104" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="2 8" stroke-linecap="round"/></svg>
+  </div>
+  <div style="position:absolute;left:0;top:360px;width:560px;height:424px;overflow:hidden"><div style="position:absolute;left:-18px;top:-90px;font-family:'Archivo Black',sans-serif;font-size:200px;line-height:.8;letter-spacing:-.06em;color:#121010;white-space:nowrap">WISH</div></div>
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.22;mix-blend-mode:multiply"><rect width="100%" height="100%" filter="url(#mc-grain)"/></svg>
+  <div style="position:absolute;top:30px;left:34px;display:flex;flex-direction:column;align-items:center;gap:4px"><span class="rk" style="font-family:'Archivo Black',sans-serif;font-size:56px;line-height:.9;letter-spacing:-.04em">Q</span><svg width="32" height="32" fill="#FFFFFF"><use href="#mc-star"/></svg></div>
+  <div style="position:absolute;bottom:30px;right:34px;display:flex;flex-direction:column;align-items:center;gap:4px;transform:rotate(180deg)"><span class="rk" style="font-family:'Archivo Black',sans-serif;font-size:56px;line-height:.9;letter-spacing:-.04em">Q</span><svg width="32" height="32" fill="#FFFFFF"><use href="#mc-star"/></svg></div>
+  <span style="position:absolute;top:40px;right:36px;font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.14em;padding:7px 15px;border-radius:999px;border:1.5px solid #FFFFFF">NOEL 2026</span>
+  <div style="position:absolute;left:44px;right:44px;top:470px;display:flex;flex-direction:column;gap:14px">
+    <span style="font-size:13px;font-weight:600;letter-spacing:.14em;color:#FBE3D9">ĐIỀU ƯỚC</span>
+    <p class="q" style="font-size:29px;line-height:1.3;font-weight:800;letter-spacing:-.01em"></p>
+  </div>
+  <div style="position:absolute;left:44px;bottom:40px;display:flex;align-items:baseline;gap:14px"><span style="font-family:'Mr Dafoe',cursive;font-size:40px;line-height:1">Merry Crush</span><span class="no" style="font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.12em;color:#FBE3D9"></span></div>
+</div></template>
+<template id="hx-b-T"><div class="mc-art" style="background:#C8141E;color:#FFFFFF">
+  <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-90deg);font-family:'Archivo Black',sans-serif;font-size:340px;line-height:.8;letter-spacing:-.06em;white-space:nowrap">CRUSH</div>
+  <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-90deg) translateY(260px);font-family:'Archivo Black',sans-serif;font-size:340px;line-height:.8;letter-spacing:-.06em;color:#8E0B13;white-space:nowrap">CRUSH</div>
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.24;mix-blend-mode:multiply"><rect width="100%" height="100%" filter="url(#mc-grain)"/></svg>
+  <div style="position:absolute;left:-10px;top:300px;width:580px;text-align:center;font-family:'Mr Dafoe',cursive;font-size:176px;line-height:1;color:#121010;transform:rotate(-12deg)">Merry</div>
+  <span class="mc-pill" style="position:absolute;top:36px;left:36px;background:#121010">UNMUTE</span>
+  <span style="position:absolute;top:34px;right:36px;font-family:'Archivo Black',sans-serif;font-size:30px;line-height:1;padding:8px 18px 10px;border-radius:999px;background:#FFFFFF;color:#C8141E;transform:rotate(6deg)">’26</span>
+  <div style="position:absolute;bottom:36px;left:36px;right:36px;display:flex;justify-content:space-between"><span class="mc-pill" style="background:#121010">NOEL EDITION</span><span class="mc-pill" style="background:#121010">TRUTH<svg width="14" height="14" fill="#FFFFFF"><use href="#mc-heart"/></svg></span></div>
+</div></template>
+<template id="hx-b-D"><div class="mc-art" style="background:#FFFFFF;color:#FFFFFF">
+  <svg style="position:absolute;inset:0;width:560px;height:784px" viewBox="0 0 560 784"><rect width="560" height="784" fill="url(#mc-cane)"/></svg>
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.22;mix-blend-mode:multiply"><rect width="100%" height="100%" filter="url(#mc-grain)"/></svg>
+  <svg style="position:absolute;left:40px;top:132px;width:480px;height:520px" viewBox="0 0 480 520"><path d="M240 0 L480 260 L240 520 L0 260 Z" fill="#121010"/><path d="M240 26 L454 260 L240 494 L26 260 Z" fill="none" stroke="#FFFFFF" stroke-width="2"/></svg>
+  <div style="position:absolute;left:40px;top:132px;width:480px;height:520px;display:flex;flex-direction:column;align-items:center;justify-content:center">
+    <div style="font-family:'Mr Dafoe',cursive;font-size:104px;line-height:.9;transform:rotate(-8deg);margin-bottom:-18px;position:relative;z-index:1">Merry</div>
+    <div style="font-family:'Archivo Black',sans-serif;font-size:82px;line-height:.9;letter-spacing:-.05em;color:#C8141E">CRUSH</div>
+    <span style="margin-top:14px;font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.2em">— NOEL ’26 —</span>
+  </div>
+  <span class="mc-pill" style="position:absolute;top:36px;left:36px;background:#121010">UNMUTE</span>
+  <div style="position:absolute;bottom:36px;left:36px;right:36px;display:flex;justify-content:space-between"><span class="mc-pill" style="background:#121010">OPEN ME</span><span class="mc-pill" style="background:#121010">DARE<svg width="14" height="14" fill="#FFFFFF"><use href="#mc-diamond"/></svg></span></div>
+</div></template>
+<template id="hx-b-M"><div class="mc-art" style="background:#121010;color:#FFFFFF">
+  <div style="position:absolute;left:-14px;bottom:-40px;display:flex;flex-direction:column;font-family:'Archivo Black',sans-serif;font-size:196px;line-height:.8;letter-spacing:-.06em;white-space:nowrap"><span>ASK</span><span style="color:#C8141E">FIRST</span></div>
+  <svg style="position:absolute;left:110px;top:0;width:340px;height:340px" viewBox="0 0 300 300"><use href="#mc-mistletoe"/></svg>
+  <div style="position:absolute;right:40px;top:300px;font-family:'Mr Dafoe',cursive;font-size:92px;line-height:1;color:#C8141E;transform:rotate(-12deg)">yes?</div>
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.12;mix-blend-mode:screen"><rect width="100%" height="100%" filter="url(#mc-grain)"/></svg>
+  <span class="mc-pill" style="position:absolute;top:36px;left:36px;background:#C8141E">UNMUTE</span>
+  <span class="mc-pill" style="position:absolute;top:36px;right:36px;border:1.5px solid #FFFFFF">MISTLETOE<svg width="14" height="14" fill="#FFFFFF"><use href="#mc-club"/></svg></span>
+</div></template>
+<template id="hx-b-W"><div class="mc-art" style="background:#121010;color:#FFFFFF">
+  <div style="position:absolute;left:0;right:0;top:96px;display:flex;flex-direction:column;align-items:center;gap:2px;font-family:'Archivo Black',sans-serif;line-height:.92;letter-spacing:-.04em;text-align:center;white-space:nowrap">
+    <svg width="84" height="84" fill="#FFFFFF" style="margin-bottom:6px"><use href="#mc-star"/></svg>
+    <span style="font-size:44px;color:#C8141E">MC</span>
+    <span style="font-size:52px;color:#C8141E">MERRY</span>
+    <span style="font-size:58px">CRUSH<span style="color:#C8141E">♥</span>CRUSH</span>
+    <span style="font-size:62px;color:#C8141E">MERRYMERRY</span>
+    <span style="font-size:66px;color:#C8141E">CRUSH<span style="color:#FFFFFF">’26</span>CRUSH</span>
+    <span style="font-size:70px;color:#8E0B13">MERRYCRUSH</span>
+    <span style="margin-top:10px;width:64px;height:56px;background:#FFFFFF"></span>
+  </div>
+  <div style="position:absolute;left:34px;top:330px;font-family:'Mr Dafoe',cursive;font-size:70px;line-height:1;transform:rotate(-14deg)">make a</div>
+  <div style="position:absolute;right:30px;top:196px;font-family:'Mr Dafoe',cursive;font-size:70px;line-height:1;transform:rotate(-14deg)">wish</div>
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.12;mix-blend-mode:screen"><rect width="100%" height="100%" filter="url(#mc-grain)"/></svg>
+  <span class="mc-pill" style="position:absolute;top:36px;left:36px;background:#C8141E">UNMUTE</span>
+  <div style="position:absolute;bottom:36px;left:36px;right:36px;display:flex;justify-content:space-between"><span class="mc-pill" style="border:1.5px solid #FFFFFF">24.12.2026</span><span class="mc-pill" style="background:#C8141E">WISH<svg width="14" height="14" fill="#FFFFFF"><use href="#mc-star"/></svg></span></div>
+</div></template>
+ 
  
 <!-- BỘ BÀI MỚI RA MẮT: MERRY CRUSH '26 -->
 <section class="mc-launch" id="merry-crush" aria-labelledby="mcTitle">
@@ -829,75 +974,52 @@ footer a:hover{color:var(--white)}
     el.addEventListener('click', function(){ track(el.dataset.track, {deck: el.dataset.deck, from:'home'}); });
   });
  
-  /* ---------- Card demo ---------- */
-  var cards = [
-    {type:'Truth', q:'Món ăn nào gợi cho bạn nhớ về nhà?'},
-    {type:'Truth', q:'Nếu đời bạn có nhạc nền, bài đó là gì?'},
-    {type:'Truth', q:'Lần gần nhất bạn thấy được lắng nghe là khi nào?'},
-    {type:'Truth', q:'Điều gì khiến bạn mỉm cười tuần này?'}
+  /* ---------- Hero: lá Merry Crush lật được ---------- */
+  var HX=[
+    {s:'T', r:'A',  n:'01', q:'Món quà Giáng sinh nào bạn muốn nhận từ crush nhất, mà chưa từng dám nói?'},
+    {s:'D', r:'10', n:'02', q:'Gói một lời khen thật lòng thành “quà” và tặng người bên phải. Có nơ, không đùa.'},
+    {s:'M', r:'K',  n:'03', q:'Nắm tay người bên cạnh đến hết lượt sau, nếu cả hai cùng muốn. Không thì đập tay thật kêu.'},
+    {s:'W', r:'Q',  n:'04', q:'Nếu đêm Noel năm nay được ước một điều cho chuyện tình cảm của mình, bạn ước gì?'}
   ];
-  var i = 0, flipped = false, busy = false;
-  var card = document.getElementById('card'),
-      qEl = document.getElementById('cardQ'),
-      tEl = document.getElementById('cardType'),
-      cEl = document.getElementById('cardCount'),
-      next = document.getElementById('next'),
-      skip = document.getElementById('skip'),
-      note = document.getElementById('note'),
-      end = document.getElementById('end');
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hxMc=document.getElementById('hxMc'), hxBack=document.getElementById('hxBack'), hxFront=document.getElementById('hxFront'),
+      hxCap=document.getElementById('hxCap'), hxDots=document.querySelectorAll('.hx-dots i'), hxI=0, hxBusy=false, hxTouched=false;
+  function hxPaint(el, id){ el.innerHTML=''; el.appendChild(document.getElementById(id).content.cloneNode(true)); }
+  function hxLoadBack(){ hxPaint(hxBack,'hx-b-'+HX[hxI].s); mcScale(); }
+  function hxLoadFront(){
+    var c=HX[hxI]; hxPaint(hxFront,'hx-f-'+c.s);
+    hxFront.querySelectorAll('.rk').forEach(function(r){ r.textContent=c.r; });
+    var q=hxFront.querySelector('.q'); q.textContent=c.q; if(c.q.length>80) q.style.fontSize='28px';
+    var no=hxFront.querySelector('.no'); if(no) no.textContent='’26 · No. '+c.n;
+    hxDots.forEach(function(d,i){ d.classList.toggle('on', i===hxI); });
+    mcScale();
+  }
+  function hxTap(){
+    if(hxBusy) return;
+    if(!hxMc.classList.contains('flipped')){
+      hxMc.classList.add('flipped'); hxCap.textContent='Chạm lần nữa để rút lá tiếp';
+      hxMc.setAttribute('aria-label','Lá bài đã lật. Chạm để rút lá tiếp'); track('card_revealed',{deck:'merry-crush',source:'home_hero'});
+    } else {
+      hxBusy=true; hxI=(hxI+1)%HX.length; hxLoadBack();
+      hxMc.classList.remove('flipped'); hxCap.textContent='Merry Crush ’26 · chạm để lật';
+      hxMc.setAttribute('aria-label','Lá bài Merry Crush. Chạm để lật');
+      setTimeout(function(){ hxLoadFront(); hxBusy=false; }, 620);
+    }
+  }
+  hxMc.addEventListener('click', function(){ hxTouched=true; hxTap(); });
+  hxLoadBack(); hxLoadFront();
+  var hxReduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!hxReduce){ setTimeout(function(){ if(!hxTouched) hxTap(); }, 2600); }
  
-  function fill(){
-    qEl.textContent = cards[i].q;
-    tEl.textContent = cards[i].type;
-    cEl.textContent = (i+1) + ' / ' + cards.length;
+  /* Parallax nhẹ theo chuột (máy tính) */
+  var hxStage=document.getElementById('hxStage'), hxHero=document.querySelector('.hero.hx');
+  if(!hxReduce && window.matchMedia('(pointer: fine)').matches){
+    hxHero.addEventListener('pointermove', function(e){
+      var r=hxHero.getBoundingClientRect();
+      hxStage.style.setProperty('--px', ((e.clientX-r.left)/r.width-.5).toFixed(3));
+      hxStage.style.setProperty('--py', ((e.clientY-r.top)/r.height-.5).toFixed(3));
+    });
+    hxHero.addEventListener('pointerleave', function(){ hxStage.style.setProperty('--px',0); hxStage.style.setProperty('--py',0); });
   }
-  function flip(){
-    if(flipped || busy) return;
-    flipped = true;
-    card.classList.add('flipped');
-    card.setAttribute('aria-label','Lá bài đã lật');
-    next.textContent = 'Rút lá tiếp';
-    note.textContent = 'Đọc to câu hỏi, rồi chuyền điện thoại.';
-    track('card_revealed', {deck:'pha-bang', source:'home_demo'});
-  }
-  function advance(skipped){
-    if(busy) return;
-    if(skipped) track('card_skipped', {deck:'pha-bang', source:'home_demo'});
-    busy = true;
-    var go = function(){
-      card.classList.remove('out','flipped');
-      flipped = false;
-      i++;
-      if(i >= cards.length){
-        card.style.visibility = 'hidden';
-        end.classList.add('show');
-        next.disabled = skip.disabled = true;
-        note.textContent = '';
-        busy = false;
-        return;
-      }
-      fill();
-      next.textContent = 'Lật lá bài';
-      note.textContent = skipped ? 'Đã bỏ qua. Không cần lý do.' : 'Lá tiếp theo đã sẵn sàng.';
-      card.setAttribute('aria-label','Lật lá bài');
-      busy = false;
-    };
-    if(reduce || !flipped){ go(); }
-    else { card.classList.add('out'); setTimeout(go, 340); }
-  }
-  card.addEventListener('click', function(){ flipped ? advance(false) : flip(); });
-  card.addEventListener('keydown', function(e){
-    if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); flipped ? advance(false) : flip(); }
-  });
-  next.addEventListener('click', function(){ flipped ? advance(false) : flip(); });
-  skip.addEventListener('click', function(){ advance(true); });
-  document.getElementById('restart').addEventListener('click', function(){
-    i = 0; fill(); end.classList.remove('show');
-    card.style.visibility = ''; next.disabled = skip.disabled = false;
-    next.textContent = 'Lật lá bài'; note.textContent = 'Lá thử từ bộ Phá Băng.';
-  });
-  fill();
  
   /* ---------- Waitlist ---------- */
   // TODO: dán URL nhận form (Formspree, Google Apps Script, ConvertKit...) trước khi launch.
@@ -919,10 +1041,9 @@ footer a:hover{color:var(--white)}
   });
  
   /* ---------- Merry Crush: scale 560×784 artwork to each card ---------- */
-  var mcCards=document.querySelectorAll('.mc-card');
-  function mcScale(){ mcCards.forEach(function(c){ c.style.setProperty('--s',(c.clientWidth/560).toFixed(4)); }); }
+  function mcScale(){ document.querySelectorAll('.mc-card, .hx-face').forEach(function(c){ if(c.clientWidth) c.style.setProperty('--s',(c.clientWidth/560).toFixed(4)); }); }
   mcScale();
-  if('ResizeObserver' in window){ var mcRO=new ResizeObserver(mcScale); mcCards.forEach(function(c){ mcRO.observe(c); }); } else { window.addEventListener('resize', mcScale); }
+  if('ResizeObserver' in window){ var mcRO=new ResizeObserver(function(){ mcScale(); }); document.querySelectorAll('.mc-card, .hx-mc').forEach(function(c){ mcRO.observe(c); }); } else { window.addEventListener('resize', mcScale); }
  
   /* ---------- Dropdown Bộ bài ---------- */
   var deckBtn = document.getElementById('deckBtn'), deckMenu = document.getElementById('deckMenu');

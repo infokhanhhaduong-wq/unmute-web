@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chạm Giới Hạn — Táo bạo, luôn có đồng thuận | UNMUTE</title>
+<meta name="description" content="Chạm Giới Hạn là bộ Truth và Dare táo bạo cho bạn thân, cặp đôi và nhóm đã thoải mái với nhau. Bỏ qua bất cứ lúc nào. Chơi ngay trên điện thoại, không cần tài khoản.">
+<link rel="canonical" href="https://www.playunmute.com/cham-gioi-han/">
+<meta property="og:title" content="Chạm Giới Hạn — Táo bạo, luôn có đồng thuận | UNMUTE">
+<meta property="og:description" content="Câu hỏi thẳng, thử thách bất ngờ, và quyền từ chối luôn trong tay bạn.">
+<meta property="og:image" content="https://www.playunmute.com/assets/poster-cham-gioi-han.webp">
+<meta property="og:url" content="https://www.playunmute.com/cham-gioi-han/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/png" href="../assets/logo-icon.png">
+<link rel="apple-touch-icon" href="../assets/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#000;--white:#fff;
+  --deep:#400D64;--purple:#7B13FF;--epink:#FF82F3;--dpink:#E6005C;
+  --g300:#B5B3BC;--line:#26202e;--panel:#0d0812;
+  --night:linear-gradient(135deg,#FF82F3 0%,#7B13FF 50%,#400D64 100%);
+  --display:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif;
+  --body:'Be Vietnam Pro','Helvetica Neue',Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--black);color:var(--white);font-family:var(--body);font-size:17px;line-height:1.55;padding-top:env(safe-area-inset-top,0px)}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--epink);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.08}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:999px;font-family:var(--display);font-weight:800;font-size:16px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s ease}
+.btn:active{transform:scale(.97)}
+.btn:disabled{opacity:.4;cursor:default}
+.btn-white{background:var(--white);color:var(--black)}
+.btn-ghost{background:transparent;color:var(--g300);box-shadow:inset 0 0 0 2px #3a3145}
+.btn-pink{background:var(--epink);color:var(--black)}
+ 
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(0,0,0,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.nav img{height:26px;width:auto}
+.nav-links{display:flex;gap:20px;font-size:15px}
+.nav-links a{text-decoration:none;color:var(--g300);white-space:nowrap}
+.nav-links a:hover{color:var(--white)}
+ 
+/* hero + play */
+.play{position:relative;overflow:hidden;padding:36px 0 72px}
+.play::before{content:"";position:absolute;width:520px;height:520px;right:-180px;top:-200px;border-radius:50%;background:var(--night);filter:blur(90px);opacity:.45;pointer-events:none}
+.play::after{content:"";position:absolute;width:380px;height:380px;left:-200px;bottom:-160px;border-radius:50%;background:var(--purple);filter:blur(110px);opacity:.3;pointer-events:none}
+.play .wrap{position:relative;z-index:1;display:grid;gap:36px;align-items:start}
+@media(min-width:920px){.play .wrap{grid-template-columns:.9fr 1.1fr;align-items:center}}
+.title{display:flex;gap:18px;align-items:center;margin-bottom:14px}
+.title svg{width:60px;height:60px;flex:none}
+.play h1{font-size:clamp(42px,8vw,68px);letter-spacing:-.02em}
+.promise{font-family:var(--display);font-weight:800;font-size:clamp(20px,3.6vw,26px);margin-bottom:14px}
+.play .lede{color:var(--g300);max-width:30em;margin-bottom:22px}
+.facts{display:flex;flex-wrap:wrap;gap:8px}
+.facts span{font-size:14px;padding:7px 14px;border-radius:999px;background:#140d1c;box-shadow:inset 0 0 0 1px #2c2238;color:var(--g300)}
+ 
+/* level tabs */
+.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:5px;border-radius:999px;background:#140d1c;box-shadow:inset 0 0 0 1px #2c2238;margin-bottom:18px}
+.levels button{border:0;background:transparent;border-radius:999px;min-height:42px;font-family:var(--display);font-weight:800;font-size:15px;color:var(--g300);cursor:pointer}
+.levels button[aria-pressed="true"]{background:var(--white);color:var(--black)}
+.levels button small{display:block;font-family:var(--body);font-weight:500;font-size:11px;line-height:1;margin-top:-2px;opacity:.75}
+ 
+/* card */
+.table{max-width:380px;margin:0 auto;width:100%}
+.stack{position:relative;aspect-ratio:5/7;perspective:1400px}
+.stack .ghost{position:absolute;inset:0;border-radius:26px;background:var(--night);border:3px solid var(--white);opacity:.35;transform:rotate(6deg) translate(12px,6px)}
+.card{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.8,.2,1);cursor:pointer}
+.card.flipped{transform:rotateY(180deg)}
+.card.out{animation:out .33s ease forwards}
+@keyframes out{to{transform:rotateY(180deg) translateX(120%) rotate(14deg);opacity:0}}
+.face{position:absolute;inset:0;border-radius:26px;border:3px solid var(--white);overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.back{background:var(--night);display:grid;place-items:center}
+.back svg{width:46%;height:auto;filter:drop-shadow(0 10px 0 rgba(0,0,0,.25))}
+.back .tap{position:absolute;bottom:20px;left:0;right:0;text-align:center;font-family:var(--display);font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.front{transform:rotateY(180deg);padding:24px;display:flex;flex-direction:column;justify-content:space-between}
+.front.truth{background:var(--black);box-shadow:inset 0 0 0 2px var(--purple)}
+.front.dare{background:radial-gradient(120% 80% at 100% 0%,#FF82F3 0%,#7B13FF 38%,#400D64 78%)}
+.front .top,.front .bot{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--g300)}
+.front.dare .top,.front.dare .bot{color:#efe3ff}
+.tag{display:inline-block;padding:5px 13px;border-radius:999px;font-family:var(--display);font-weight:800;font-size:14px}
+.truth .tag{background:var(--white);color:var(--black)}
+.dare .tag{background:var(--dpink);color:var(--white)}
+.front p.q{font-family:var(--body);font-weight:600;font-size:clamp(22px,5.6vw,25px);line-height:1.35}
+.front .bot svg{width:28px;height:28px}
+.controls{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;margin-top:20px}
+.note{text-align:center;margin-top:12px;font-size:14px;color:var(--g300);min-height:1.5em}
+ 
+/* overlays inside stack */
+.panel{position:absolute;inset:0;border-radius:26px;background:var(--panel);box-shadow:inset 0 0 0 2px #3a2650;display:none;flex-direction:column;justify-content:center;gap:16px;padding:28px;text-align:center}
+.panel.show{display:flex}
+.panel h2{font-size:28px}
+.panel p{color:var(--g300);font-size:16px}
+.panel ul{list-style:none;text-align:left;display:grid;gap:8px;font-size:15px;color:var(--g300)}
+.panel li{padding-left:22px;position:relative}
+.panel li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;border-radius:50%;background:var(--epink)}
+.panel .btn{width:100%}
+ 
+/* sections */
+section.info{padding:72px 0;border-top:1px solid var(--line)}
+section.info h2{font-size:clamp(30px,5vw,42px);margin-bottom:14px;letter-spacing:-.01em}
+.sub{color:var(--g300);max-width:36em;margin-bottom:36px;font-size:18px}
+.two{display:grid;gap:16px}
+@media(min-width:760px){.two{grid-template-columns:1fr 1fr}}
+.box{border-radius:24px;padding:26px;background:#0b0710;box-shadow:inset 0 0 0 1px var(--line)}
+.box h3{font-size:20px;margin-bottom:8px}
+.box p{color:var(--g300)}
+ol.steps{list-style:none;display:grid;gap:14px;counter-reset:s}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start}
+ol.steps li::before{content:counter(s);width:44px;height:44px;border-radius:50%;background:var(--night);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:18px}
+ol.steps b{display:block;font-family:var(--display);font-size:20px;margin-bottom:2px}
+ol.steps span{color:var(--g300)}
+.swatch{display:inline-block;width:14px;height:20px;border-radius:4px;vertical-align:-4px;margin:0 4px;border:1.5px solid var(--white)}
+.lv{display:grid;gap:14px;margin-top:40px}
+@media(min-width:760px){.lv{grid-template-columns:repeat(3,1fr)}}
+.lv .box b{font-family:var(--display);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--epink)}
+.lv .box h3{margin-top:6px}
+.rules{display:grid;gap:1px;background:var(--line);border-radius:24px;overflow:hidden}
+@media(min-width:760px){.rules{grid-template-columns:1fr 1fr}}
+.rules div{background:var(--black);padding:24px}
+.rules h3{font-size:19px;margin-bottom:6px}
+.rules p{color:var(--g300)}
+ 
+footer{border-top:1px solid var(--line);padding:40px 0 calc(40px + env(safe-area-inset-bottom,0px));color:var(--g300);font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;justify-content:space-between}
+footer img{height:24px;width:auto}
+footer nav{display:flex;gap:20px;flex-wrap:wrap}
+footer a{text-decoration:none}
+footer a:hover{color:var(--white)}
+ 
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+ 
+<!-- Icon dùng chung: tia sét phá vỡ khung tròn -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="bolt" viewBox="0 0 64 64">
+    <path d="M44 10A24 24 0 1 0 56 30" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M38 4 20 34h12l-5 26 19-32H34l6-24z" fill="#FF82F3" stroke="#FF82F3" stroke-width="3.5" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+ 
+<nav class="nav" aria-label="Chính">
+  <div class="wrap">
+    <a href="/" aria-label="UNMUTE, về trang chủ"><img src="../assets/logo-horizontal-white.png" alt="UNMUTE"></a>
+    <div class="nav-links">
+      <a href="#cach-choi">Cách chơi</a>
+      <a href="/#decks">Bộ bài khác</a>
+    </div>
+  </div>
+</nav>
+ 
+<main>
+<header class="play">
+  <div class="wrap">
+    <div>
+      <div class="title">
+        <svg aria-hidden="true"><use href="#bolt"/></svg>
+        <h1>Chạm Giới Hạn</h1>
+      </div>
+      <p class="promise">Táo bạo. Luôn có đồng thuận.</p>
+      <p class="lede">Câu hỏi thẳng, thử thách bất ngờ cho bạn thân, cặp đôi và những nhóm đã đủ thoải mái với nhau. Truth thì trả lời, Dare thì làm. Không muốn thì bỏ qua.</p>
+      <div class="facts">
+        <span id="factCount">Truth &amp; Dare</span>
+        <span>3 level, nóng dần</span>
+        <span>Bỏ qua không cần lý do</span>
+      </div>
+    </div>
+ 
+    <div class="table">
+      <div class="levels" role="group" aria-label="Chọn level">
+        <button type="button" data-level="1" aria-pressed="true">Level 1<small>Khởi động</small></button>
+        <button type="button" data-level="2" aria-pressed="false">Level 2<small>Nói thẳng</small></button>
+        <button type="button" data-level="3" aria-pressed="false">Level 3<small>Vượt rào</small></button>
+      </div>
+ 
+      <div class="stack">
+        <div class="ghost" aria-hidden="true"></div>
+        <div class="card" id="card" role="button" tabindex="0" aria-label="Lật lá bài">
+          <div class="face back" aria-hidden="true">
+            <svg><use href="#bolt"/></svg>
+            <span class="tap">Chạm để lật</span>
+          </div>
+          <div class="face front truth" id="front">
+            <div class="top"><span class="tag" id="cType">Truth</span><span id="cLevel">Level 1</span></div>
+            <p class="q" id="cText" aria-live="polite"></p>
+            <div class="bot"><span id="cCount">1 / 20</span><svg aria-hidden="true"><use href="#bolt"/></svg></div>
+          </div>
+        </div>
+ 
+        <!-- Trước khi chơi -->
+        <div class="panel show" id="pStart">
+          <h2>Trước khi rút lá đầu</h2>
+          <ul>
+            <li>Bỏ qua bất kỳ lá nào, không cần giải thích.</li>
+            <li>Thoả thuận luật phạt trước, hoặc chơi không phạt.</li>
+            <li>Chỉ kể chuyện của mình, không kể bí mật của người khác.</li>
+          </ul>
+          <button class="btn btn-white" type="button" id="bStart">Cả bàn đồng ý, bắt đầu</button>
+        </div>
+ 
+        <!-- Điểm dừng trước Level 3 -->
+        <div class="panel" id="pCheck">
+          <h2>Điểm dừng</h2>
+          <p>Level 3 táo bạo hơn. Hỏi nhanh cả bàn: mọi người đều muốn đi tiếp chứ?</p>
+          <p>Chỉ cần một người chưa muốn, cả bàn ở lại Level 2. Không ai phải giải thích.</p>
+          <button class="btn btn-pink" type="button" id="bGo">Cả bàn muốn, vào Level 3</button>
+          <button class="btn btn-ghost" type="button" id="bStay">Ở lại Level 2</button>
+        </div>
+ 
+        <!-- Hết bài -->
+        <div class="panel" id="pEnd">
+          <h2 id="endTitle">Hết lá rồi.</h2>
+          <p id="endText">Bạn đã chơi hết bộ Chạm Giới Hạn.</p>
+          <button class="btn btn-white" type="button" id="bAgain">Xáo bài, chơi lại</button>
+          <a class="btn btn-ghost" href="/#decks">Xem bộ bài khác</a>
+        </div>
+      </div>
+ 
+      <div class="controls">
+        <button class="btn btn-ghost" type="button" id="bSkip">Bỏ qua</button>
+        <button class="btn btn-white" type="button" id="bNext">Lật lá bài</button>
+      </div>
+      <p class="note" id="note">Bỏ qua mọi lúc, không cần giải thích.</p>
+    </div>
+  </div>
+</header>
+ 
+<section class="info" id="ve-bo-bai">
+  <div class="wrap">
+    <h2>Về bộ Chạm Giới Hạn</h2>
+    <p class="sub">Một chút căng thẳng, nhiều tiếng cười, và không ai bị ép. Mục tiêu là bất ngờ và gần nhau hơn, không phải làm ai xấu hổ.</p>
+    <div class="two">
+      <div class="box"><h3>Dành cho</h3><p>Bạn thân, cặp đôi và những nhóm đã đủ thoải mái để thử điều táo bạo hơn.</p></div>
+      <div class="box"><h3>Hợp nhất khi</h3><p>Game night, tiệc tại nhà, chuyến đi cùng bạn bè, hoặc buổi hẹn khi cả hai đã thấy thoải mái.</p></div>
+    </div>
+  </div>
+</section>
+ 
+<section class="info" id="cach-choi">
+  <div class="wrap">
+    <h2>Cách chơi</h2>
+    <p class="sub">Một điện thoại, đặt giữa bàn.</p>
+    <ol class="steps">
+      <li><div><b>Thống nhất trước khi chơi</b><span>Chọn luật phạt khi bỏ qua, hoặc chơi không phạt. Không cần đồ uống có cồn để chơi.</span></div></li>
+      <li><div><b>Lần lượt rút lá và đọc to</b><span>Lá đen<i class="swatch" style="background:#000"></i>là Truth: trả lời thật lòng. Lá tím<i class="swatch" style="background:linear-gradient(135deg,#FF82F3,#7B13FF,#400D64)"></i>là Dare: làm theo thử thách.</span></div></li>
+      <li><div><b>Bỏ qua bất cứ lúc nào</b><span>Không cần giải thích. Thử thách liên quan đến người khác chỉ làm khi người đó cũng đồng ý.</span></div></li>
+    </ol>
+    <div class="lv">
+      <div class="box"><b>Level 1</b><h3>Khởi động</h3><p>Câu hỏi hơi “lầy” và thử thách vui để cả bàn vào guồng.</p></div>
+      <div class="box"><b>Level 2</b><h3>Nói thẳng</h3><p>Những câu bình thường ngại hỏi, và thử thách đòi một chút can đảm.</p></div>
+      <div class="box"><b>Level 3</b><h3>Vượt rào</h3><p>Táo bạo nhất bộ. Có điểm dừng để cả bàn hỏi ý nhau trước khi vào.</p></div>
+    </div>
+  </div>
+</section>
+ 
+<section class="info">
+  <div class="wrap">
+    <h2>Luật của bộ này</h2>
+    <p class="sub">Táo bạo chỉ vui khi ai cũng thấy an toàn.</p>
+    <div class="rules">
+      <div><h3>Từ chối là bình thường</h3><p>Bỏ qua bất kỳ câu hỏi hay thử thách nào, không cần lý do, không ai hỏi lại.</p></div>
+      <div><h3>Chạm thì phải hỏi</h3><p>Không lá nào bắt buộc tiếp xúc cơ thể. Thử thách có người khác chỉ làm khi họ cũng muốn.</p></div>
+      <div><h3>Bí mật của ai người nấy giữ</h3><p>Chỉ kể chuyện của chính bạn. Không lôi chuyện riêng của người vắng mặt ra bàn.</p></div>
+      <div><h3>Không mạo hiểm thật</h3><p>Không thử thách nào cần làm điều nguy hiểm, phạm luật hay uống thêm rượu bia.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+ 
+<footer>
+  <div class="wrap">
+    <a href="/" aria-label="UNMUTE, về trang chủ"><img src="../assets/logo-horizontal-white.png" alt="UNMUTE"></a>
+    <nav aria-label="Chân trang"><a href="/">Trang chủ</a><a href="/#decks">Các bộ bài</a><a href="/#faq">Hỏi đáp</a></nav>
+    <span>© 2026 UNMUTE · Bớt khách sáo. Chân thành hơn.</span>
+  </div>
+</footer>
+ 
+<script>
+(function(){
+  /* =====================================================================
+     NỘI DUNG BỘ BÀI — BẢN NHÁP
+     Theo master doc: đọc to, chỉnh sửa và duyệt từng lá trước khi phát hành.
+     t: 'T' = Truth, 'D' = Dare. Thêm/xoá lá chỉ cần sửa các mảng dưới đây.
+     ===================================================================== */
+  var DECK = {
+    1: [
+      {t:'T', q:'Lời nói dối vô hại nhất bạn từng dùng để thoát một cuộc hẹn là gì?'},
+      {t:'T', q:'Bạn từng giả vờ thích thứ gì chỉ để hợp với mọi người?'},
+      {t:'T', q:'Ai trong bàn này bạn nghĩ dễ bị dụ nhất? Vì sao?'},
+      {t:'T', q:'Thói quen nào của bạn mà người khác thấy kỳ, còn bạn thấy hoàn toàn bình thường?'},
+      {t:'T', q:'Lần gần nhất bạn làm gì đó chỉ vì bị thách là khi nào?'},
+      {t:'T', q:'Bạn từng crush ai mà giờ nghĩ lại thấy khó hiểu nhất?'},
+      {t:'T', q:'Món đồ nào bạn mua xong hối hận ngay, nhưng vẫn không chịu thừa nhận?'},
+      {t:'T', q:'Bạn hay bị nói là “làm quá” về chuyện gì nhất?'},
+      {t:'T', q:'Nếu được làm một điều liều lĩnh nhưng vô hại mà không ai biết, bạn chọn gì?'},
+      {t:'T', q:'Lời khen nào bạn nhận được mà vẫn nhớ đến tận giờ?'},
+      {t:'D', q:'Khen thật lòng người ngồi bên trái một câu. Không được đùa.'},
+      {t:'D', q:'Tường thuật bữa ăn gần nhất của bạn bằng giọng bình luận viên bóng đá trong 20 giây.'},
+      {t:'D', q:'Để người bên phải đặt cho bạn một biệt danh. Cả bàn gọi bạn bằng tên đó đến hết lượt sau.'},
+      {t:'D', q:'Bắt chước cách nói chuyện của một người trong bàn. Cả bàn đoán là ai.'},
+      {t:'D', q:'Trong 30 giây, kể ba điều bạn thích ở chính mình mà không được dừng lại.'},
+      {t:'D', q:'Hát một điệp khúc bạn thuộc, nhưng đổi hết lời thành tên món ăn.'},
+      {t:'D', q:'Đoán món người đối diện hay gọi nhất khi đi cà phê. Đoán sai thì họ được hỏi bạn một câu.'},
+      {t:'D', q:'Tạo dáng như đang chụp bìa tạp chí trong 10 giây. Cả bàn đặt tên cho tạp chí đó.'},
+      {t:'D', q:'Nhìn vào mắt người đối diện 15 giây mà không được cười.'},
+      {t:'D', q:'Đổi chỗ với người bạn nói chuyện ít nhất tối nay.'}
+    ],
+    2: [
+      {t:'T', q:'Điều gì ở bạn mà người khác hay hiểu lầm nhất?'},
+      {t:'T', q:'Lần gần nhất bạn ghen tị với ai đó là vì chuyện gì?'},
+      {t:'T', q:'Bạn từng im lặng trong chuyện gì mà giờ ước mình đã lên tiếng?'},
+      {t:'T', q:'Một quan điểm bạn có nhưng hiếm khi dám nói ra là gì?'},
+      {t:'T', q:'Ấn tượng đầu tiên của bạn về người bên phải là gì? Giờ còn đúng không?'},
+      {t:'T', q:'Điều gì khiến bạn mất cảm tình với một người nhanh nhất?'},
+      {t:'T', q:'Bạn sợ người khác nghĩ gì về mình nhất?'},
+      {t:'T', q:'Bạn từng làm gì để gây ấn tượng với crush mà giờ nghĩ lại thấy ngại?'},
+      {t:'T', q:'Nếu được nghe lén một cuộc nói chuyện về mình, bạn muốn nghe ai nói?'},
+      {t:'T', q:'Điều gì bạn thích ở một người nhưng khó nói thẳng với họ?'},
+      {t:'D', q:'Nói với một người trong bàn một điều bạn chưa từng cảm ơn họ.'},
+      {t:'D', q:'Cả bàn hỏi bạn ba câu liên tiếp. Mỗi câu phải trả lời trong 3 giây.'},
+      {t:'D', q:'Kể một chuyện xấu hổ của chính bạn. Không được kể chuyện của người khác.'},
+      {t:'D', q:'Chọn một tấm ảnh gần đây bạn sẵn lòng cho cả bàn xem, rồi kể câu chuyện đằng sau nó.'},
+      {t:'D', q:'Nói với một người điều bạn nghĩ họ làm giỏi hơn bạn.'},
+      {t:'D', q:'Trong 30 giây, thuyết phục cả bàn về một quan điểm bạn thật ra không đồng ý.'},
+      {t:'D', q:'Để người bên trái đặt cho bạn một luật nhỏ đến hết vòng sau, nếu bạn đồng ý với luật đó.'},
+      {t:'D', q:'Gọi tên một người trong bàn mà bạn muốn thân hơn, và nói vì sao.'}
+    ],
+    3: [
+      {t:'T', q:'Điều gì bạn muốn thử trong năm nay nhưng vẫn đang sợ?'},
+      {t:'T', q:'Lần gần nhất bạn biết mình sai mà vẫn không nhận là khi nào?'},
+      {t:'T', q:'Bạn từng thích một người bạn thân chưa? Chuyện đó kết thúc thế nào?'},
+      {t:'T', q:'Điều gì bạn chưa từng kể với ai trong bàn này, nhưng tối nay sẵn lòng kể?'},
+      {t:'T', q:'Ngoài ngoại hình, điều gì khiến bạn thấy một người hấp dẫn?'},
+      {t:'T', q:'Ranh giới nào của bạn mà người khác hay vô tình bước qua?'},
+      {t:'T', q:'Mối quan hệ nào đã dạy bạn nhiều nhất về chính mình?'},
+      {t:'T', q:'Nếu người bên phải là một bộ phim, đó là phim gì, và bạn chấm mấy sao?'},
+      {t:'D', q:'Nói một điều bạn thấy cuốn hút ở một người trong bàn. Khen thật, không trêu.'},
+      {t:'D', q:'Nói với người bên trái một điều bạn muốn họ biết về bạn mà họ chưa từng hỏi.'},
+      {t:'D', q:'Cả bàn chọn cho bạn một thử thách nhỏ. Bạn được quyền đổi một lần.'},
+      {t:'D', q:'Nắm tay người bên cạnh đến hết lượt sau, nếu cả hai cùng muốn. Không thì đập tay thật kêu.'},
+      {t:'D', q:'Kể lần liều nhất bạn từng làm. Cả bàn chấm điểm từ 1 đến 10.'},
+      {t:'D', q:'Viết một tin nhắn cảm ơn cho người không có mặt ở đây. Gửi hay không là quyền của bạn.'},
+      {t:'D', q:'Chọn một người. Cả hai cùng trả lời: điều gì ở người kia làm mình bất ngờ nhất tối nay?'},
+      {t:'D', q:'Trong 60 giây, nói ba điều bạn muốn thay đổi năm tới. Chọn một người trong bàn để nhắc bạn.'}
+    ]
+  };
+ 
+  /* ---------- Analytics (không gửi nội dung câu hỏi) ---------- */
+  function track(name, props){
+    try{ window.dataLayer = window.dataLayer || []; window.dataLayer.push(Object.assign({event:name, deck:'cham-gioi-han'}, props||{})); }catch(e){}
+  }
+ 
+  var $ = function(id){ return document.getElementById(id); };
+  var card=$('card'), front=$('front'), cType=$('cType'), cLevel=$('cLevel'), cText=$('cText'), cCount=$('cCount'),
+      bNext=$('bNext'), bSkip=$('bSkip'), note=$('note'),
+      pStart=$('pStart'), pCheck=$('pCheck'), pEnd=$('pEnd');
+  var tabs = document.querySelectorAll('.levels button');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var total = DECK[1].length + DECK[2].length + DECK[3].length;
+  $('factCount').textContent = total + ' lá Truth & Dare';
+ 
+  function shuffle(a){ a=a.slice(); for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;} return a; }
+ 
+  var S = { level:1, pile:[], i:0, flipped:false, busy:false, unlocked3:false, started:false };
+ 
+  function loadLevel(lv){
+    S.level = lv; S.pile = shuffle(DECK[lv]); S.i = 0;
+    tabs.forEach(function(b){ b.setAttribute('aria-pressed', String(Number(b.dataset.level)===lv)); });
+    resetCard(); fill();
+  }
+  function resetCard(){
+    card.classList.remove('flipped','out'); card.style.visibility='';
+    S.flipped=false; bNext.textContent='Lật lá bài'; card.setAttribute('aria-label','Lật lá bài');
+  }
+  function fill(){
+    var c = S.pile[S.i]; if(!c) return;
+    var dare = c.t==='D';
+    front.className = 'face front ' + (dare?'dare':'truth');
+    cType.textContent = dare?'Dare':'Truth';
+    cLevel.textContent = 'Level ' + S.level;
+    cText.textContent = c.q;
+    cCount.textContent = (S.i+1) + ' / ' + S.pile.length;
+  }
+  function show(panel){
+    [pStart,pCheck,pEnd].forEach(function(p){ p.classList.toggle('show', p===panel); });
+    var blocked = !!panel;
+    card.style.visibility = blocked ? 'hidden' : '';
+    bNext.disabled = bSkip.disabled = blocked;
+  }
+  function flip(){
+    if(S.flipped||S.busy) return;
+    S.flipped=true; card.classList.add('flipped');
+    card.setAttribute('aria-label','Lá bài đã lật, chạm để rút lá tiếp');
+    bNext.textContent='Rút lá tiếp';
+    note.textContent = S.pile[S.i].t==='D' ? 'Dare: làm nếu bạn muốn. Có người khác thì hỏi họ trước.' : 'Truth: trả lời theo cách của bạn.';
+    track('card_revealed',{level:S.level});
+  }
+  function advance(skipped){
+    if(S.busy) return;
+    if(skipped) track('card_skipped',{level:S.level});
+    S.busy=true;
+    var go=function(){
+      S.i++; resetCard(); S.busy=false;
+      if(S.i >= S.pile.length){ return levelDone(); }
+      fill();
+      note.textContent = skipped ? 'Đã bỏ qua. Không cần lý do.' : 'Lá tiếp theo đã sẵn sàng.';
+    };
+    if(reduce||!S.flipped) go(); else { card.classList.add('out'); setTimeout(go,330); }
+  }
+  function levelDone(){
+    if(S.level===1){ loadLevel(2); note.textContent='Xong Level 1. Chuyển sang Level 2: Nói thẳng.'; return; }
+    if(S.level===2){ show(pCheck); note.textContent=''; return; }
+    $('endTitle').textContent='Hết lá rồi.';
+    $('endText').textContent='Cả bàn đã đi hết ba level của Chạm Giới Hạn.';
+    show(pEnd); note.textContent=''; track('deck_completed');
+  }
+  function requestLevel(lv){
+    if(!S.started) return;
+    if(lv===3 && !S.unlocked3){ show(pCheck); note.textContent=''; return; }
+    show(null); loadLevel(lv); note.textContent='Đang ở Level '+lv+'.';
+  }
+ 
+  $('bStart').addEventListener('click', function(){ S.started=true; show(null); loadLevel(1); note.textContent='Chạm vào lá bài để lật.'; track('game_started'); });
+  $('bGo').addEventListener('click', function(){ S.unlocked3=true; show(null); loadLevel(3); note.textContent='Level 3: Vượt rào. Vẫn bỏ qua được mọi lúc.'; });
+  $('bStay').addEventListener('click', function(){ show(null); loadLevel(2); note.textContent='Ở lại Level 2. Bài đã được xáo lại.'; });
+  $('bAgain').addEventListener('click', function(){ show(null); loadLevel(1); note.textContent='Đã xáo bài. Chạm vào lá bài để lật.'; });
+  tabs.forEach(function(b){ b.addEventListener('click', function(){ requestLevel(Number(b.dataset.level)); }); });
+ 
+  function act(){ S.flipped ? advance(false) : flip(); }
+  card.addEventListener('click', act);
+  card.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); act(); } });
+  bNext.addEventListener('click', act);
+  bSkip.addEventListener('click', function(){ advance(true); });
+ 
+  loadLevel(1); show(pStart);
+})();
+</script>
+</body>
+</html>
+ 

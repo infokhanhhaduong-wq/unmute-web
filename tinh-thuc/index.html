@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tỉnh Thức — Hiểu mình rõ hơn | UNMUTE</title>
+<meta name="description" content="Tỉnh Thức là bộ câu hỏi và thử thách nhỏ để tự nhìn lại mình: giá trị, lựa chọn, điều bạn muốn. Chơi một mình hoặc cùng người thân, ngay trên điện thoại, không cần tài khoản.">
+<link rel="canonical" href="https://www.playunmute.com/tinh-thuc/">
+<meta property="og:title" content="Tỉnh Thức — Hiểu mình rõ hơn | UNMUTE">
+<meta property="og:description" content="Chậm lại một chút. Rút một lá, và nghe xem mình thật sự nghĩ gì.">
+<meta property="og:image" content="https://www.playunmute.com/assets/poster-tinh-thuc.webp">
+<meta property="og:url" content="https://www.playunmute.com/tinh-thuc/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta name="theme-color" content="#0040FF">
+<link rel="icon" type="image/png" href="../assets/logo-icon.png">
+<link rel="apple-touch-icon" href="../assets/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#000;--white:#fff;--mist:#F4F7FF;
+  --eblue:#0040FF;--ocean:#158FDB;--green:#70FF40;
+  --g600:#55525A;--line:#DCE4F7;
+  --sea:linear-gradient(150deg,#0040FF 0%,#158FDB 100%);
+  --display:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif;
+  --body:'Be Vietnam Pro','Helvetica Neue',Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--white);color:var(--black);font-family:var(--body);font-size:17px;line-height:1.6;padding-top:env(safe-area-inset-top,0px)}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--eblue);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.08}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:999px;font-family:var(--display);font-weight:800;font-size:16px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s ease}
+.btn:active{transform:scale(.97)}
+.btn:disabled{opacity:.4;cursor:default}
+.btn-blue{background:var(--eblue);color:var(--white)}
+.btn-ghost{background:transparent;color:var(--eblue);box-shadow:inset 0 0 0 2px var(--eblue)}
+ 
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.nav img{height:26px;width:auto}
+.nav-links{display:flex;gap:20px;font-size:15px}
+.nav-links a{text-decoration:none;color:var(--g600);white-space:nowrap}
+.nav-links a:hover{color:var(--eblue)}
+ 
+/* hero + play */
+.play{position:relative;overflow:hidden;padding:36px 0 72px;background:var(--mist)}
+.play::before{content:"";position:absolute;width:560px;height:560px;right:-200px;top:-240px;border-radius:50%;background:var(--sea);filter:blur(90px);opacity:.35;pointer-events:none}
+.play::after{content:"";position:absolute;width:300px;height:300px;left:-140px;bottom:-140px;border-radius:50%;background:var(--green);filter:blur(100px);opacity:.35;pointer-events:none}
+.play .wrap{position:relative;z-index:1;display:grid;gap:36px;align-items:start}
+@media(min-width:920px){.play .wrap{grid-template-columns:.9fr 1.1fr;align-items:center}}
+.title{display:flex;gap:18px;align-items:center;margin-bottom:14px}
+.title svg{width:60px;height:60px;flex:none}
+.play h1{font-size:clamp(46px,9vw,76px);letter-spacing:-.02em}
+.promise{font-family:var(--display);font-weight:800;font-size:clamp(20px,3.6vw,26px);margin-bottom:14px;color:var(--eblue)}
+.play .lede{color:var(--g600);max-width:30em;margin-bottom:22px}
+.facts{display:flex;flex-wrap:wrap;gap:8px}
+.facts span{font-size:14px;padding:7px 14px;border-radius:999px;background:var(--white);box-shadow:inset 0 0 0 1px var(--line);color:var(--g600)}
+ 
+/* level tabs */
+.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:5px;border-radius:999px;background:var(--white);box-shadow:inset 0 0 0 1px var(--line);margin-bottom:18px}
+.levels button{border:0;background:transparent;border-radius:999px;min-height:42px;font-family:var(--display);font-weight:800;font-size:15px;color:var(--g600);cursor:pointer}
+.levels button[aria-pressed="true"]{background:var(--eblue);color:var(--white)}
+.levels button small{display:block;font-family:var(--body);font-weight:500;font-size:11px;line-height:1;margin-top:-2px;opacity:.85}
+ 
+/* card */
+.table{max-width:380px;margin:0 auto;width:100%}
+.stack{position:relative;aspect-ratio:5/7;perspective:1400px}
+.stack .ghost{position:absolute;inset:0;border-radius:26px;background:var(--sea);border:3px solid var(--white);opacity:.3;transform:rotate(5deg) translate(12px,6px)}
+.card{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .6s cubic-bezier(.2,.8,.2,1);cursor:pointer}
+.card.flipped{transform:rotateY(180deg)}
+.card.out{animation:out .38s ease forwards}
+@keyframes out{to{transform:rotateY(180deg) translateY(-24px);opacity:0}}
+.face{position:absolute;inset:0;border-radius:26px;border:3px solid var(--white);overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 30px 50px rgba(0,64,255,.16)}
+.back{background:var(--sea);display:grid;place-items:center}
+.back svg{width:46%;height:auto}
+.back .tap{position:absolute;bottom:20px;left:0;right:0;text-align:center;font-family:var(--display);font-weight:500;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--white)}
+.front{transform:rotateY(180deg);padding:24px;display:flex;flex-direction:column;justify-content:space-between}
+.front.truth{background:var(--white);box-shadow:inset 0 0 0 2px var(--eblue)}
+.front.dare{background:var(--sea);color:var(--white)}
+.front .top,.front .bot{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--g600)}
+.front.dare .top,.front.dare .bot{color:#DCE8FF}
+.tag{display:inline-block;padding:5px 13px;border-radius:999px;font-family:var(--display);font-weight:800;font-size:14px}
+.truth .tag{background:var(--eblue);color:var(--white)}
+.dare .tag{background:var(--green);color:var(--black)}
+.front p.q{font-weight:600;font-size:clamp(22px,5.6vw,25px);line-height:1.38}
+.front .bot svg{width:30px;height:30px}
+.controls{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;margin-top:20px}
+.note{text-align:center;margin-top:12px;font-size:14px;color:var(--g600);min-height:1.5em}
+ 
+/* overlays */
+.panel{position:absolute;inset:0;border-radius:26px;background:var(--white);box-shadow:inset 0 0 0 2px var(--line),0 30px 50px rgba(0,64,255,.1);display:none;flex-direction:column;justify-content:center;gap:16px;padding:28px;text-align:center}
+.panel.show{display:flex}
+.panel h2{font-size:28px}
+.panel p{color:var(--g600);font-size:16px}
+.panel ul{list-style:none;text-align:left;display:grid;gap:8px;font-size:15px;color:var(--g600)}
+.panel li{padding-left:22px;position:relative}
+.panel li::before{content:"";position:absolute;left:0;top:.5em;width:11px;height:11px;border-radius:50%;border:2.5px solid var(--eblue)}
+.panel .btn{width:100%}
+ 
+/* sections */
+section.info{padding:72px 0;border-top:1px solid var(--line)}
+section.info h2{font-size:clamp(30px,5vw,42px);margin-bottom:14px;letter-spacing:-.01em}
+.sub{color:var(--g600);max-width:36em;margin-bottom:36px;font-size:18px}
+.two{display:grid;gap:16px}
+@media(min-width:760px){.two{grid-template-columns:1fr 1fr}}
+.box{border-radius:24px;padding:26px;background:var(--mist);box-shadow:inset 0 0 0 1px var(--line)}
+.box h3{font-size:20px;margin-bottom:8px}
+.box p{color:var(--g600)}
+ol.steps{list-style:none;display:grid;gap:14px;counter-reset:s}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start}
+ol.steps li::before{content:counter(s);width:44px;height:44px;border-radius:50%;background:var(--sea);color:var(--white);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:18px}
+ol.steps b{display:block;font-family:var(--display);font-size:20px;margin-bottom:2px}
+ol.steps span{color:var(--g600)}
+.swatch{display:inline-block;width:14px;height:20px;border-radius:4px;vertical-align:-4px;margin:0 4px;border:1.5px solid var(--eblue)}
+.lv{display:grid;gap:14px;margin-top:40px}
+@media(min-width:760px){.lv{grid-template-columns:repeat(3,1fr)}}
+.lv .box b{font-family:var(--display);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--eblue)}
+.lv .box h3{margin-top:6px}
+.rules{display:grid;gap:1px;background:var(--line);border-radius:24px;overflow:hidden}
+@media(min-width:760px){.rules{grid-template-columns:1fr 1fr}}
+.rules div{background:var(--white);padding:24px}
+.rules h3{font-size:19px;margin-bottom:6px}
+.rules p{color:var(--g600)}
+.care{margin-top:20px;font-size:15px;color:var(--g600);max-width:44em}
+ 
+footer{background:var(--black);color:#B5B3BC;padding:40px 0 calc(40px + env(safe-area-inset-bottom,0px));font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;justify-content:space-between}
+footer img{height:24px;width:auto}
+footer nav{display:flex;gap:20px;flex-wrap:wrap}
+footer a{text-decoration:none}
+footer a:hover{color:var(--white)}
+ 
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+ 
+<!-- Icon dùng chung: vòng tròn mở với một điểm sáng bên trong -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="light" viewBox="0 0 64 64">
+    <path d="M50 16A24 24 0 1 0 56 34" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="32" cy="32" r="6" fill="#70FF40"/>
+  </symbol>
+</svg>
+ 
+<nav class="nav" aria-label="Chính">
+  <div class="wrap">
+    <a href="/" aria-label="UNMUTE, về trang chủ"><img src="../assets/logo-horizontal.png" alt="UNMUTE"></a>
+    <div class="nav-links">
+      <a href="#cach-choi">Cách chơi</a>
+      <a href="/#decks">Bộ bài khác</a>
+    </div>
+  </div>
+</nav>
+ 
+<main>
+<header class="play">
+  <div class="wrap">
+    <div>
+      <div class="title">
+        <svg aria-hidden="true" style="color:#0040FF"><use href="#light"/></svg>
+        <h1>Tỉnh Thức</h1>
+      </div>
+      <p class="promise">Hiểu mình rõ hơn.</p>
+      <p class="lede">Câu hỏi về điều bạn coi trọng, điều bạn muốn và những lựa chọn đã định hình bạn. Chơi một mình như viết nhật ký, hoặc cùng một người bạn tin tưởng. Không có câu trả lời đúng hay sai.</p>
+      <div class="facts">
+        <span id="factCount">Truth &amp; Dare</span>
+        <span>Chơi một mình hoặc cùng người khác</span>
+        <span>Bỏ qua không cần lý do</span>
+      </div>
+    </div>
+ 
+    <div class="table">
+      <div class="levels" role="group" aria-label="Chọn level">
+        <button type="button" data-level="1" aria-pressed="true">Level 1<small>Nhìn lại</small></button>
+        <button type="button" data-level="2" aria-pressed="false">Level 2<small>Điều quan trọng</small></button>
+        <button type="button" data-level="3" aria-pressed="false">Level 3<small>Mở ra</small></button>
+      </div>
+ 
+      <div class="stack">
+        <div class="ghost" aria-hidden="true"></div>
+        <div class="card" id="card" role="button" tabindex="0" aria-label="Lật lá bài">
+          <div class="face back" aria-hidden="true">
+            <svg style="color:#fff"><use href="#light"/></svg>
+            <span class="tap">Chạm để lật</span>
+          </div>
+          <div class="face front truth" id="front">
+            <div class="top"><span class="tag" id="cType">Truth</span><span id="cLevel">Level 1</span></div>
+            <p class="q" id="cText" aria-live="polite"></p>
+            <div class="bot"><span id="cCount">1 / 18</span><svg aria-hidden="true" id="cIcon" style="color:#0040FF"><use href="#light"/></svg></div>
+          </div>
+        </div>
+ 
+        <div class="panel show" id="pStart">
+          <h2>Chậm lại một chút.</h2>
+          <ul>
+            <li>Không có câu trả lời đúng hay sai.</li>
+            <li>Nghe nhau, không sửa lời nhau, không phán xét.</li>
+            <li>Cần im lặng nghĩ thêm cũng được. Bỏ qua mọi lúc.</li>
+          </ul>
+          <button class="btn btn-blue" type="button" id="bStart">Bắt đầu</button>
+        </div>
+ 
+        <div class="panel" id="pEnd">
+          <h2>Hết lá rồi.</h2>
+          <p>Có câu hỏi nào bạn muốn mang về nghĩ tiếp không? Viết nó ra trước khi quên.</p>
+          <button class="btn btn-blue" type="button" id="bAgain">Xáo bài, chơi lại</button>
+          <a class="btn btn-ghost" href="/#decks">Xem bộ bài khác</a>
+        </div>
+      </div>
+ 
+      <div class="controls">
+        <button class="btn btn-ghost" type="button" id="bSkip">Bỏ qua</button>
+        <button class="btn btn-blue" type="button" id="bNext">Lật lá bài</button>
+      </div>
+      <p class="note" id="note">Bỏ qua mọi lúc, không cần giải thích.</p>
+    </div>
+  </div>
+</header>
+ 
+<section class="info" id="ve-bo-bai">
+  <div class="wrap">
+    <h2>Về bộ Tỉnh Thức</h2>
+    <p class="sub">Những câu hỏi tò mò, không phán xét, để bạn nhận ra điều mới về chính mình và thấy thêm một vài khả năng phía trước.</p>
+    <div class="two">
+      <div class="box"><h3>Dành cho</h3><p>Người tò mò về cảm xúc, giá trị, niềm tin, lựa chọn và ranh giới của bản thân.</p></div>
+      <div class="box"><h3>Hợp nhất khi</h3><p>Một buổi tối yên tĩnh, lúc viết nhật ký, hoặc khi ngồi lại có chủ đích với bạn bè, người thân.</p></div>
+    </div>
+  </div>
+</section>
+ 
+<section class="info" id="cach-choi">
+  <div class="wrap">
+    <h2>Cách chơi</h2>
+    <p class="sub">Một mình hay cùng người khác đều được.</p>
+    <ol class="steps">
+      <li><div><b>Chọn cách chơi</b><span>Một mình: rút lá và viết câu trả lời vào sổ. Cùng người khác: lần lượt rút lá, đọc to và trả lời.</span></div></li>
+      <li><div><b>Rút lá và dành thời gian</b><span>Lá trắng<i class="swatch" style="background:#fff"></i>là Truth: trả lời thật lòng. Lá xanh<i class="swatch" style="background:linear-gradient(150deg,#0040FF,#158FDB)"></i>là Dare: một việc nhỏ để thử ngay.</span></div></li>
+      <li><div><b>Bỏ qua bất cứ lúc nào</b><span>Không cần giải thích. Một câu hỏi chạm đến điều khó nói thì cứ để nó lại.</span></div></li>
+    </ol>
+    <div class="lv">
+      <div class="box"><b>Level 1</b><h3>Nhìn lại</h3><p>Để ý mình đang thế nào: thói quen, cảm xúc, những điều nhỏ làm bạn vui.</p></div>
+      <div class="box"><b>Level 2</b><h3>Điều quan trọng</h3><p>Giá trị, lựa chọn và ranh giới bạn đang học cách giữ.</p></div>
+      <div class="box"><b>Level 3</b><h3>Mở ra</h3><p>Điều bạn muốn thử, người bạn muốn trở thành, bước nhỏ tiếp theo.</p></div>
+    </div>
+  </div>
+</section>
+ 
+<section class="info">
+  <div class="wrap">
+    <h2>Luật của bộ này</h2>
+    <p class="sub">Tò mò với chính mình, nhẹ nhàng với nhau.</p>
+    <div class="rules">
+      <div><h3>Không có đáp án đúng</h3><p>Câu trả lời của bạn hôm nay có thể khác ngày mai. Như vậy là bình thường.</p></div>
+      <div><h3>Lắng nghe, không sửa</h3><p>Khi người khác chia sẻ, hãy nghe. Không khuyên nếu họ không hỏi.</p></div>
+      <div><h3>Im lặng cũng là câu trả lời</h3><p>Không cần trả lời ngay. Nghĩ thêm, hoặc chuyển sang lá khác.</p></div>
+      <div><h3>Chuyện riêng thì giữ riêng</h3><p>Những gì được chia sẻ ở đây không mang đi kể lại.</p></div>
+    </div>
+    <p class="care">Tỉnh Thức là một trò chơi trò chuyện, không phải trị liệu. Nếu một câu hỏi khiến bạn thấy nặng lòng, hãy dừng lại và nói chuyện với người bạn tin tưởng hoặc một chuyên gia.</p>
+  </div>
+</section>
+</main>
+ 
+<footer>
+  <div class="wrap">
+    <a href="/" aria-label="UNMUTE, về trang chủ"><img src="../assets/logo-horizontal-white.png" alt="UNMUTE"></a>
+    <nav aria-label="Chân trang"><a href="/">Trang chủ</a><a href="/#decks">Các bộ bài</a><a href="/#faq">Hỏi đáp</a></nav>
+    <span>© 2026 UNMUTE · Bớt khách sáo. Chân thành hơn.</span>
+  </div>
+</footer>
+ 
+<script>
+(function(){
+  /* =====================================================================
+     NỘI DUNG BỘ BÀI — BẢN NHÁP
+     Theo master doc: đọc to, chỉnh sửa và duyệt từng lá trước khi phát hành.
+     Giữ giọng tò mò, không phán xét; không trình bày như trị liệu.
+     t: 'T' = Truth, 'D' = Dare.
+     ===================================================================== */
+  var DECK = {
+    1: [
+      {t:'T', q:'Gần đây lúc nào bạn thấy mình là chính mình nhất?'},
+      {t:'T', q:'Khi cần ở một mình, bạn thường làm gì?'},
+      {t:'T', q:'Khoảnh khắc nào trong tuần này bạn muốn được sống lại lần nữa?'},
+      {t:'T', q:'Điều gì bạn từng rất ghét mà giờ lại thấy thích?'},
+      {t:'T', q:'Bạn nhận ra mình đang mệt qua dấu hiệu nào?'},
+      {t:'T', q:'Âm thanh, mùi hương hay nơi chốn nào khiến bạn thấy bình yên?'},
+      {t:'T', q:'Dạo này bạn đang tò mò về điều gì?'},
+      {t:'T', q:'Bạn của năm 15 tuổi sẽ ngạc nhiên nhất điều gì ở bạn bây giờ?'},
+      {t:'T', q:'Một lời nhận xét về tính cách bạn mà bạn thấy đúng nhất là gì?'},
+      {t:'T', q:'Bạn thường quyết định nhanh hay chậm? Điều đó có giúp bạn không?'},
+      {t:'D', q:'Nhắm mắt 30 giây, rồi gọi tên một cảm xúc bạn đang có.'},
+      {t:'D', q:'Kể ba điều nhỏ bạn thấy biết ơn hôm nay.'},
+      {t:'D', q:'Chọn một từ tả tâm trạng của bạn tuần này, rồi nói vì sao.'},
+      {t:'D', q:'Khen chính mình một điều bạn đang làm tốt mà ít khi tự nhận.'},
+      {t:'D', q:'Trong 30 giây, tả một ngày lý tưởng của bạn, từ lúc thức dậy.'},
+      {t:'D', q:'Mở bức ảnh gần nhất làm bạn mỉm cười. Kể vì sao.'},
+      {t:'D', q:'Viết ra một điều bạn muốn để lại phía sau trong tuần này.'},
+      {t:'D', q:'Hít thở chậm ba lần, rồi nói điều đầu tiên bạn nghĩ đến.'}
+    ],
+    2: [
+      {t:'T', q:'Điều gì quan trọng với bạn đến mức không muốn đánh đổi?'},
+      {t:'T', q:'Lần gần nhất bạn nói “có” trong khi muốn nói “không” là khi nào?'},
+      {t:'T', q:'Với bạn, một ngày “đáng sống” cần có điều gì?'},
+      {t:'T', q:'Lựa chọn nào trong vài năm qua đã thay đổi bạn nhiều nhất?'},
+      {t:'T', q:'Bạn học được gì từ một người mà bạn không hợp?'},
+      {t:'T', q:'Điều gì khiến bạn thấy mình được tôn trọng?'},
+      {t:'T', q:'Ranh giới nào bạn đang học cách giữ?'},
+      {t:'T', q:'Niềm tin nào của bạn đã thay đổi theo thời gian?'},
+      {t:'T', q:'Khi mọi thứ không theo kế hoạch, bạn thường phản ứng thế nào?'},
+      {t:'T', q:'Bạn đang cố chứng minh điều gì, và với ai?'},
+      {t:'D', q:'Nói ba giá trị bạn sống theo, xếp theo thứ tự quan trọng.'},
+      {t:'D', q:'Kể một quyết định gần đây bạn tự hào vì đã làm theo lòng mình.'},
+      {t:'D', q:'Trong 45 giây, kể về một người đã thay đổi cách bạn nhìn cuộc sống.'},
+      {t:'D', q:'Hoàn thành câu: “Mình đang học cách…”'},
+      {t:'D', q:'Hoàn thành câu: “Mình thấy nhẹ nhõm khi…”'},
+      {t:'D', q:'Chọn một thói quen muốn giữ và một thói quen muốn bỏ. Nói vì sao.'},
+      {t:'D', q:'Nói một điều bạn cần nhưng ít khi dám nhờ ai.'}
+    ],
+    3: [
+      {t:'T', q:'Nếu không sợ thất bại, điều đầu tiên bạn thử là gì?'},
+      {t:'T', q:'Bạn mong gặp phiên bản nào của mình trong năm năm nữa?'},
+      {t:'T', q:'Bạn muốn được nhớ đến vì điều gì?'},
+      {t:'T', q:'Dạo này câu hỏi nào bạn tự hỏi mình nhiều nhất?'},
+      {t:'T', q:'Điều gì bạn đang chờ “đúng lúc” mới làm?'},
+      {t:'T', q:'Bạn muốn dành nhiều thời gian hơn cho ai, hoặc cho điều gì?'},
+      {t:'T', q:'Nếu được bắt đầu lại một điều, bạn sẽ chọn điều gì?'},
+      {t:'D', q:'Viết một câu bạn muốn nói với chính mình một năm sau. Đọc to nếu bạn muốn.'},
+      {t:'D', q:'Nói một việc nhỏ bạn sẽ làm tuần này để gần hơn với điều bạn muốn.'},
+      {t:'D', q:'Hoàn thành câu: “Nếu mình tin bản thân hơn một chút, mình sẽ…”'},
+      {t:'D', q:'Kể một ước mơ cũ bạn chưa thật sự buông bỏ.'},
+      {t:'D', q:'Nói một điều bạn muốn nhẹ nhàng hơn với chính mình.'},
+      {t:'D', q:'Nếu đang chơi cùng ai đó: nói với họ một điều tốt bạn thấy ở họ mà có thể họ chưa thấy.'},
+      {t:'D', q:'Chọn một câu hỏi từ hôm nay để mang về nghĩ tiếp. Viết nó ra.'}
+    ]
+  };
+ 
+  function track(name, props){
+    try{ window.dataLayer = window.dataLayer || []; window.dataLayer.push(Object.assign({event:name, deck:'tinh-thuc'}, props||{})); }catch(e){}
+  }
+ 
+  var $ = function(id){ return document.getElementById(id); };
+  var card=$('card'), front=$('front'), cType=$('cType'), cLevel=$('cLevel'), cText=$('cText'), cCount=$('cCount'), cIcon=$('cIcon'),
+      bNext=$('bNext'), bSkip=$('bSkip'), note=$('note'), pStart=$('pStart'), pEnd=$('pEnd');
+  var tabs = document.querySelectorAll('.levels button');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  $('factCount').textContent = (DECK[1].length + DECK[2].length + DECK[3].length) + ' lá Truth & Dare';
+ 
+  function shuffle(a){ a=a.slice(); for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;} return a; }
+  var S = { level:1, pile:[], i:0, flipped:false, busy:false, started:false };
+ 
+  function loadLevel(lv){
+    S.level=lv; S.pile=shuffle(DECK[lv]); S.i=0;
+    tabs.forEach(function(b){ b.setAttribute('aria-pressed', String(Number(b.dataset.level)===lv)); });
+    resetCard(); fill();
+  }
+  function resetCard(){
+    card.classList.remove('flipped','out');
+    S.flipped=false; bNext.textContent='Lật lá bài'; card.setAttribute('aria-label','Lật lá bài');
+  }
+  function fill(){
+    var c=S.pile[S.i]; if(!c) return;
+    var dare=c.t==='D';
+    front.className='face front '+(dare?'dare':'truth');
+    cIcon.style.color = dare ? '#fff' : '#0040FF';
+    cType.textContent=dare?'Dare':'Truth';
+    cLevel.textContent='Level '+S.level;
+    cText.textContent=c.q;
+    cCount.textContent=(S.i+1)+' / '+S.pile.length;
+  }
+  function show(panel){
+    [pStart,pEnd].forEach(function(p){ p.classList.toggle('show', p===panel); });
+    card.style.visibility = panel ? 'hidden' : '';
+    bNext.disabled = bSkip.disabled = !!panel;
+  }
+  function flip(){
+    if(S.flipped||S.busy) return;
+    S.flipped=true; card.classList.add('flipped');
+    card.setAttribute('aria-label','Lá bài đã lật, chạm để rút lá tiếp');
+    bNext.textContent='Rút lá tiếp';
+    note.textContent = S.pile[S.i].t==='D' ? 'Dare: một việc nhỏ, làm nếu bạn muốn.' : 'Cứ từ từ. Không cần trả lời ngay.';
+    track('card_revealed',{level:S.level});
+  }
+  function advance(skipped){
+    if(S.busy) return;
+    if(skipped) track('card_skipped',{level:S.level});
+    S.busy=true;
+    var go=function(){
+      S.i++; resetCard(); S.busy=false;
+      if(S.i>=S.pile.length){
+        if(S.level<3){ loadLevel(S.level+1); note.textContent='Chuyển sang Level '+S.level+'.'; }
+        else { show(pEnd); note.textContent=''; track('deck_completed'); }
+        return;
+      }
+      fill();
+      note.textContent = skipped ? 'Đã bỏ qua. Không cần lý do.' : 'Lá tiếp theo đã sẵn sàng.';
+    };
+    if(reduce||!S.flipped) go(); else { card.classList.add('out'); setTimeout(go,380); }
+  }
+ 
+  $('bStart').addEventListener('click', function(){ S.started=true; show(null); loadLevel(1); note.textContent='Chạm vào lá bài để lật.'; track('game_started'); });
+  $('bAgain').addEventListener('click', function(){ show(null); loadLevel(1); note.textContent='Đã xáo bài. Chạm vào lá bài để lật.'; });
+  tabs.forEach(function(b){ b.addEventListener('click', function(){
+    if(!S.started) return;
+    show(null); loadLevel(Number(b.dataset.level)); note.textContent='Đang ở Level '+S.level+'.';
+  }); });
+ 
+  function act(){ S.flipped ? advance(false) : flip(); }
+  card.addEventListener('click', act);
+  card.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); act(); } });
+  bNext.addEventListener('click', act);
+  bSkip.addEventListener('click', function(){ advance(true); });
+ 
+  loadLevel(1); show(pStart);
+})();
+</script>
+</body>
+</html>
+ 

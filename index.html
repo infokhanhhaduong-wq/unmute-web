@@ -259,6 +259,18 @@ section{padding:88px 0}
 .mc-duo:hover .mc-card.a{transform:translate(-88%,-52%) rotate(-13deg)}
 .mc-duo:hover .mc-card.b{transform:translate(-12%,-48%) rotate(11deg)}
  
+/* ===== CTA ngắn Merry Crush (sau Câu chuyện) ===== */
+.mc-strip{background:var(--white);padding:0 0 88px}
+.mc-strip-in{position:relative;overflow:hidden;display:flex;flex-wrap:wrap;align-items:center;gap:24px 32px;background:#C8141E;color:#fff;border-radius:28px;padding:26px 28px}
+.mc-strip-in::after{content:"CRUSH";position:absolute;right:-12px;bottom:-34px;font-family:'Archivo Black',sans-serif;font-size:150px;line-height:.8;letter-spacing:-.06em;color:rgba(255,255,255,.1);pointer-events:none}
+.mc-strip .thumb{position:relative;width:86px;aspect-ratio:5/7;flex:none;transform:rotate(-8deg)}
+.mc-strip .thumb .mc-card{position:absolute;inset:0;width:100%;height:auto}
+.mc-strip .txt{flex:1 1 300px;position:relative;z-index:1}
+.mc-strip .txt .merry{font-family:'Mr Dafoe',cursive;font-size:44px;line-height:1;color:#121010;display:inline-block;transform:rotate(-6deg);margin-right:6px}
+.mc-strip .txt .crush{font-family:'Archivo Black',sans-serif;font-size:34px;letter-spacing:-.04em;line-height:1;white-space:nowrap}
+.mc-strip .txt p{margin-top:8px;color:#FFF3F0;font-size:17px}
+.mc-strip .btn{position:relative;z-index:1;background:#121010;color:#fff}
+ 
 /* card demo */
 .demo{position:relative;max-width:360px;margin:0 auto;width:100%}
 .stack{position:relative;aspect-ratio:5/7;perspective:1400px}
@@ -729,6 +741,71 @@ footer a:hover{color:var(--white)}
   </div>
 </section>
  
+<!-- DECKS -->
+<section class="decks" id="decks">
+  <div class="wrap">
+    <div class="head">
+      <h2>Mỗi khoảnh khắc, một bộ bài.</h2>
+      <p>Bốn bộ chơi quanh năm, mỗi bộ một giọng văn và một độ sâu riêng. Mùa này, bàn có thêm một vị khách: bộ bài Noel.</p>
+    </div>
+    <div class="grid">
+      <article class="deck d-mc">
+        <span class="num">Bộ đặc biệt · Noel 2026</span>
+        <div class="mc-mini" aria-label="Merry Crush 2026"><span class="merry" aria-hidden="true">Merry</span><span class="crush" aria-hidden="true">CRUSH ’26</span></div>
+        <p class="promise">Bớt khách sáo. Thêm chút rung động.</p>
+        <p class="for">Dành cho crush, cặp đôi mới quen và hội bạn mùa lễ. Truth để nói thật, Dare để liều một chút, Tầm gửi khi cả hai cùng muốn, và Điều ước cho năm mới.</p>
+        <div class="foot"><a class="btn btn-white" href="/merry-crush/" data-track="deck_selected" data-deck="merry-crush">Chơi Merry Crush</a><span class="soon">Mới ra mắt</span></div>
+      </article>
+      <article class="deck d-pha">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="3.5" stroke-linejoin="round" aria-hidden="true">
+          <path d="M8 8h22a6 6 0 0 1 6 6v10a6 6 0 0 1-6 6H18l-7 6v-6H8a6 6 0 0 1-6-6V14a6 6 0 0 1 6-6z"/>
+          <path d="M56 26H34a6 6 0 0 0-6 6v10a6 6 0 0 0 6 6h12l7 6v-6h3a6 6 0 0 0 6-6V32a6 6 0 0 0-6-6z" fill="#CEFF32" stroke="#CEFF32"/>
+        </svg>
+        <span class="num">Bộ 01 · Icebreaker</span>
+        <h3>Phá Băng</h3>
+        <p class="promise">Mở lời thật dễ.</p>
+        <p class="for">Cho lần đầu gặp, buổi hẹn đầu và hội chưa thân. Câu hỏi nhẹ về sở thích, thói quen và những lựa chọn giả định vui vui, để không ai phải nghĩ câu mở đầu.</p>
+        <div class="foot"><a class="btn btn-white" href="/pha-bang/" data-track="deck_selected" data-deck="pha-bang">Chơi Phá Băng</a></div>
+      </article>
+      <article class="deck d-tinh">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" aria-hidden="true">
+          <path d="M50 16A24 24 0 1 0 56 34"/>
+          <circle cx="32" cy="32" r="6" fill="#70FF40" stroke="none"/>
+        </svg>
+        <span class="num">Bộ 02 · Self-discovery</span>
+        <h3>Tỉnh Thức</h3>
+        <p class="promise">Hiểu mình rõ hơn.</p>
+        <p class="for">Cho những tối chậm rãi, một mình hay cùng người bạn tin. Về điều bạn coi trọng, điều bạn muốn và những lựa chọn đã làm nên bạn.</p>
+        <div class="foot"><a class="btn btn-white" href="/tinh-thuc/" data-track="deck_selected" data-deck="tinh-thuc">Chơi Tỉnh Thức</a></div>
+      </article>
+      <article class="deck d-cham">
+        <svg viewBox="0 0 64 64" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M44 10A24 24 0 1 0 56 30" stroke="#fff"/>
+          <path d="M38 4 20 34h12l-5 26 19-32H34l6-24z" fill="#FF82F3" stroke="#FF82F3"/>
+        </svg>
+        <span class="num">Bộ 03 · Dare &amp; Boundaries</span>
+        <h3>Chạm Giới Hạn</h3>
+        <p class="promise">Táo bạo, luôn có đồng thuận.</p>
+        <p class="for">Cho bạn thân, cặp đôi và hội đã đủ thoải mái. Câu hỏi thẳng, thử thách bất ngờ, và quyền nói “không” luôn nằm trong tay bạn.</p>
+        <div class="foot"><a class="btn btn-white" href="/cham-gioi-han/" data-track="deck_selected" data-deck="cham-gioi-han">Chơi Chạm Giới Hạn</a></div>
+      </article>
+      <article class="deck d-tan">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#000" stroke-width="3.5" stroke-linecap="round" aria-hidden="true">
+          <path d="M14 36a18 18 0 0 1 36 0"/>
+          <path d="M4 36h56"/>
+          <rect x="20" y="44" width="24" height="13" rx="6.5"/>
+          <circle cx="37.5" cy="50.5" r="3.5" fill="#000" stroke="none"/>
+        </svg>
+        <span class="num">Bộ 04 · After Work</span>
+        <h3>Tan Ca</h3>
+        <p class="promise">Tắt chế độ làm việc.</p>
+        <p class="for">Cho đồng nghiệp và bạn bè sau giờ làm. Chuyện vui trong ngày, kế hoạch tối nay, và mọi thứ không dính đến KPI.</p>
+        <div class="foot"><a class="btn btn-black" href="/tan-ca/" data-track="deck_selected" data-deck="tan-ca">Chơi Tan Ca</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+ 
 <!-- CÂU CHUYỆN CỦA TÔI -->
 <section class="story" id="cau-chuyen" aria-labelledby="storyTitle">
   <div class="wrap">
@@ -742,6 +819,20 @@ footer a:hover{color:var(--white)}
       <h2 id="storyTitle">live and <mark>love</mark></h2>
       <img src="assets/joey-signature.png" alt="Chữ ký của Joey" width="720" height="615" loading="lazy">
       <span class="who"><b>Joey</b>Founder, UNMUTE</span>
+    </div>
+  </div>
+</section>
+ 
+<!-- CTA NGẮN: MERRY CRUSH -->
+<section class="mc-strip" aria-label="Merry Crush ’26">
+  <div class="wrap">
+    <div class="mc-strip-in">
+      <span class="thumb" aria-hidden="true"><span class="mc-card" data-tpl="hx-b-D"></span></span>
+      <div class="txt">
+        <span class="merry" aria-hidden="true">Merry</span><span class="crush">CRUSH ’26</span>
+        <p>Bộ bài Noel đã lên bàn. Rủ crush rút một lá trước đêm 24/12.</p>
+      </div>
+      <a class="btn" href="/merry-crush/" data-track="deck_selected" data-deck="merry-crush">Chơi Merry Crush</a>
     </div>
   </div>
 </section>
@@ -833,70 +924,7 @@ footer a:hover{color:var(--white)}
   </div>
 </section>
  
-<!-- DECKS -->
-<section class="decks" id="decks">
-  <div class="wrap">
-    <div class="head">
-      <h2>Bốn bộ bài. Bốn khoảnh khắc.</h2>
-      <p>Mỗi bộ có giọng văn và độ sâu riêng, cả bốn đều chơi được ngay trên điện thoại. Mùa này có thêm một bộ đặc biệt cho Noel.</p>
-    </div>
-    <div class="grid">
-      <article class="deck d-mc">
-        <span class="num">Bộ đặc biệt · Noel Edition 2026</span>
-        <div class="mc-mini" aria-label="Merry Crush 2026"><span class="merry" aria-hidden="true">Merry</span><span class="crush" aria-hidden="true">CRUSH ’26</span></div>
-        <p class="promise">Bớt khách sáo. Thêm chút rung động.</p>
-        <p class="for">Cho crush, cặp đôi mới quen và hội bạn mùa lễ. Bốn chất bài Truth, Dare, Tầm gửi và Điều ước, với lá Tầm gửi luôn hỏi ý nhau trước.</p>
-        <div class="foot"><a class="btn btn-white" href="/merry-crush/" data-track="deck_selected" data-deck="merry-crush">Chơi Merry Crush</a><span class="soon">Mới ra mắt</span></div>
-      </article>
-      <article class="deck d-pha">
-        <svg viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="3.5" stroke-linejoin="round" aria-hidden="true">
-          <path d="M8 8h22a6 6 0 0 1 6 6v10a6 6 0 0 1-6 6H18l-7 6v-6H8a6 6 0 0 1-6-6V14a6 6 0 0 1 6-6z"/>
-          <path d="M56 26H34a6 6 0 0 0-6 6v10a6 6 0 0 0 6 6h12l7 6v-6h3a6 6 0 0 0 6-6V32a6 6 0 0 0-6-6z" fill="#CEFF32" stroke="#CEFF32"/>
-        </svg>
-        <span class="num">Bộ 01 · Icebreaker</span>
-        <h3>Phá Băng</h3>
-        <p class="promise">Mở lời thật dễ.</p>
-        <p class="for">Cho người mới gặp, buổi hẹn đầu và nhóm chưa thân. Sở thích, thói quen, quan điểm vui, những lựa chọn giả định nhẹ nhàng.</p>
-        <div class="foot"><a class="btn btn-white" href="/pha-bang/" data-track="deck_selected" data-deck="pha-bang">Chơi Phá Băng</a></div>
-      </article>
-      <article class="deck d-tinh">
-        <svg viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" aria-hidden="true">
-          <path d="M50 16A24 24 0 1 0 56 34"/>
-          <circle cx="32" cy="32" r="6" fill="#70FF40" stroke="none"/>
-        </svg>
-        <span class="num">Bộ 02 · Self-discovery</span>
-        <h3>Tỉnh Thức</h3>
-        <p class="promise">Hiểu mình rõ hơn.</p>
-        <p class="for">Cho những cuộc trò chuyện chậm rãi về điều bạn coi trọng, điều bạn muốn và những lựa chọn đã định hình bạn.</p>
-        <div class="foot"><a class="btn btn-white" href="/tinh-thuc/" data-track="deck_selected" data-deck="tinh-thuc">Chơi Tỉnh Thức</a></div>
-      </article>
-      <article class="deck d-cham">
-        <svg viewBox="0 0 64 64" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M44 10A24 24 0 1 0 56 30" stroke="#fff"/>
-          <path d="M38 4 20 34h12l-5 26 19-32H34l6-24z" fill="#FF82F3" stroke="#FF82F3"/>
-        </svg>
-        <span class="num">Bộ 03 · Dare &amp; Boundaries</span>
-        <h3>Chạm Giới Hạn</h3>
-        <p class="promise">Táo bạo, luôn có đồng thuận.</p>
-        <p class="for">Cho bạn thân, cặp đôi và những nhóm đã đủ thoải mái. Câu hỏi thẳng, thử thách bất ngờ, và quyền từ chối luôn trong tay bạn.</p>
-        <div class="foot"><a class="btn btn-white" href="/cham-gioi-han/" data-track="deck_selected" data-deck="cham-gioi-han">Chơi Chạm Giới Hạn</a></div>
-      </article>
-      <article class="deck d-tan">
-        <svg viewBox="0 0 64 64" fill="none" stroke="#000" stroke-width="3.5" stroke-linecap="round" aria-hidden="true">
-          <path d="M14 36a18 18 0 0 1 36 0"/>
-          <path d="M4 36h56"/>
-          <rect x="20" y="44" width="24" height="13" rx="6.5"/>
-          <circle cx="37.5" cy="50.5" r="3.5" fill="#000" stroke="none"/>
-        </svg>
-        <span class="num">Bộ 04 · After Work</span>
-        <h3>Tan Ca</h3>
-        <p class="promise">Tắt chế độ làm việc.</p>
-        <p class="for">Cho đồng nghiệp và bạn bè sau giờ làm. Chuyện vui trong ngày, kế hoạch tối nay, và mọi thứ không liên quan đến KPI.</p>
-        <div class="foot"><a class="btn btn-black" href="/tan-ca/" data-track="deck_selected" data-deck="tan-ca">Chơi Tan Ca</a></div>
-      </article>
-    </div>
-  </div>
-</section>
+ 
  
 <!-- SAFETY -->
 <section class="safe" id="safe">

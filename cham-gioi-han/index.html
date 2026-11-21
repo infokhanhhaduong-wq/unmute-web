@@ -139,6 +139,12 @@ footer nav{display:flex;gap:20px;flex-wrap:wrap}
 footer a{text-decoration:none}
 footer a:hover{color:var(--white)}
 
+/* language toggle */
+.lang{display:flex;gap:2px;padding:3px;border-radius:999px;background:#140d1c;box-shadow:inset 0 0 0 1px #2c2238}
+.lang button{border:0;background:transparent;color:#B5B3BC;min-height:34px;min-width:40px;padding:0 10px;border-radius:999px;font-family:var(--display);font-weight:800;font-size:13px;letter-spacing:.04em;cursor:pointer}
+.lang button[aria-pressed="true"]{background:#fff;color:#000}
+.nav-links{align-items:center}
+@media(max-width:430px){.nav-links .more{display:none}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -154,10 +160,14 @@ footer a:hover{color:var(--white)}
 
 <nav class="nav" aria-label="Chính">
   <div class="wrap">
-    <a href="/" aria-label="UNMUTE, về trang chủ"><img src="../assets/logo-horizontal-white.png" alt="UNMUTE"></a>
+    <a href="/" data-i18n-aria="home" aria-label="UNMUTE, về trang chủ"><img src="../assets/logo-horizontal-white.png" alt="UNMUTE"></a>
     <div class="nav-links">
-      <a href="#cach-choi">Cách chơi</a>
-      <a href="/#decks">Bộ bài khác</a>
+      <a href="#cach-choi" data-i18n="navHow">Cách chơi</a>
+      <a href="/#decks" class="more" data-i18n="navMore">Bộ bài khác</a>
+      <div class="lang" role="group" data-i18n-aria="langGroup" aria-label="Ngôn ngữ">
+        <button type="button" data-lang="vi" aria-pressed="true" lang="vi">VI</button>
+        <button type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
     </div>
   </div>
 </nav>
@@ -168,22 +178,22 @@ footer a:hover{color:var(--white)}
     <div>
       <div class="title">
         <svg aria-hidden="true"><use href="#bolt"/></svg>
-        <h1>Chạm Giới Hạn</h1>
+        <h1 data-i18n="h1">Chạm Giới Hạn</h1>
       </div>
-      <p class="promise">Táo bạo. Luôn có đồng thuận.</p>
-      <p class="lede">Câu hỏi thẳng, thử thách bất ngờ cho bạn thân, cặp đôi và những nhóm đã đủ thoải mái với nhau. Truth thì trả lời, Dare thì làm. Không muốn thì bỏ qua.</p>
+      <p class="promise" data-i18n="promise">Táo bạo. Luôn có đồng thuận.</p>
+      <p class="lede" data-i18n="lede">Câu hỏi thẳng, thử thách bất ngờ cho bạn thân, cặp đôi và những nhóm đã đủ thoải mái với nhau. Truth thì trả lời, Dare thì làm. Không muốn thì bỏ qua.</p>
       <div class="facts">
         <span id="factCount">Truth &amp; Dare</span>
-        <span>3 level, nóng dần</span>
-        <span>Bỏ qua không cần lý do</span>
+        <span data-i18n="f2">3 level, nóng dần</span>
+        <span data-i18n="f3">Bỏ qua không cần lý do</span>
       </div>
     </div>
 
     <div class="table">
-      <div class="levels" role="group" aria-label="Chọn level">
-        <button type="button" data-level="1" aria-pressed="true">Level 1<small>Khởi động</small></button>
-        <button type="button" data-level="2" aria-pressed="false">Level 2<small>Nói thẳng</small></button>
-        <button type="button" data-level="3" aria-pressed="false">Level 3<small>Vượt rào</small></button>
+      <div class="levels" role="group" data-i18n-aria="levels" aria-label="Chọn level">
+        <button type="button" data-level="1" aria-pressed="true">Level 1<small data-i18n="lv1">Khởi động</small></button>
+        <button type="button" data-level="2" aria-pressed="false">Level 2<small data-i18n="lv2">Nói thẳng</small></button>
+        <button type="button" data-level="3" aria-pressed="false">Level 3<small data-i18n="lv3">Vượt rào</small></button>
       </div>
 
       <div class="stack">
@@ -191,7 +201,7 @@ footer a:hover{color:var(--white)}
         <div class="card" id="card" role="button" tabindex="0" aria-label="Lật lá bài">
           <div class="face back" aria-hidden="true">
             <svg><use href="#bolt"/></svg>
-            <span class="tap">Chạm để lật</span>
+            <span class="tap" data-i18n="tap">Chạm để lật</span>
           </div>
           <div class="face front truth" id="front">
             <div class="top"><span class="tag" id="cType">Truth</span><span id="cLevel">Level 1</span></div>
@@ -200,37 +210,34 @@ footer a:hover{color:var(--white)}
           </div>
         </div>
 
-        <!-- Trước khi chơi -->
         <div class="panel show" id="pStart">
-          <h2>Trước khi rút lá đầu</h2>
+          <h2 data-i18n="startH">Trước khi rút lá đầu</h2>
           <ul>
-            <li>Bỏ qua bất kỳ lá nào, không cần giải thích.</li>
-            <li>Thoả thuận luật phạt trước, hoặc chơi không phạt.</li>
-            <li>Chỉ kể chuyện của mình, không kể bí mật của người khác.</li>
+            <li data-i18n="s1">Bỏ qua bất kỳ lá nào, không cần giải thích.</li>
+            <li data-i18n="s2">Thoả thuận luật phạt trước, hoặc chơi không phạt.</li>
+            <li data-i18n="s3">Chỉ kể chuyện của mình, không kể bí mật của người khác.</li>
           </ul>
-          <button class="btn btn-white" type="button" id="bStart">Cả bàn đồng ý, bắt đầu</button>
+          <button class="btn btn-white" type="button" id="bStart" data-i18n="bStart">Cả bàn đồng ý, bắt đầu</button>
         </div>
 
-        <!-- Điểm dừng trước Level 3 -->
         <div class="panel" id="pCheck">
-          <h2>Điểm dừng</h2>
-          <p>Level 3 táo bạo hơn. Hỏi nhanh cả bàn: mọi người đều muốn đi tiếp chứ?</p>
-          <p>Chỉ cần một người chưa muốn, cả bàn ở lại Level 2. Không ai phải giải thích.</p>
-          <button class="btn btn-pink" type="button" id="bGo">Cả bàn muốn, vào Level 3</button>
-          <button class="btn btn-ghost" type="button" id="bStay">Ở lại Level 2</button>
+          <h2 data-i18n="checkH">Điểm dừng</h2>
+          <p data-i18n="c1">Level 3 táo bạo hơn. Hỏi nhanh cả bàn: mọi người đều muốn đi tiếp chứ?</p>
+          <p data-i18n="c2">Chỉ cần một người chưa muốn, cả bàn ở lại Level 2. Không ai phải giải thích.</p>
+          <button class="btn btn-pink" type="button" id="bGo" data-i18n="bGo">Cả bàn muốn, vào Level 3</button>
+          <button class="btn btn-ghost" type="button" id="bStay" data-i18n="bStay">Ở lại Level 2</button>
         </div>
 
-        <!-- Hết bài -->
         <div class="panel" id="pEnd">
-          <h2 id="endTitle">Hết lá rồi.</h2>
-          <p id="endText">Bạn đã chơi hết bộ Chạm Giới Hạn.</p>
-          <button class="btn btn-white" type="button" id="bAgain">Xáo bài, chơi lại</button>
-          <a class="btn btn-ghost" href="/#decks">Xem bộ bài khác</a>
+          <h2 data-i18n="endH">Hết lá rồi.</h2>
+          <p data-i18n="endP">Cả bàn đã đi hết ba level của Chạm Giới Hạn.</p>
+          <button class="btn btn-white" type="button" id="bAgain" data-i18n="bAgain">Xáo bài, chơi lại</button>
+          <a class="btn btn-ghost" href="/#decks" data-i18n="endMore">Xem bộ bài khác</a>
         </div>
       </div>
 
       <div class="controls">
-        <button class="btn btn-ghost" type="button" id="bSkip">Bỏ qua</button>
+        <button class="btn btn-ghost" type="button" id="bSkip" data-i18n="skip">Bỏ qua</button>
         <button class="btn btn-white" type="button" id="bNext">Lật lá bài</button>
       </div>
       <p class="note" id="note">Bỏ qua mọi lúc, không cần giải thích.</p>
@@ -240,41 +247,41 @@ footer a:hover{color:var(--white)}
 
 <section class="info" id="ve-bo-bai">
   <div class="wrap">
-    <h2>Về bộ Chạm Giới Hạn</h2>
-    <p class="sub">Một chút căng thẳng, nhiều tiếng cười, và không ai bị ép. Mục tiêu là bất ngờ và gần nhau hơn, không phải làm ai xấu hổ.</p>
+    <h2 data-i18n="aboutH">Về bộ Chạm Giới Hạn</h2>
+    <p class="sub" data-i18n="aboutP">Một chút căng thẳng, nhiều tiếng cười, và không ai bị ép. Mục tiêu là bất ngờ và gần nhau hơn, không phải làm ai xấu hổ.</p>
     <div class="two">
-      <div class="box"><h3>Dành cho</h3><p>Bạn thân, cặp đôi và những nhóm đã đủ thoải mái để thử điều táo bạo hơn.</p></div>
-      <div class="box"><h3>Hợp nhất khi</h3><p>Game night, tiệc tại nhà, chuyến đi cùng bạn bè, hoặc buổi hẹn khi cả hai đã thấy thoải mái.</p></div>
+      <div class="box"><h3 data-i18n="forH">Dành cho</h3><p data-i18n="forP">Bạn thân, cặp đôi và những nhóm đã đủ thoải mái để thử điều táo bạo hơn.</p></div>
+      <div class="box"><h3 data-i18n="whenH">Hợp nhất khi</h3><p data-i18n="whenP">Game night, tiệc tại nhà, chuyến đi cùng bạn bè, hoặc buổi hẹn khi cả hai đã thấy thoải mái.</p></div>
     </div>
   </div>
 </section>
 
 <section class="info" id="cach-choi">
   <div class="wrap">
-    <h2>Cách chơi</h2>
-    <p class="sub">Một điện thoại, đặt giữa bàn.</p>
+    <h2 data-i18n="howH">Cách chơi</h2>
+    <p class="sub" data-i18n="howP">Một điện thoại, đặt giữa bàn.</p>
     <ol class="steps">
-      <li><div><b>Thống nhất trước khi chơi</b><span>Chọn luật phạt khi bỏ qua, hoặc chơi không phạt. Không cần đồ uống có cồn để chơi.</span></div></li>
-      <li><div><b>Lần lượt rút lá và đọc to</b><span>Lá đen<i class="swatch" style="background:#000"></i>là Truth: trả lời thật lòng. Lá tím<i class="swatch" style="background:linear-gradient(135deg,#FF82F3,#7B13FF,#400D64)"></i>là Dare: làm theo thử thách.</span></div></li>
-      <li><div><b>Bỏ qua bất cứ lúc nào</b><span>Không cần giải thích. Thử thách liên quan đến người khác chỉ làm khi người đó cũng đồng ý.</span></div></li>
+      <li><div><b data-i18n="st1b">Thống nhất trước khi chơi</b><span data-i18n="st1">Chọn luật phạt khi bỏ qua, hoặc chơi không phạt. Không cần đồ uống có cồn để chơi.</span></div></li>
+      <li><div><b data-i18n="st2b">Lần lượt rút lá và đọc to</b><span data-i18n-sw="st2">Lá đen<i class="swatch" style="background:#000"></i>là Truth: trả lời thật lòng. Lá tím<i class="swatch" style="background:linear-gradient(135deg,#FF82F3,#7B13FF,#400D64)"></i>là Dare: làm theo thử thách.</span></div></li>
+      <li><div><b data-i18n="st3b">Bỏ qua bất cứ lúc nào</b><span data-i18n="st3">Không cần giải thích. Thử thách liên quan đến người khác chỉ làm khi người đó cũng đồng ý.</span></div></li>
     </ol>
     <div class="lv">
-      <div class="box"><b>Level 1</b><h3>Khởi động</h3><p>Câu hỏi hơi “lầy” và thử thách vui để cả bàn vào guồng.</p></div>
-      <div class="box"><b>Level 2</b><h3>Nói thẳng</h3><p>Những câu bình thường ngại hỏi, và thử thách đòi một chút can đảm.</p></div>
-      <div class="box"><b>Level 3</b><h3>Vượt rào</h3><p>Táo bạo nhất bộ. Có điểm dừng để cả bàn hỏi ý nhau trước khi vào.</p></div>
+      <div class="box"><b>Level 1</b><h3 data-i18n="lv1">Khởi động</h3><p data-i18n="l1p">Câu hỏi hơi “lầy” và thử thách vui để cả bàn vào guồng.</p></div>
+      <div class="box"><b>Level 2</b><h3 data-i18n="lv2">Nói thẳng</h3><p data-i18n="l2p">Những câu bình thường ngại hỏi, và thử thách đòi một chút can đảm.</p></div>
+      <div class="box"><b>Level 3</b><h3 data-i18n="lv3">Vượt rào</h3><p data-i18n="l3p">Táo bạo nhất bộ. Có điểm dừng để cả bàn hỏi ý nhau trước khi vào.</p></div>
     </div>
   </div>
 </section>
 
 <section class="info">
   <div class="wrap">
-    <h2>Luật của bộ này</h2>
-    <p class="sub">Táo bạo chỉ vui khi ai cũng thấy an toàn.</p>
+    <h2 data-i18n="rulesH">Luật của bộ này</h2>
+    <p class="sub" data-i18n="rulesP">Táo bạo chỉ vui khi ai cũng thấy an toàn.</p>
     <div class="rules">
-      <div><h3>Từ chối là bình thường</h3><p>Bỏ qua bất kỳ câu hỏi hay thử thách nào, không cần lý do, không ai hỏi lại.</p></div>
-      <div><h3>Chạm thì phải hỏi</h3><p>Không lá nào bắt buộc tiếp xúc cơ thể. Thử thách có người khác chỉ làm khi họ cũng muốn.</p></div>
-      <div><h3>Bí mật của ai người nấy giữ</h3><p>Chỉ kể chuyện của chính bạn. Không lôi chuyện riêng của người vắng mặt ra bàn.</p></div>
-      <div><h3>Không mạo hiểm thật</h3><p>Không thử thách nào cần làm điều nguy hiểm, phạm luật hay uống thêm rượu bia.</p></div>
+      <div><h3 data-i18n="r1h">Từ chối là bình thường</h3><p data-i18n="r1p">Bỏ qua bất kỳ câu hỏi hay thử thách nào, không cần lý do, không ai hỏi lại.</p></div>
+      <div><h3 data-i18n="r2h">Chạm thì phải hỏi</h3><p data-i18n="r2p">Không lá nào bắt buộc tiếp xúc cơ thể. Thử thách có người khác chỉ làm khi họ cũng muốn.</p></div>
+      <div><h3 data-i18n="r3h">Bí mật của ai người nấy giữ</h3><p data-i18n="r3p">Chỉ kể chuyện của chính bạn. Không lôi chuyện riêng của người vắng mặt ra bàn.</p></div>
+      <div><h3 data-i18n="r4h">Không mạo hiểm thật</h3><p data-i18n="r4p">Không thử thách nào cần làm điều nguy hiểm, phạm luật hay uống thêm rượu bia.</p></div>
     </div>
   </div>
 </section>
@@ -282,130 +289,317 @@ footer a:hover{color:var(--white)}
 
 <footer>
   <div class="wrap">
-    <a href="/" aria-label="UNMUTE, về trang chủ"><img src="../assets/logo-horizontal-white.png" alt="UNMUTE"></a>
-    <nav aria-label="Chân trang"><a href="/">Trang chủ</a><a href="/#decks">Các bộ bài</a><a href="/#faq">Hỏi đáp</a></nav>
-    <span>© 2026 UNMUTE · Bớt khách sáo. Chân thành hơn.</span>
+    <a href="/" data-i18n-aria="home" aria-label="UNMUTE, về trang chủ"><img src="../assets/logo-horizontal-white.png" alt="UNMUTE"></a>
+    <nav aria-label="Footer"><a href="/" data-i18n="fHome">Trang chủ</a><a href="/#decks" data-i18n="fDecks">Các bộ bài</a><a href="/#faq" data-i18n="fFaq">Hỏi đáp</a></nav>
+    <span data-i18n="fCopy">© 2026 UNMUTE · Bớt khách sáo. Chân thành hơn.</span>
   </div>
 </footer>
 
 <script>
 (function(){
   /* =====================================================================
-     NỘI DUNG BỘ BÀI — BẢN NHÁP
-     Theo master doc: đọc to, chỉnh sửa và duyệt từng lá trước khi phát hành.
-     t: 'T' = Truth, 'D' = Dare. Thêm/xoá lá chỉ cần sửa các mảng dưới đây.
+     NỘI DUNG BỘ BÀI (song ngữ) — mỗi lá có vi và en.
+     t: 'T' = Truth, 'D' = Dare.
      ===================================================================== */
   var DECK = {
     1: [
-      {t:'T', q:'Lời nói dối trơn tru nhất bạn từng dùng để thoát một buổi hẹn là gì?'},
-      {t:'T', q:'Bạn đang thích thầm ai đó không? Cho cả bàn một gợi ý: chữ cái đầu tên họ.'},
-      {t:'T', q:'Nếu trên người bạn có dán nhãn cảnh báo, nó sẽ ghi gì?'},
-      {t:'T', q:'Tin nhắn gần nhất bạn gõ xong rồi xoá, không dám gửi, là gì?'},
-      {t:'T', q:'Lần gần nhất bạn làm điều gì đó ngớ ngẩn chỉ để gây ấn tượng với ai là khi nào?'},
-      {t:'T', q:'Crush nào trong quá khứ mà giờ nghĩ lại bạn chỉ muốn độn thổ?'},
-      {t:'T', q:'Bạn từng “đào” mạng xã hội của ai sâu nhất? Lướt ngược về tận năm nào?'},
-      {t:'T', q:'Nếu cả bàn thi tán tỉnh, bạn nghĩ ai sẽ thắng? Ai về chót?'},
-      {t:'T', q:'Nếu được xem trộm điện thoại của một người trong bàn 5 phút, bạn chọn ai? Vì sao?'},
-      {t:'T', q:'Lời khen nào từng làm bạn đỏ mặt nhất?'},
-      {t:'D', q:'Khen người bên trái một câu thật lòng, nhìn thẳng vào mắt họ khi nói.'},
-      {t:'D', q:'Đọc to tin nhắn gần nhất bạn đã gửi, nếu bạn thấy ổn. Không thì kể nó nói về chuyện gì.'},
-      {t:'D', q:'Để người bên phải đặt cho bạn một biệt danh. Cả bàn gọi bạn bằng tên đó đến hết game.'},
-      {t:'D', q:'Diễn lại cách bạn tán tỉnh một người trong 15 giây. Cả bàn chấm điểm từ 1 đến 10.'},
-      {t:'D', q:'Đọc “hồ sơ hẹn hò” của bạn trong 20 giây, thật tự tin, không được cười.'},
-      {t:'D', q:'Gửi một emoji vẫy tay cho người bạn nhắn gần nhất, không giải thích gì thêm.'},
-      {t:'D', q:'Lướt album ảnh 7 ngày gần đây, cho cả bàn xem tấm “lầy” nhất mà bạn sẵn lòng chia sẻ.'},
-      {t:'D', q:'Nhìn vào mắt người đối diện 20 giây mà không được cười.'},
-      {t:'D', q:'Đổi chỗ, ngồi cạnh người bạn thấy thú vị nhất tối nay. Nói lý do trong một câu.'},
-      {t:'D', q:'Để cả bàn đoán emoji bạn dùng nhiều nhất. Mở bàn phím ra cho mọi người kiểm chứng.'}
+      {t:'T', vi:"Lời nói dối trơn tru nhất bạn từng dùng để thoát một buổi hẹn là gì?", en:"What’s the smoothest lie you’ve ever used to get out of a date?"},
+      {t:'T', vi:"Bạn đang thích thầm ai đó không? Cho cả bàn một gợi ý: chữ cái đầu tên họ.", en:"Secretly crushing on someone right now? Give the table a hint: the first letter of their name."},
+      {t:'T', vi:"Nếu trên người bạn có dán nhãn cảnh báo, nó sẽ ghi gì?", en:"If you came with a warning label, what would it say?"},
+      {t:'T', vi:"Tin nhắn gần nhất bạn gõ xong rồi xoá, không dám gửi, là gì?", en:"What’s the last message you typed, then deleted because you didn’t dare send it?"},
+      {t:'T', vi:"Lần gần nhất bạn làm điều gì đó ngớ ngẩn chỉ để gây ấn tượng với ai là khi nào?", en:"When was the last time you did something ridiculous just to impress someone?"},
+      {t:'T', vi:"Crush nào trong quá khứ mà giờ nghĩ lại bạn chỉ muốn độn thổ?", en:"Which past crush makes you want to crawl under a rock now?"},
+      {t:'T', vi:"Bạn từng “đào” mạng xã hội của ai sâu nhất? Lướt ngược về tận năm nào?", en:"Whose social media have you stalked the deepest? How many years back did you scroll?"},
+      {t:'T', vi:"Nếu cả bàn thi tán tỉnh, bạn nghĩ ai sẽ thắng? Ai về chót?", en:"If this table had a flirting contest, who wins? Who comes last?"},
+      {t:'T', vi:"Nếu được xem trộm điện thoại của một người trong bàn 5 phút, bạn chọn ai? Vì sao?", en:"If you could secretly look through someone’s phone at this table for 5 minutes, whose would it be? Why?"},
+      {t:'T', vi:"Lời khen nào từng làm bạn đỏ mặt nhất?", en:"What compliment made you blush the hardest?"},
+      {t:'D', vi:"Khen người bên trái một câu thật lòng, nhìn thẳng vào mắt họ khi nói.", en:"Give the person on your left one honest compliment, looking them in the eye."},
+      {t:'D', vi:"Đọc to tin nhắn gần nhất bạn đã gửi, nếu bạn thấy ổn. Không thì kể nó nói về chuyện gì.", en:"Read your last sent message out loud if you’re okay with it. If not, tell us what it was about."},
+      {t:'D', vi:"Để người bên phải đặt cho bạn một biệt danh. Cả bàn gọi bạn bằng tên đó đến hết game.", en:"Let the person on your right give you a nickname. Everyone calls you that for the rest of the game."},
+      {t:'D', vi:"Diễn lại cách bạn tán tỉnh một người trong 15 giây. Cả bàn chấm điểm từ 1 đến 10.", en:"Act out how you flirt with someone, for 15 seconds. The table scores you from 1 to 10."},
+      {t:'D', vi:"Đọc “hồ sơ hẹn hò” của bạn trong 20 giây, thật tự tin, không được cười.", en:"Read your “dating profile” out loud for 20 seconds. Full confidence, no laughing."},
+      {t:'D', vi:"Gửi một emoji vẫy tay cho người bạn nhắn gần nhất, không giải thích gì thêm.", en:"Send a waving-hand emoji to the last person you texted. No explanation."},
+      {t:'D', vi:"Lướt album ảnh 7 ngày gần đây, cho cả bàn xem tấm “lầy” nhất mà bạn sẵn lòng chia sẻ.", en:"Scroll your last 7 days of photos and show the table the silliest one you’re happy to share."},
+      {t:'D', vi:"Nhìn vào mắt người đối diện 20 giây mà không được cười.", en:"Hold eye contact with the person across from you for 20 seconds without laughing."},
+      {t:'D', vi:"Đổi chỗ, ngồi cạnh người bạn thấy thú vị nhất tối nay. Nói lý do trong một câu.", en:"Swap seats to sit next to the most interesting person tonight. Say why in one sentence."},
+      {t:'D', vi:"Để cả bàn đoán emoji bạn dùng nhiều nhất. Mở bàn phím ra cho mọi người kiểm chứng.", en:"Let the table guess your most-used emoji. Open your keyboard to prove it."}
     ],
     2: [
-      {t:'T', q:'Nếu người yêu cũ được hỏi về bạn, điều đầu tiên họ sẽ kể là gì?'},
-      {t:'T', q:'Lần gần nhất bạn ghen là vì ai, và vì chuyện gì?'},
-      {t:'T', q:'Bạn đã từng thích người yêu của bạn thân chưa? Kể thật đi.'},
-      {t:'T', q:'Một điều bạn đã làm mà tới giờ vẫn chưa dám kể với gia đình?'},
-      {t:'T', q:'Ấn tượng đầu tiên thật sự của bạn về người bên phải là gì? Không được nói giảm.'},
-      {t:'T', q:'Điều gì ở bản thân bạn hay giấu kỹ nhất trước người mới quen?'},
-      {t:'T', q:'Bạn từng nhắn cho người cũ lúc nửa đêm chưa? Kết quả ra sao?'},
-      {t:'T', q:'Red flag nào của bạn mà bạn biết rõ nhưng chưa định sửa?'},
-      {t:'T', q:'Nếu cần giúp lúc 3 giờ sáng, bạn gọi ai trong bàn này đầu tiên? Vì sao?'},
-      {t:'T', q:'Điều bạn thích ở một người trong bàn nhưng chưa từng dám nói thẳng?'},
-      {t:'D', q:'Nói với một người trong bàn điều bạn chưa bao giờ dám nói với họ.'},
-      {t:'D', q:'Cả bàn hỏi bạn ba câu liên tiếp. Mỗi câu trả lời trong 3 giây, được bỏ qua tối đa một câu.'},
-      {t:'D', q:'Kể chuyện hẹn hò xấu hổ nhất của bạn. Chỉ kể chuyện của chính bạn.'},
-      {t:'D', q:'Kể cho cả bàn biết người bạn nhắn tin nhiều nhất tuần này là ai.'},
-      {t:'D', q:'Gọi cho một người bạn ngoài bàn, nói “Tự nhiên mình muốn nói là mình quý bạn ghê” rồi cúp máy.'},
-      {t:'D', q:'Trong 30 giây, thuyết phục cả bàn rằng bạn là người tán tỉnh giỏi nhất ở đây.'},
-      {t:'D', q:'Để người bên trái soạn một tin nhắn dễ thương, bạn chọn gửi cho ai trong danh bạ. Không muốn thì kể crush gần nhất.'},
-      {t:'D', q:'Gọi tên người trong bàn mà bạn muốn thân hơn, và nói vì sao ngay trước mặt họ.'}
+      {t:'T', vi:"Nếu người yêu cũ được hỏi về bạn, điều đầu tiên họ sẽ kể là gì?", en:"If your ex were asked about you, what’s the first thing they’d say?"},
+      {t:'T', vi:"Lần gần nhất bạn ghen là vì ai, và vì chuyện gì?", en:"Who made you jealous most recently, and over what?"},
+      {t:'T', vi:"Bạn đã từng thích người yêu của bạn thân chưa? Kể thật đi.", en:"Have you ever had feelings for your best friend’s partner? Be honest."},
+      {t:'T', vi:"Một điều bạn đã làm mà tới giờ vẫn chưa dám kể với gia đình?", en:"What’s something you’ve done that you still haven’t told your family?"},
+      {t:'T', vi:"Ấn tượng đầu tiên thật sự của bạn về người bên phải là gì? Không được nói giảm.", en:"What was your real first impression of the person on your right? No sugar-coating."},
+      {t:'T', vi:"Điều gì ở bản thân bạn hay giấu kỹ nhất trước người mới quen?", en:"What do you hide hardest from people you’ve just met?"},
+      {t:'T', vi:"Bạn từng nhắn cho người cũ lúc nửa đêm chưa? Kết quả ra sao?", en:"Ever texted an ex in the middle of the night? How did it go?"},
+      {t:'T', vi:"Red flag nào của bạn mà bạn biết rõ nhưng chưa định sửa?", en:"Which red flag of yours do you know about but don’t plan to fix?"},
+      {t:'T', vi:"Nếu cần giúp lúc 3 giờ sáng, bạn gọi ai trong bàn này đầu tiên? Vì sao?", en:"If you needed help at 3 a.m., who at this table would you call first? Why?"},
+      {t:'T', vi:"Điều bạn thích ở một người trong bàn nhưng chưa từng dám nói thẳng?", en:"What do you like about someone here that you’ve never said to their face?"},
+      {t:'D', vi:"Nói với một người trong bàn điều bạn chưa bao giờ dám nói với họ.", en:"Tell someone at the table something you’ve never dared to say to them."},
+      {t:'D', vi:"Cả bàn hỏi bạn ba câu liên tiếp. Mỗi câu trả lời trong 3 giây, được bỏ qua tối đa một câu.", en:"The table asks you three questions in a row. Three seconds to answer each, and you can skip only one."},
+      {t:'D', vi:"Kể chuyện hẹn hò xấu hổ nhất của bạn. Chỉ kể chuyện của chính bạn.", en:"Tell your most embarrassing dating story. Only your own story."},
+      {t:'D', vi:"Kể cho cả bàn biết người bạn nhắn tin nhiều nhất tuần này là ai.", en:"Tell the table who you’ve texted the most this week."},
+      {t:'D', vi:"Gọi cho một người bạn ngoài bàn, nói “Tự nhiên mình muốn nói là mình quý bạn ghê” rồi cúp máy.", en:"Call a friend who isn’t here, say “Random, but I just want you to know I really like you,” then hang up."},
+      {t:'D', vi:"Trong 30 giây, thuyết phục cả bàn rằng bạn là người tán tỉnh giỏi nhất ở đây.", en:"In 30 seconds, convince the table you’re the best flirt here."},
+      {t:'D', vi:"Để người bên trái soạn một tin nhắn dễ thương, bạn chọn gửi cho ai trong danh bạ. Không muốn thì kể crush gần nhất.", en:"Let the person on your left write a sweet message, then you choose who in your contacts gets it. Don’t want to? Tell us about your latest crush instead."},
+      {t:'D', vi:"Gọi tên người trong bàn mà bạn muốn thân hơn, và nói vì sao ngay trước mặt họ.", en:"Name the person here you’d like to get closer to, and say why, right in front of them."}
     ],
     3: [
-      {t:'T', q:'Ai trong bàn này bạn thấy hấp dẫn nhất? Không được trả lời “ai cũng đẹp”.'},
-      {t:'T', q:'Lần gần nhất bạn biết mình sai mà vẫn cãi tới cùng là khi nào?'},
-      {t:'T', q:'Bạn từng thích một người bạn thân chưa? Người đó có biết không?'},
-      {t:'T', q:'Một bí mật của chính bạn mà chưa ai trong bàn biết, và tối nay bạn sẵn lòng kể?'},
-      {t:'T', q:'Kiểu người nào có thể khiến bạn mất hết lý trí?'},
-      {t:'T', q:'Điều táo bạo nhất bạn từng làm vì một người là gì?'},
-      {t:'T', q:'Nỗi sợ nào trong chuyện tình cảm mà bạn chưa từng nói ra?'},
-      {t:'T', q:'Giả sử ai cũng độc thân: bạn chọn hẹn hò một ngày với ai trong bàn, và đưa họ đi đâu?'},
-      {t:'D', q:'Nói với một người trong bàn điều bạn thấy cuốn hút nhất ở họ, nhìn thẳng vào mắt họ.'},
-      {t:'D', q:'Thì thầm vào tai người bên cạnh một lời khen, nếu họ đồng ý. Không thì nói to cho cả bàn nghe.'},
-      {t:'D', q:'Cả bàn chọn cho bạn một thử thách nhỏ. Bạn chỉ được đổi một lần.'},
-      {t:'D', q:'Nắm tay người bạn chọn đến hết hai lượt, nếu cả hai cùng muốn. Không thì đập tay thật kêu.'},
-      {t:'D', q:'Nhắn “Hi” cho người cũ hoặc crush, nếu bạn muốn. Không thì kể lần cuối hai người nói chuyện.'},
-      {t:'D', q:'Kể lần liều nhất bạn từng làm vì tình. Cả bàn chấm điểm từ 1 đến 10.'},
-      {t:'D', q:'Chọn một người. Cả hai nói cùng lúc: điều gì ở người kia làm mình bất ngờ nhất tối nay?'},
-      {t:'D', q:'Đọc to 3 mục gần nhất trong lịch sử tìm kiếm của bạn. Dám thì cho cả bàn tự xem.'}
+      {t:'T', vi:"Ai trong bàn này bạn thấy hấp dẫn nhất? Không được trả lời “ai cũng đẹp”.", en:"Who at this table do you find the most attractive? “Everyone” doesn’t count."},
+      {t:'T', vi:"Lần gần nhất bạn biết mình sai mà vẫn cãi tới cùng là khi nào?", en:"When did you last know you were wrong but keep arguing anyway?"},
+      {t:'T', vi:"Bạn từng thích một người bạn thân chưa? Người đó có biết không?", en:"Have you ever had a crush on a close friend? Do they know?"},
+      {t:'T', vi:"Một bí mật của chính bạn mà chưa ai trong bàn biết, và tối nay bạn sẵn lòng kể?", en:"What’s a secret of your own that no one here knows, and you’re willing to share tonight?"},
+      {t:'T', vi:"Kiểu người nào có thể khiến bạn mất hết lý trí?", en:"What kind of person makes you lose all common sense?"},
+      {t:'T', vi:"Điều táo bạo nhất bạn từng làm vì một người là gì?", en:"What’s the boldest thing you’ve ever done for someone?"},
+      {t:'T', vi:"Nỗi sợ nào trong chuyện tình cảm mà bạn chưa từng nói ra?", en:"What’s a fear about love you’ve never said out loud?"},
+      {t:'T', vi:"Giả sử ai cũng độc thân: bạn chọn hẹn hò một ngày với ai trong bàn, và đưa họ đi đâu?", en:"Say everyone’s single: who here would you take on a one-day date, and where would you go?"},
+      {t:'D', vi:"Nói với một người trong bàn điều bạn thấy cuốn hút nhất ở họ, nhìn thẳng vào mắt họ.", en:"Tell someone here what you find most attractive about them, looking them in the eye."},
+      {t:'D', vi:"Thì thầm vào tai người bên cạnh một lời khen, nếu họ đồng ý. Không thì nói to cho cả bàn nghe.", en:"Whisper a compliment in the ear of the person next to you, if they’re okay with it. If not, say it out loud to everyone."},
+      {t:'D', vi:"Cả bàn chọn cho bạn một thử thách nhỏ. Bạn chỉ được đổi một lần.", en:"The table picks a small dare for you. You can swap it only once."},
+      {t:'D', vi:"Nắm tay người bạn chọn đến hết hai lượt, nếu cả hai cùng muốn. Không thì đập tay thật kêu.", en:"Hold hands with someone you choose for the next two turns, if you both want to. If not, a loud high five."},
+      {t:'D', vi:"Nhắn “Hi” cho người cũ hoặc crush, nếu bạn muốn. Không thì kể lần cuối hai người nói chuyện.", en:"Text “Hi” to an ex or a crush, if you want to. If not, tell us about the last time you two talked."},
+      {t:'D', vi:"Kể lần liều nhất bạn từng làm vì tình. Cả bàn chấm điểm từ 1 đến 10.", en:"Tell us the riskiest thing you’ve ever done for love. The table scores it from 1 to 10."},
+      {t:'D', vi:"Chọn một người. Cả hai nói cùng lúc: điều gì ở người kia làm mình bất ngờ nhất tối nay?", en:"Pick someone. Both answer at the same time: what surprised you most about the other person tonight?"},
+      {t:'D', vi:"Đọc to 3 mục gần nhất trong lịch sử tìm kiếm của bạn. Dám thì cho cả bàn tự xem.", en:"Read your last 3 search history entries out loud. Brave enough? Let the table look themselves."}
     ]
   };
 
-  /* ---------- Analytics (không gửi nội dung câu hỏi) ---------- */
+  /* Chữ trên giao diện, theo ngôn ngữ */
+  var STR = {
+"vi": {
+"title": "Chạm Giới Hạn — Táo bạo, luôn có đồng thuận | UNMUTE",
+"desc": "Chạm Giới Hạn là bộ Truth và Dare táo bạo cho bạn thân, cặp đôi và nhóm đã thoải mái với nhau. Bỏ qua bất cứ lúc nào. Chơi ngay trên điện thoại, không cần tài khoản.",
+"home": "UNMUTE, về trang chủ",
+"navHow": "Cách chơi",
+"navMore": "Bộ bài khác",
+"langGroup": "Ngôn ngữ",
+"h1": "Chạm Giới Hạn",
+"promise": "Táo bạo. Luôn có đồng thuận.",
+"lede": "Câu hỏi thẳng, thử thách bất ngờ cho bạn thân, cặp đôi và những nhóm đã đủ thoải mái với nhau. Truth thì trả lời, Dare thì làm. Không muốn thì bỏ qua.",
+"count": "{n} lá Truth & Dare",
+"f2": "3 level, nóng dần",
+"f3": "Bỏ qua không cần lý do",
+"levels": "Chọn level",
+"lv1": "Khởi động",
+"lv2": "Nói thẳng",
+"lv3": "Vượt rào",
+"tap": "Chạm để lật",
+"startH": "Trước khi rút lá đầu",
+"s1": "Bỏ qua bất kỳ lá nào, không cần giải thích.",
+"s2": "Thoả thuận luật phạt trước, hoặc chơi không phạt.",
+"s3": "Chỉ kể chuyện của mình, không kể bí mật của người khác.",
+"bStart": "Cả bàn đồng ý, bắt đầu",
+"checkH": "Điểm dừng",
+"c1": "Level 3 táo bạo hơn. Hỏi nhanh cả bàn: mọi người đều muốn đi tiếp chứ?",
+"c2": "Chỉ cần một người chưa muốn, cả bàn ở lại Level 2. Không ai phải giải thích.",
+"bGo": "Cả bàn muốn, vào Level 3",
+"bStay": "Ở lại Level 2",
+"endH": "Hết lá rồi.",
+"endP": "Cả bàn đã đi hết ba level của Chạm Giới Hạn.",
+"bAgain": "Xáo bài, chơi lại",
+"endMore": "Xem bộ bài khác",
+"skip": "Bỏ qua",
+"flip": "Lật lá bài",
+"next": "Rút lá tiếp",
+"ariaFlip": "Lật lá bài",
+"ariaFlipped": "Lá bài đã lật, chạm để rút lá tiếp",
+"nInit": "Bỏ qua mọi lúc, không cần giải thích.",
+"nDare": "Dare: làm nếu bạn muốn. Có người khác thì hỏi họ trước.",
+"nTruth": "Truth: trả lời theo cách của bạn.",
+"nSkipped": "Đã bỏ qua. Không cần lý do.",
+"nReady": "Lá tiếp theo đã sẵn sàng.",
+"nL1": "Xong Level 1. Chuyển sang Level 2: Nói thẳng.",
+"nAt": "Đang ở Level {n}.",
+"nStart": "Chạm vào lá bài để lật.",
+"nGo": "Level 3: Vượt rào. Vẫn bỏ qua được mọi lúc.",
+"nStay": "Ở lại Level 2. Bài đã được xáo lại.",
+"nAgain": "Đã xáo bài. Chạm vào lá bài để lật.",
+"aboutH": "Về bộ Chạm Giới Hạn",
+"aboutP": "Một chút căng thẳng, nhiều tiếng cười, và không ai bị ép. Mục tiêu là bất ngờ và gần nhau hơn, không phải làm ai xấu hổ.",
+"forH": "Dành cho",
+"forP": "Bạn thân, cặp đôi và những nhóm đã đủ thoải mái để thử điều táo bạo hơn.",
+"whenH": "Hợp nhất khi",
+"whenP": "Game night, tiệc tại nhà, chuyến đi cùng bạn bè, hoặc buổi hẹn khi cả hai đã thấy thoải mái.",
+"howH": "Cách chơi",
+"howP": "Một điện thoại, đặt giữa bàn.",
+"st1b": "Thống nhất trước khi chơi",
+"st1": "Chọn luật phạt khi bỏ qua, hoặc chơi không phạt. Không cần đồ uống có cồn để chơi.",
+"st2b": "Lần lượt rút lá và đọc to",
+"st2": "Lá đen{sw1}là Truth: trả lời thật lòng. Lá tím{sw2}là Dare: làm theo thử thách.",
+"st3b": "Bỏ qua bất cứ lúc nào",
+"st3": "Không cần giải thích. Thử thách liên quan đến người khác chỉ làm khi người đó cũng đồng ý.",
+"l1p": "Câu hỏi hơi “lầy” và thử thách vui để cả bàn vào guồng.",
+"l2p": "Những câu bình thường ngại hỏi, và thử thách đòi một chút can đảm.",
+"l3p": "Táo bạo nhất bộ. Có điểm dừng để cả bàn hỏi ý nhau trước khi vào.",
+"rulesH": "Luật của bộ này",
+"rulesP": "Táo bạo chỉ vui khi ai cũng thấy an toàn.",
+"r1h": "Từ chối là bình thường",
+"r1p": "Bỏ qua bất kỳ câu hỏi hay thử thách nào, không cần lý do, không ai hỏi lại.",
+"r2h": "Chạm thì phải hỏi",
+"r2p": "Không lá nào bắt buộc tiếp xúc cơ thể. Thử thách có người khác chỉ làm khi họ cũng muốn.",
+"r3h": "Bí mật của ai người nấy giữ",
+"r3p": "Chỉ kể chuyện của chính bạn. Không lôi chuyện riêng của người vắng mặt ra bàn.",
+"r4h": "Không mạo hiểm thật",
+"r4p": "Không thử thách nào cần làm điều nguy hiểm, phạm luật hay uống thêm rượu bia.",
+"fHome": "Trang chủ",
+"fDecks": "Các bộ bài",
+"fFaq": "Hỏi đáp",
+"fCopy": "© 2026 UNMUTE · Bớt khách sáo. Chân thành hơn."
+},
+"en": {
+"title": "Push the Line (Chạm Giới Hạn) — Bold, always with consent | UNMUTE",
+"desc": "Push the Line is a bold Truth or Dare deck for close friends, couples and groups who are comfortable together. Skip anytime. Play on your phone, no account needed.",
+"home": "UNMUTE, back to home",
+"navHow": "How to play",
+"navMore": "Other decks",
+"langGroup": "Language",
+"h1": "Push the Line",
+"promise": "Bold. Always with consent.",
+"lede": "Straight-up questions and surprise dares for close friends, couples and groups who are already comfortable together. Truth: answer it. Dare: do it. Not feeling it? Skip.",
+"count": "{n} Truth & Dare cards",
+"f2": "3 levels, getting hotter",
+"f3": "Skip, no reason needed",
+"levels": "Choose a level",
+"lv1": "Warm-up",
+"lv2": "Real talk",
+"lv3": "Cross the line",
+"tap": "Tap to flip",
+"startH": "Before the first card",
+"s1": "Skip any card, no explanation needed.",
+"s2": "Agree on penalties first, or play without them.",
+"s3": "Only share your own stories, never someone else’s secrets.",
+"bStart": "Everyone’s in, let’s go",
+"checkH": "Check-in",
+"c1": "Level 3 gets bolder. Quick check with the table: does everyone want to keep going?",
+"c2": "If even one person isn’t ready, the table stays on Level 2. No one has to explain why.",
+"bGo": "Everyone’s in, go to Level 3",
+"bStay": "Stay on Level 2",
+"endH": "That’s the deck.",
+"endP": "Your table made it through all three levels of Push the Line.",
+"bAgain": "Shuffle and play again",
+"endMore": "See other decks",
+"skip": "Skip",
+"flip": "Flip card",
+"next": "Next card",
+"ariaFlip": "Flip card",
+"ariaFlipped": "Card flipped, tap for the next card",
+"nInit": "Skip anytime, no explanation needed.",
+"nDare": "Dare: do it if you want. If it involves someone else, ask them first.",
+"nTruth": "Truth: answer your way.",
+"nSkipped": "Skipped. No reason needed.",
+"nReady": "Next card is ready.",
+"nL1": "Level 1 done. On to Level 2: Real talk.",
+"nAt": "Now on Level {n}.",
+"nStart": "Tap the card to flip it.",
+"nGo": "Level 3: Cross the line. You can still skip anytime.",
+"nStay": "Staying on Level 2. Cards reshuffled.",
+"nAgain": "Shuffled. Tap the card to flip it.",
+"aboutH": "About Push the Line",
+"aboutP": "A little tension, lots of laughs, and no one gets pushed. The goal is surprise and getting closer, not embarrassing anyone.",
+"forH": "Made for",
+"forP": "Close friends, couples and groups comfortable enough to try something bolder.",
+"whenH": "Best for",
+"whenP": "Game nights, house parties, trips with friends, or a date once you’re both at ease.",
+"howH": "How to play",
+"howP": "One phone, in the middle of the table.",
+"st1b": "Agree before you start",
+"st1": "Pick a penalty for skipping, or play with none. No alcohol needed.",
+"st2b": "Take turns drawing and reading aloud",
+"st2": "Black cards{sw1}are Truth: answer honestly. Purple cards{sw2}are Dare: do the challenge.",
+"st3b": "Skip anytime",
+"st3": "No explanation needed. Dares involving someone else only happen if they agree too.",
+"l1p": "Cheeky questions and fun dares to get the table going.",
+"l2p": "The questions people usually avoid, and dares that take a bit of nerve.",
+"l3p": "The boldest in the deck, with a check-in so the table agrees before going in.",
+"rulesH": "House rules",
+"rulesP": "Bold is only fun when everyone feels safe.",
+"r1h": "Saying no is normal",
+"r1p": "Skip any question or dare. No reason needed, no one asks again.",
+"r2h": "Ask before you touch",
+"r2p": "No card requires physical contact. Dares with others only happen if they want to.",
+"r3h": "Your secrets, not theirs",
+"r3p": "Only tell your own stories. Leave people who aren’t here out of it.",
+"r4h": "No real risks",
+"r4p": "No dare asks for anything dangerous, illegal, or another drink.",
+"fHome": "Home",
+"fDecks": "All decks",
+"fFaq": "FAQ",
+"fCopy": "© 2026 UNMUTE · Less small talk. More human."
+}
+};
+  var SW = {sw1:'<i class="swatch" style="background:#000"></i>', sw2:'<i class="swatch" style="background:linear-gradient(135deg,#FF82F3,#7B13FF,#400D64)"></i>'};
+
   function track(name, props){
-    try{ window.dataLayer = window.dataLayer || []; window.dataLayer.push(Object.assign({event:name, deck:'cham-gioi-han'}, props||{})); }catch(e){}
+    try{ window.dataLayer = window.dataLayer || []; window.dataLayer.push(Object.assign({event:name, deck:'cham-gioi-han', lang:LANG}, props||{})); }catch(e){}
   }
 
-  var $ = function(id){ return document.getElementById(id); };
+  /* ---------- Ngôn ngữ ---------- */
+  var LANG='vi';
+  try{
+    var h=(location.hash||'').toLowerCase();
+    if(h==='#en'||h==='#vi') LANG=h.slice(1);
+    else { var saved=localStorage.getItem('unmute-lang'); if(saved==='en'||saved==='vi') LANG=saved; }
+  }catch(e){}
+  function L(k, vars){ var v=(STR[LANG]&&STR[LANG][k])||STR.vi[k]||''; if(vars) Object.keys(vars).forEach(function(n){ v=v.split('{'+n+'}').join(vars[n]); }); return v; }
+
+  var $=function(id){ return document.getElementById(id); };
   var card=$('card'), front=$('front'), cType=$('cType'), cLevel=$('cLevel'), cText=$('cText'), cCount=$('cCount'),
-      bNext=$('bNext'), bSkip=$('bSkip'), note=$('note'),
-      pStart=$('pStart'), pCheck=$('pCheck'), pEnd=$('pEnd');
-  var tabs = document.querySelectorAll('.levels button');
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var total = DECK[1].length + DECK[2].length + DECK[3].length;
-  $('factCount').textContent = total + ' lá Truth & Dare';
+      bNext=$('bNext'), bSkip=$('bSkip'), note=$('note'), pStart=$('pStart'), pCheck=$('pCheck'), pEnd=$('pEnd');
+  var tabs=document.querySelectorAll('.levels button');
+  var langBtns=document.querySelectorAll('.lang button');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var TOTAL=DECK[1].length+DECK[2].length+DECK[3].length;
 
+  var S={ level:1, pile:[], i:0, flipped:false, busy:false, unlocked3:false, started:false, note:{k:'nInit'} };
+  function setNote(k, vars){ S.note={k:k, v:vars}; note.textContent = k ? L(k, vars) : ''; }
+  function setBtn(){ bNext.textContent = S.flipped ? L('next') : L('flip'); card.setAttribute('aria-label', S.flipped ? L('ariaFlipped') : L('ariaFlip')); }
+
+  function applyLang(){
+    document.documentElement.lang = LANG;
+    document.title = L('title');
+    var md=document.querySelector('meta[name="description"]'); if(md) md.setAttribute('content', L('desc'));
+    document.querySelectorAll('[data-i18n]').forEach(function(el){ el.textContent=L(el.dataset.i18n); });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function(el){ el.setAttribute('aria-label', L(el.dataset.i18nAria)); });
+    document.querySelectorAll('[data-i18n-sw]').forEach(function(el){ el.innerHTML=L(el.dataset.i18nSw, SW); });
+    $('factCount').textContent = L('count', {n:TOTAL});
+    langBtns.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.lang===LANG)); });
+    setBtn(); fill(); setNote(S.note.k, S.note.v);
+  }
+  function setLang(l){
+    if(l===LANG) return; LANG=l;
+    try{ localStorage.setItem('unmute-lang', l); }catch(e){}
+    try{ history.replaceState(null,'', location.pathname + location.search + '#'+l); }catch(e){}
+    applyLang(); track('language_changed');
+  }
+  langBtns.forEach(function(b){ b.addEventListener('click', function(){ setLang(b.dataset.lang); }); });
+  window.addEventListener('hashchange', function(){ var h=location.hash.toLowerCase(); if(h==='#en'||h==='#vi') setLang(h.slice(1)); });
+
+  /* ---------- Trò chơi ---------- */
   function shuffle(a){ a=a.slice(); for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;} return a; }
-
-  var S = { level:1, pile:[], i:0, flipped:false, busy:false, unlocked3:false, started:false };
-
   function loadLevel(lv){
-    S.level = lv; S.pile = shuffle(DECK[lv]); S.i = 0;
+    S.level=lv; S.pile=shuffle(DECK[lv]); S.i=0;
     tabs.forEach(function(b){ b.setAttribute('aria-pressed', String(Number(b.dataset.level)===lv)); });
     resetCard(); fill();
   }
-  function resetCard(){
-    card.classList.remove('flipped','out'); card.style.visibility='';
-    S.flipped=false; bNext.textContent='Lật lá bài'; card.setAttribute('aria-label','Lật lá bài');
-  }
+  function resetCard(){ card.classList.remove('flipped','out'); S.flipped=false; setBtn(); }
   function fill(){
-    var c = S.pile[S.i]; if(!c) return;
-    var dare = c.t==='D';
-    front.className = 'face front ' + (dare?'dare':'truth');
-    cType.textContent = dare?'Dare':'Truth';
-    cLevel.textContent = 'Level ' + S.level;
-    cText.textContent = c.q;
-    cCount.textContent = (S.i+1) + ' / ' + S.pile.length;
+    var c=S.pile[S.i]; if(!c) return;
+    var dare=c.t==='D';
+    front.className='face front '+(dare?'dare':'truth');
+    cType.textContent=dare?'Dare':'Truth';
+    cLevel.textContent='Level '+S.level;
+    cText.textContent=c[LANG]||c.vi;
+    cCount.textContent=(S.i+1)+' / '+S.pile.length;
   }
   function show(panel){
     [pStart,pCheck,pEnd].forEach(function(p){ p.classList.toggle('show', p===panel); });
-    var blocked = !!panel;
-    card.style.visibility = blocked ? 'hidden' : '';
-    bNext.disabled = bSkip.disabled = blocked;
+    card.style.visibility = panel ? 'hidden' : '';
+    bNext.disabled = bSkip.disabled = !!panel;
   }
   function flip(){
     if(S.flipped||S.busy) return;
-    S.flipped=true; card.classList.add('flipped');
-    card.setAttribute('aria-label','Lá bài đã lật, chạm để rút lá tiếp');
-    bNext.textContent='Rút lá tiếp';
-    note.textContent = S.pile[S.i].t==='D' ? 'Dare: làm nếu bạn muốn. Có người khác thì hỏi họ trước.' : 'Truth: trả lời theo cách của bạn.';
+    S.flipped=true; card.classList.add('flipped'); setBtn();
+    setNote(S.pile[S.i].t==='D' ? 'nDare' : 'nTruth');
     track('card_revealed',{level:S.level});
   }
   function advance(skipped){
@@ -414,29 +608,26 @@ footer a:hover{color:var(--white)}
     S.busy=true;
     var go=function(){
       S.i++; resetCard(); S.busy=false;
-      if(S.i >= S.pile.length){ return levelDone(); }
-      fill();
-      note.textContent = skipped ? 'Đã bỏ qua. Không cần lý do.' : 'Lá tiếp theo đã sẵn sàng.';
+      if(S.i>=S.pile.length){ return levelDone(); }
+      fill(); setNote(skipped ? 'nSkipped' : 'nReady');
     };
     if(reduce||!S.flipped) go(); else { card.classList.add('out'); setTimeout(go,330); }
   }
   function levelDone(){
-    if(S.level===1){ loadLevel(2); note.textContent='Xong Level 1. Chuyển sang Level 2: Nói thẳng.'; return; }
-    if(S.level===2){ show(pCheck); note.textContent=''; return; }
-    $('endTitle').textContent='Hết lá rồi.';
-    $('endText').textContent='Cả bàn đã đi hết ba level của Chạm Giới Hạn.';
-    show(pEnd); note.textContent=''; track('deck_completed');
+    if(S.level===1){ loadLevel(2); setNote('nL1'); return; }
+    if(S.level===2 && !S.unlocked3){ show(pCheck); setNote(''); return; }
+    show(pEnd); setNote(''); track('deck_completed');
   }
   function requestLevel(lv){
     if(!S.started) return;
-    if(lv===3 && !S.unlocked3){ show(pCheck); note.textContent=''; return; }
-    show(null); loadLevel(lv); note.textContent='Đang ở Level '+lv+'.';
+    if(lv===3 && !S.unlocked3){ show(pCheck); setNote(''); return; }
+    show(null); loadLevel(lv); setNote('nAt',{n:lv});
   }
 
-  $('bStart').addEventListener('click', function(){ S.started=true; show(null); loadLevel(1); note.textContent='Chạm vào lá bài để lật.'; track('game_started'); });
-  $('bGo').addEventListener('click', function(){ S.unlocked3=true; show(null); loadLevel(3); note.textContent='Level 3: Vượt rào. Vẫn bỏ qua được mọi lúc.'; });
-  $('bStay').addEventListener('click', function(){ show(null); loadLevel(2); note.textContent='Ở lại Level 2. Bài đã được xáo lại.'; });
-  $('bAgain').addEventListener('click', function(){ show(null); loadLevel(1); note.textContent='Đã xáo bài. Chạm vào lá bài để lật.'; });
+  $('bStart').addEventListener('click', function(){ S.started=true; show(null); loadLevel(1); setNote('nStart'); track('game_started'); });
+  $('bGo').addEventListener('click', function(){ S.unlocked3=true; show(null); loadLevel(3); setNote('nGo'); });
+  $('bStay').addEventListener('click', function(){ show(null); loadLevel(2); setNote('nStay'); });
+  $('bAgain').addEventListener('click', function(){ S.unlocked3=false; show(null); loadLevel(1); setNote('nAgain'); });
   tabs.forEach(function(b){ b.addEventListener('click', function(){ requestLevel(Number(b.dataset.level)); }); });
 
   function act(){ S.flipped ? advance(false) : flip(); }
@@ -445,7 +636,7 @@ footer a:hover{color:var(--white)}
   bNext.addEventListener('click', act);
   bSkip.addEventListener('click', function(){ advance(true); });
 
-  loadLevel(1); show(pStart);
+  loadLevel(1); show(pStart); applyLang();
 })();
 </script>
 </body>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Merry Crush ’26 — Bộ bài Noel | UNMUTE</title>
+<meta name="description" content="Merry Crush ’26 là bộ bài Noel của UNMUTE cho crush, cặp đôi mới quen và hội bạn: Truth, Dare, Tầm gửi và Điều ước. Chơi ngay trên điện thoại, không cần tài khoản.">
+<link rel="canonical" href="https://www.playunmute.com/merry-crush/">
+<meta property="og:title" content="Merry Crush ’26 — Bộ bài Noel | UNMUTE">
+<meta property="og:description" content="Bớt khách sáo. Thêm chút rung động. Rút một lá trong mùa Giáng sinh này.">
+<meta property="og:url" content="https://www.playunmute.com/merry-crush/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta name="theme-color" content="#C8141E">
+<link rel="icon" type="image/png" href="../assets/logo-icon.png">
+<link rel="apple-touch-icon" href="../assets/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Be+Vietnam+Pro:wght@400;600;800&family=DM+Mono:wght@500&family=Mr+Dafoe&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#C8141E;--deep:#8E0B13;--ink:#121010;--white:#FFFFFF;--pine:#2F6B4A;
+  --mute:#B9B0A2;--blush:#FBE3D9;
+  --display:'Archivo Black','Arial Black',Arial,sans-serif;
+  --script:'Mr Dafoe','Brush Script MT',cursive;
+  --mono:'DM Mono',ui-monospace,monospace;
+  --body:'Be Vietnam Pro','Helvetica Neue',Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:100px}
+#choi{scroll-margin-top:110px}
+body{background:var(--ink);color:var(--white);font-family:var(--body);font-size:17px;line-height:1.55;padding-top:env(safe-area-inset-top,0px)}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--white);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-weight:800;line-height:1.1}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:999px;font-family:var(--body);font-weight:800;font-size:16px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s ease}
+.btn:active{transform:scale(.97)}
+.btn:disabled{opacity:.4;cursor:default}
+.btn-white{background:var(--white);color:var(--ink)}
+.btn-ink{background:var(--ink);color:var(--white)}
+.btn-ghost{background:transparent;color:var(--white);box-shadow:inset 0 0 0 2px rgba(255,255,255,.7)}
+.btn-ghost-ink{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.pill{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:13px;letter-spacing:.14em;padding:7px 14px;border-radius:999px}
+ 
+/* floating nav */
+.nav{position:sticky;top:0;z-index:30;height:0;padding:0 12px}
+.nav>.wrap{position:relative;top:12px;max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:14px;min-height:64px;padding:10px 18px;background:var(--white);color:var(--ink);border-radius:22px;box-shadow:0 12px 32px rgba(0,0,0,.3)}
+.nav img{height:26px;width:auto}
+.nav-sep{width:1px;height:28px;background:#E2E0E8}
+.nav-links{display:flex;align-items:center;gap:20px;font-size:15px;font-weight:600;margin-left:auto}
+@media(min-width:640px){.nav-links{margin-left:4px;gap:28px}}
+.nav-links a{text-decoration:none;color:#55525A;white-space:nowrap}
+.nav-links a:hover{color:var(--ink)}
+ 
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--red);padding:120px 0 64px}
+.hero .wrap{position:relative;z-index:2;display:grid;gap:40px;align-items:center}
+@media(min-width:920px){.hero .wrap{grid-template-columns:.95fr 1.05fr}}
+.hero-big{position:absolute;left:-1vw;bottom:-5vw;z-index:0;font-family:var(--display);font-size:clamp(150px,30vw,380px);line-height:.8;letter-spacing:-.06em;color:rgba(255,255,255,.12);white-space:nowrap;pointer-events:none}
+.grain{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.22;mix-blend-mode:multiply;z-index:1}
+.lockup{position:relative;display:inline-flex;flex-direction:column;align-items:flex-start;margin-bottom:18px}
+.lockup .merry{font-family:var(--script);font-size:clamp(84px,15vw,130px);line-height:.9;color:var(--ink);transform:rotate(-9deg);margin:0 0 -.32em .1em;position:relative;z-index:1}
+.lockup .crush{font-family:var(--display);font-size:clamp(84px,16vw,138px);line-height:.85;letter-spacing:-.05em;color:var(--white)}
+.lockup .yr{position:absolute;right:-.3em;top:.4em;font-family:var(--display);font-size:clamp(24px,4vw,34px);line-height:1;padding:6px 16px 8px;border-radius:999px;background:var(--white);color:var(--red);transform:rotate(-6deg)}
+.hero .tag{font-weight:800;font-size:clamp(20px,3.4vw,26px);margin-bottom:12px}
+.hero .lede{max-width:30em;margin-bottom:22px;color:#FFF3F0}
+.facts{display:flex;flex-wrap:wrap;gap:8px}
+.facts span{font-size:14px;padding:7px 14px;border-radius:999px;background:rgba(0,0,0,.22);color:var(--white)}
+ 
+/* table */
+.table{max-width:380px;margin:0 auto;width:100%}
+.stack{position:relative;aspect-ratio:5/7;perspective:1400px;--s:.68}
+.ghost{position:absolute;inset:0;border-radius:calc(28px * var(--s));background:var(--ink);transform:rotate(5deg) translate(12px,6px);opacity:.5}
+.card{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.8,.2,1);cursor:pointer}
+.card.flipped{transform:rotateY(180deg)}
+.card.out{animation:out .33s ease forwards}
+@keyframes out{to{transform:rotateY(180deg) translateX(120%) rotate(14deg);opacity:0}}
+.face{position:absolute;inset:0;border-radius:calc(28px * var(--s));overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.face.front{transform:rotateY(180deg)}
+.art{position:absolute;left:0;top:0;width:560px;height:784px;transform:scale(var(--s));transform-origin:0 0;overflow:hidden;font-family:var(--body)}
+.controls{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;margin-top:20px}
+.note{text-align:center;margin-top:12px;font-size:14px;color:#FFF3F0;min-height:1.5em}
+ 
+/* panels */
+.panel{position:absolute;inset:0;border-radius:calc(28px * var(--s));background:var(--white);color:var(--ink);display:none;flex-direction:column;justify-content:center;gap:14px;padding:26px;text-align:center;box-shadow:0 30px 60px rgba(0,0,0,.35);z-index:3}
+.panel.show{display:flex}
+.panel.dark{background:var(--ink);color:var(--white);box-shadow:inset 0 0 0 2px var(--red),0 30px 60px rgba(0,0,0,.35)}
+.panel h2{font-size:26px}
+.panel p{font-size:15px;color:#55525A}
+.panel.dark p{color:var(--mute)}
+.panel ul{list-style:none;text-align:left;display:grid;gap:8px;font-size:15px;color:#55525A}
+.panel li{padding-left:22px;position:relative}
+.panel li::before{content:"";position:absolute;left:0;top:.5em;width:11px;height:11px;border-radius:50%;background:var(--red)}
+.panel .btn{width:100%}
+.panel .script{font-family:var(--script);font-size:56px;line-height:1;color:var(--red);transform:rotate(-8deg)}
+ 
+/* sections */
+section.info{padding:80px 0;border-top:1px solid #2a2424}
+section.info h2{font-size:clamp(30px,5vw,42px);margin-bottom:14px;letter-spacing:-.01em}
+.sub{color:var(--mute);max-width:36em;margin-bottom:36px;font-size:18px}
+.two{display:grid;gap:16px}
+@media(min-width:760px){.two{grid-template-columns:1fr 1fr}}
+.box{border-radius:24px;padding:26px;background:#1b1717}
+.box h3{font-size:20px;margin-bottom:8px}
+.box p{color:var(--mute)}
+.suits{display:grid;gap:14px}
+@media(min-width:640px){.suits{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.suits{grid-template-columns:repeat(4,1fr)}}
+.suit{border-radius:24px;padding:24px;min-height:220px;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden}
+.suit svg.ic{width:34px;height:34px}
+.suit b{font-family:var(--mono);font-size:13px;letter-spacing:.14em;font-weight:500}
+.suit h3{font-size:22px}
+.suit p{font-size:15px}
+.s-t{background:var(--white);color:var(--ink)}.s-t p{color:#55525A}.s-t b{color:var(--red)}
+.s-d{background:var(--red)}.s-d p{color:var(--blush)}
+.s-m{background:#000;box-shadow:inset 0 0 0 1.5px #3a3030}.s-m p{color:var(--mute)}.s-m b{color:#7FB894}
+.s-w{background:linear-gradient(var(--ink) 0 46%,var(--red) 46% 100%)}.s-w p{color:var(--blush)}
+.rules{display:grid;gap:1px;background:#2a2424;border-radius:24px;overflow:hidden}
+@media(min-width:760px){.rules{grid-template-columns:1fr 1fr}}
+.rules div{background:var(--ink);padding:24px}
+.rules h3{font-size:19px;margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.rules h3 i{width:12px;height:12px;border-radius:50%;background:var(--red);flex:none}
+.rules p{color:var(--mute)}
+ 
+.outro{background:var(--red);text-align:center;padding:96px 0;position:relative;overflow:hidden}
+.outro .wrap{position:relative;z-index:2}
+.outro .merry{font-family:var(--script);font-size:clamp(64px,12vw,110px);line-height:1;color:var(--ink);transform:rotate(-8deg);margin-bottom:6px}
+.outro p{margin:12px auto 28px;max-width:28em;color:#FFF3F0}
+ 
+footer{background:#000;color:var(--mute);padding:40px 0 calc(40px + env(safe-area-inset-bottom,0px));font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;justify-content:space-between}
+footer img{height:24px;width:auto}
+footer nav{display:flex;gap:20px;flex-wrap:wrap}
+footer a{text-decoration:none}
+footer a:hover{color:var(--white)}
+ 
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+ 
+<!-- Shared defs: grain + suit symbols -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+    <pattern id="cane" width="64" height="64" patternUnits="userSpaceOnUse" patternTransform="rotate(-35)"><rect width="64" height="64" fill="#FFFFFF"/><rect width="34" height="64" fill="#C8141E"/></pattern>
+  </defs>
+  <symbol id="s-heart" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.3C.4 8.4 2.2 4.5 6 4.5c2.3 0 3.6 1.3 6 3.6 2.4-2.3 3.7-3.6 6-3.6 3.8 0 5.6 3.9 4 7.2C19.5 16.4 12 21 12 21z"/></symbol>
+  <symbol id="s-diamond" viewBox="0 0 24 24"><path d="M12 2l8 10-8 10-8-10z"/></symbol>
+  <symbol id="s-club" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4.2"/><circle cx="7" cy="13" r="4.2"/><circle cx="17" cy="13" r="4.2"/><path d="M11 13h2l1.6 8.5H9.4z"/></symbol>
+  <symbol id="s-star" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.2l7.1-.6z"/></symbol>
+  <symbol id="s-mistletoe" viewBox="0 0 300 300">
+    <line x1="150" y1="0" x2="150" y2="96" stroke="#FFFFFF" stroke-width="2"/>
+    <path d="M150 96c-22-22-54-18-50 2 3 14 30 10 50-2z" fill="#C8141E"/>
+    <path d="M150 96c22-22 54-18 50 2-3 14-30 10-50-2z" fill="#C8141E"/>
+    <path d="M146 96l-16 40M154 96l16 40" stroke="#C8141E" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="150" cy="96" r="9" fill="#8E0B13"/>
+    <path d="M150 104 C150 160 150 200 150 230" stroke="#4E8A5F" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M150 150 C110 140 72 162 58 206 C102 210 136 188 150 150z" fill="#2F6B4A"/>
+    <path d="M150 150 C190 140 228 162 242 206 C198 210 164 188 150 150z" fill="#3B7A55"/>
+    <path d="M150 196 C118 196 92 224 88 266 C124 262 146 236 150 196z" fill="#3B7A55"/>
+    <path d="M150 196 C182 196 208 224 212 266 C176 262 154 236 150 196z" fill="#2F6B4A"/>
+    <g fill="#FFFFFF"><circle cx="138" cy="232" r="11"/><circle cx="162" cy="232" r="11"/><circle cx="150" cy="250" r="11"/></g>
+  </symbol>
+</svg>
+ 
+<!-- ===================== CARD FACE TEMPLATES (560×784, scaled to fit) ===================== -->
+ 
+<!-- ♥ TRUTH — front -->
+<template id="f-T">
+<div class="art" style="background:#FFFFFF;color:#121010">
+  <svg class="grainL" style="position:absolute;inset:0;width:100%;height:100%;opacity:.2;mix-blend-mode:multiply"><rect width="100%" height="100%" filter="url(#grain)"/></svg>
+  <div style="position:absolute;top:30px;left:34px;display:flex;flex-direction:column;align-items:center;gap:4px;color:#C8141E"><span class="rk" style="font-family:var(--display);font-size:56px;line-height:.9;letter-spacing:-.04em">A</span><svg width="32" height="32" fill="#C8141E"><use href="#s-heart"/></svg></div>
+  <div style="position:absolute;bottom:30px;right:34px;display:flex;flex-direction:column;align-items:center;gap:4px;color:#C8141E;transform:rotate(180deg)"><span class="rk" style="font-family:var(--display);font-size:56px;line-height:.9;letter-spacing:-.04em">A</span><svg width="32" height="32" fill="#C8141E"><use href="#s-heart"/></svg></div>
+  <span style="position:absolute;top:40px;right:36px;font-family:var(--mono);font-size:14px;letter-spacing:.14em;padding:8px 16px;border-radius:999px;background:#C8141E;color:#FFFFFF">TRUTH</span>
+  <svg style="position:absolute;left:150px;top:0;width:260px;height:360px" viewBox="0 0 260 360">
+    <line x1="130" y1="0" x2="130" y2="92" stroke="#121010" stroke-width="2"/>
+    <path d="M118 92h24l-3 18h-18z" fill="#121010"/>
+    <circle cx="130" cy="88" r="7" fill="none" stroke="#121010" stroke-width="2.5"/>
+    <g transform="translate(30 104) scale(8.4)"><use href="#s-heart" width="24" height="24" fill="#C8141E"/><path d="M4.2 9.6c.3-1.9 1.6-3 3.2-3" fill="none" stroke="#FFFFFF" stroke-width=".7" stroke-linecap="round"/></g>
+    <text x="130" y="232" text-anchor="middle" font-family="Mr Dafoe, cursive" font-size="64" fill="#FFFFFF" transform="rotate(-8 130 220)">crush</text>
+  </svg>
+  <div style="position:absolute;left:44px;right:44px;top:400px;display:flex;flex-direction:column;gap:16px">
+    <span style="font-size:13px;font-weight:600;letter-spacing:.14em;color:#5A524A">CÂU HỎI THẬT LÒNG</span>
+    <p class="q" style="font-size:32px;line-height:1.28;font-weight:800;letter-spacing:-.01em"></p>
+  </div>
+  <div style="position:absolute;left:44px;bottom:40px;display:flex;align-items:baseline;gap:14px"><span style="font-family:var(--script);font-size:40px;line-height:1;color:#C8141E">Merry Crush</span><span class="no" style="font-family:var(--mono);font-size:13px;letter-spacing:.12em;color:#5A524A"></span></div>
+</div>
+</template>
+ 
+<!-- ♦ DARE — front -->
+<template id="f-D">
+<div class="art" style="background:#C8141E;color:#FFFFFF">
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.24;mix-blend-mode:multiply"><rect width="100%" height="100%" filter="url(#grain)"/></svg>
+  <div style="position:absolute;top:30px;left:30px;display:flex;flex-direction:column;align-items:center;gap:4px"><span class="rk" style="font-family:var(--display);font-size:52px;line-height:.9;letter-spacing:-.04em">10</span><svg width="30" height="30" fill="#FFFFFF"><use href="#s-diamond"/></svg></div>
+  <div style="position:absolute;bottom:30px;right:30px;display:flex;flex-direction:column;align-items:center;gap:4px;transform:rotate(180deg)"><span class="rk" style="font-family:var(--display);font-size:52px;line-height:.9;letter-spacing:-.04em">10</span><svg width="30" height="30" fill="#FFFFFF"><use href="#s-diamond"/></svg></div>
+  <span style="position:absolute;top:40px;right:36px;font-family:var(--mono);font-size:14px;letter-spacing:.14em;padding:8px 16px;border-radius:999px;background:#121010;color:#FFFFFF">DARE</span>
+  <svg style="position:absolute;left:130px;top:54px;width:300px;height:320px" viewBox="0 0 300 320">
+    <path d="M150 0 L290 160 L150 320 L10 160 Z" fill="#FFFFFF"/>
+    <rect x="88" y="150" width="124" height="96" fill="#121010"/>
+    <rect x="80" y="128" width="140" height="30" fill="#121010"/>
+    <rect x="141" y="128" width="18" height="118" fill="#C8141E"/>
+    <path d="M150 128c-14-30-52-34-52-12 0 14 26 14 52 12z" fill="none" stroke="#C8141E" stroke-width="9" stroke-linejoin="round"/>
+    <path d="M150 128c14-30 52-34 52-12 0 14-26 14-52 12z" fill="none" stroke="#C8141E" stroke-width="9" stroke-linejoin="round"/>
+    <text x="150" y="292" text-anchor="middle" font-family="DM Mono, monospace" font-size="13" letter-spacing="3" fill="#C8141E">OPEN ME</text>
+  </svg>
+  <div style="position:absolute;left:44px;right:44px;top:410px;display:flex;flex-direction:column;gap:16px">
+    <span style="font-size:13px;font-weight:600;letter-spacing:.14em;color:#FBE3D9">THỬ THÁCH</span>
+    <p class="q" style="font-size:31px;line-height:1.28;font-weight:800;letter-spacing:-.01em"></p>
+  </div>
+  <div style="position:absolute;left:44px;bottom:40px;display:flex;align-items:baseline;gap:14px"><span style="font-family:var(--script);font-size:40px;line-height:1">Merry Crush</span><span class="no" style="font-family:var(--mono);font-size:13px;letter-spacing:.12em;color:#FBE3D9"></span></div>
+</div>
+</template>
+ 
+<!-- ♣ MISTLETOE — front -->
+<template id="f-M">
+<div class="art" style="background:#121010;color:#FFFFFF">
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.12;mix-blend-mode:screen"><rect width="100%" height="100%" filter="url(#grain)"/></svg>
+  <div style="position:absolute;top:30px;left:34px;display:flex;flex-direction:column;align-items:center;gap:4px"><span class="rk" style="font-family:var(--display);font-size:56px;line-height:.9;letter-spacing:-.04em">K</span><svg width="32" height="32" fill="#FFFFFF"><use href="#s-club"/></svg></div>
+  <div style="position:absolute;bottom:30px;right:34px;display:flex;flex-direction:column;align-items:center;gap:4px;transform:rotate(180deg)"><span class="rk" style="font-family:var(--display);font-size:56px;line-height:.9;letter-spacing:-.04em">K</span><svg width="32" height="32" fill="#FFFFFF"><use href="#s-club"/></svg></div>
+  <span style="position:absolute;top:40px;right:36px;font-family:var(--mono);font-size:14px;letter-spacing:.14em;padding:8px 16px;border-radius:999px;background:#C8141E;color:#FFFFFF">ASK FIRST</span>
+  <svg style="position:absolute;left:130px;top:0;width:300px;height:300px" viewBox="0 0 300 300"><use href="#s-mistletoe"/></svg>
+  <div style="position:absolute;left:0;right:0;top:300px;text-align:center;font-family:var(--script);font-size:54px;line-height:1;transform:rotate(-6deg)">under here?</div>
+  <div style="position:absolute;left:44px;right:44px;top:410px;display:flex;flex-direction:column;gap:16px">
+    <span style="font-size:13px;font-weight:600;letter-spacing:.14em;color:#B9B0A2">DƯỚI CÀNH TẦM GỬI</span>
+    <p class="q" style="font-size:30px;line-height:1.3;font-weight:800;letter-spacing:-.01em"></p>
+  </div>
+  <div style="position:absolute;left:44px;bottom:40px;display:flex;align-items:baseline;gap:14px"><span style="font-family:var(--script);font-size:40px;line-height:1">Merry Crush</span><span class="no" style="font-family:var(--mono);font-size:13px;letter-spacing:.12em;color:#B9B0A2"></span></div>
+</div>
+</template>
+ 
+<!-- ★ WISH — front -->
+<template id="f-W">
+<div class="art" style="background:#C8141E;color:#FFFFFF">
+  <div style="position:absolute;left:0;top:0;width:560px;height:360px;background:#121010;overflow:hidden">
+    <div style="position:absolute;left:-18px;top:270px;font-family:var(--display);font-size:200px;line-height:.8;letter-spacing:-.06em;color:#C8141E;white-space:nowrap">WISH</div>
+    <svg style="position:absolute;inset:0;width:560px;height:360px" viewBox="0 0 560 360"><g fill="#FFFFFF"><use href="#s-star" width="24" height="24" transform="translate(300 70) scale(2.2)"/><use href="#s-star" width="24" height="24" transform="translate(420 140) scale(1.1)"/><use href="#s-star" width="24" height="24" transform="translate(220 150) scale(.8)"/></g><path d="M180 60 C 240 90, 270 100, 300 104" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="2 8" stroke-linecap="round"/></svg>
+  </div>
+  <div style="position:absolute;left:0;top:360px;width:560px;height:424px;overflow:hidden"><div style="position:absolute;left:-18px;top:-90px;font-family:var(--display);font-size:200px;line-height:.8;letter-spacing:-.06em;color:#121010;white-space:nowrap">WISH</div></div>
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.22;mix-blend-mode:multiply"><rect width="100%" height="100%" filter="url(#grain)"/></svg>
+  <div style="position:absolute;top:30px;left:34px;display:flex;flex-direction:column;align-items:center;gap:4px"><span class="rk" style="font-family:var(--display);font-size:56px;line-height:.9;letter-spacing:-.04em">Q</span><svg width="32" height="32" fill="#FFFFFF"><use href="#s-star"/></svg></div>
+  <div style="position:absolute;bottom:30px;right:34px;display:flex;flex-direction:column;align-items:center;gap:4px;transform:rotate(180deg)"><span class="rk" style="font-family:var(--display);font-size:56px;line-height:.9;letter-spacing:-.04em">Q</span><svg width="32" height="32" fill="#FFFFFF"><use href="#s-star"/></svg></div>
+  <span style="position:absolute;top:40px;right:36px;font-family:var(--mono);font-size:14px;letter-spacing:.14em;padding:7px 15px;border-radius:999px;border:1.5px solid #FFFFFF">NOEL 2026</span>
+  <div style="position:absolute;left:44px;right:44px;top:470px;display:flex;flex-direction:column;gap:14px">
+    <span style="font-size:13px;font-weight:600;letter-spacing:.14em;color:#FBE3D9">ĐIỀU ƯỚC</span>
+    <p class="q" style="font-size:29px;line-height:1.3;font-weight:800;letter-spacing:-.01em"></p>
+  </div>
+  <div style="position:absolute;left:44px;bottom:40px;display:flex;align-items:baseline;gap:14px"><span style="font-family:var(--script);font-size:40px;line-height:1">Merry Crush</span><span class="no" style="font-family:var(--mono);font-size:13px;letter-spacing:.12em;color:#FBE3D9"></span></div>
+</div>
+</template>
+ 
+<!-- ♥ back -->
+<template id="b-T">
+<div class="art" style="background:#C8141E;color:#FFFFFF">
+  <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-90deg);font-family:var(--display);font-size:340px;line-height:.8;letter-spacing:-.06em;white-space:nowrap">CRUSH</div>
+  <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-90deg) translateY(260px);font-family:var(--display);font-size:340px;line-height:.8;letter-spacing:-.06em;color:#8E0B13;white-space:nowrap">CRUSH</div>
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.24;mix-blend-mode:multiply"><rect width="100%" height="100%" filter="url(#grain)"/></svg>
+  <div style="position:absolute;left:-10px;top:300px;width:580px;text-align:center;font-family:var(--script);font-size:176px;line-height:1;color:#121010;transform:rotate(-12deg)">Merry</div>
+  <span class="pill" style="position:absolute;top:36px;left:36px;background:#121010">UNMUTE</span>
+  <span style="position:absolute;top:34px;right:36px;font-family:var(--display);font-size:30px;line-height:1;padding:8px 18px 10px;border-radius:999px;background:#FFFFFF;color:#C8141E;transform:rotate(6deg)">’26</span>
+  <div style="position:absolute;bottom:36px;left:36px;right:36px;display:flex;justify-content:space-between"><span class="pill" style="background:#121010">NOEL EDITION</span><span class="pill" style="background:#121010">TRUTH<svg width="14" height="14" fill="#FFFFFF"><use href="#s-heart"/></svg></span></div>
+</div>
+</template>
+ 
+<!-- ♦ back -->
+<template id="b-D">
+<div class="art" style="background:#FFFFFF;color:#FFFFFF">
+  <svg style="position:absolute;inset:0;width:560px;height:784px" viewBox="0 0 560 784"><rect width="560" height="784" fill="url(#cane)"/></svg>
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.22;mix-blend-mode:multiply"><rect width="100%" height="100%" filter="url(#grain)"/></svg>
+  <svg style="position:absolute;left:40px;top:132px;width:480px;height:520px" viewBox="0 0 480 520"><path d="M240 0 L480 260 L240 520 L0 260 Z" fill="#121010"/><path d="M240 26 L454 260 L240 494 L26 260 Z" fill="none" stroke="#FFFFFF" stroke-width="2"/></svg>
+  <div style="position:absolute;left:40px;top:132px;width:480px;height:520px;display:flex;flex-direction:column;align-items:center;justify-content:center">
+    <div style="font-family:var(--script);font-size:104px;line-height:.9;transform:rotate(-8deg);margin-bottom:-18px;position:relative;z-index:1">Merry</div>
+    <div style="font-family:var(--display);font-size:82px;line-height:.9;letter-spacing:-.05em;color:#C8141E">CRUSH</div>
+    <span style="margin-top:14px;font-family:var(--mono);font-size:14px;letter-spacing:.2em">— NOEL ’26 —</span>
+  </div>
+  <span class="pill" style="position:absolute;top:36px;left:36px;background:#121010">UNMUTE</span>
+  <div style="position:absolute;bottom:36px;left:36px;right:36px;display:flex;justify-content:space-between"><span class="pill" style="background:#121010">OPEN ME</span><span class="pill" style="background:#121010">DARE<svg width="14" height="14" fill="#FFFFFF"><use href="#s-diamond"/></svg></span></div>
+</div>
+</template>
+ 
+<!-- ♣ back -->
+<template id="b-M">
+<div class="art" style="background:#121010;color:#FFFFFF">
+  <div style="position:absolute;left:-14px;bottom:-40px;display:flex;flex-direction:column;font-family:var(--display);font-size:196px;line-height:.8;letter-spacing:-.06em;white-space:nowrap"><span>ASK</span><span style="color:#C8141E">FIRST</span></div>
+  <svg style="position:absolute;left:110px;top:0;width:340px;height:340px" viewBox="0 0 300 300"><use href="#s-mistletoe"/></svg>
+  <div style="position:absolute;right:40px;top:300px;font-family:var(--script);font-size:92px;line-height:1;color:#C8141E;transform:rotate(-12deg)">yes?</div>
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.12;mix-blend-mode:screen"><rect width="100%" height="100%" filter="url(#grain)"/></svg>
+  <span class="pill" style="position:absolute;top:36px;left:36px;background:#C8141E">UNMUTE</span>
+  <span class="pill" style="position:absolute;top:36px;right:36px;border:1.5px solid #FFFFFF">MISTLETOE<svg width="14" height="14" fill="#FFFFFF"><use href="#s-club"/></svg></span>
+</div>
+</template>
+ 
+<!-- ★ back -->
+<template id="b-W">
+<div class="art" style="background:#121010;color:#FFFFFF">
+  <div style="position:absolute;left:0;right:0;top:96px;display:flex;flex-direction:column;align-items:center;gap:2px;font-family:var(--display);line-height:.92;letter-spacing:-.04em;text-align:center;white-space:nowrap">
+    <svg width="84" height="84" fill="#FFFFFF" style="margin-bottom:6px"><use href="#s-star"/></svg>
+    <span style="font-size:44px;color:#C8141E">MC</span>
+    <span style="font-size:52px;color:#C8141E">MERRY</span>
+    <span style="font-size:58px">CRUSH<span style="color:#C8141E">♥</span>CRUSH</span>
+    <span style="font-size:62px;color:#C8141E">MERRYMERRY</span>
+    <span style="font-size:66px;color:#C8141E">CRUSH<span style="color:#FFFFFF">’26</span>CRUSH</span>
+    <span style="font-size:70px;color:#8E0B13">MERRYCRUSH</span>
+    <span style="margin-top:10px;width:64px;height:56px;background:#FFFFFF"></span>
+  </div>
+  <div style="position:absolute;left:34px;top:330px;font-family:var(--script);font-size:70px;line-height:1;transform:rotate(-14deg)">make a</div>
+  <div style="position:absolute;right:30px;top:196px;font-family:var(--script);font-size:70px;line-height:1;transform:rotate(-14deg)">wish</div>
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.12;mix-blend-mode:screen"><rect width="100%" height="100%" filter="url(#grain)"/></svg>
+  <span class="pill" style="position:absolute;top:36px;left:36px;background:#C8141E">UNMUTE</span>
+  <div style="position:absolute;bottom:36px;left:36px;right:36px;display:flex;justify-content:space-between"><span class="pill" style="border:1.5px solid #FFFFFF">24.12.2026</span><span class="pill" style="background:#C8141E">WISH<svg width="14" height="14" fill="#FFFFFF"><use href="#s-star"/></svg></span></div>
+</div>
+</template>
+ 
+<nav class="nav" aria-label="Chính">
+  <div class="wrap">
+    <a href="/" aria-label="UNMUTE, về trang chủ"><img src="../assets/logo-horizontal.png" alt="UNMUTE"></a>
+    <span class="nav-sep" aria-hidden="true"></span>
+    <div class="nav-links">
+      <a href="#cach-choi">Cách chơi</a>
+      <a href="/#decks">Bộ bài khác</a>
+    </div>
+  </div>
+</nav>
+ 
+<main>
+<header class="hero">
+  <div class="hero-big" aria-hidden="true">CRUSH</div>
+  <svg class="grain" aria-hidden="true"><rect width="100%" height="100%" filter="url(#grain)"/></svg>
+  <div class="wrap">
+    <div>
+      <h1 class="lockup" aria-label="Merry Crush 2026">
+        <span class="merry" aria-hidden="true">Merry</span>
+        <span class="crush" aria-hidden="true">CRUSH</span>
+        <span class="yr" aria-hidden="true">’26</span>
+      </h1>
+      <p class="tag">Bớt khách sáo. Thêm chút rung động.</p>
+      <p class="lede">Bộ bài Noel cho crush, cặp đôi mới quen và hội bạn. Bốn chất bài: Truth để nói thật, Dare để liều một chút, Tầm gửi khi cả hai cùng muốn, và Điều ước cho năm mới. Không muốn thì bỏ qua.</p>
+      <div class="facts">
+        <span id="factCount">Truth · Dare · Tầm gửi · Điều ước</span>
+        <span>Mùa Noel 2026</span>
+        <span>Bỏ qua không cần lý do</span>
+      </div>
+    </div>
+ 
+    <div class="table" id="choi">
+      <div class="stack" id="stack">
+        <div class="ghost" aria-hidden="true"></div>
+        <div class="card" id="card" role="button" tabindex="0" aria-label="Lật lá bài">
+          <div class="face back" id="faceBack" aria-hidden="true"></div>
+          <div class="face front" id="faceFront" aria-live="polite"></div>
+        </div>
+ 
+        <div class="panel show" id="pStart">
+          <div class="script">Merry Crush</div>
+          <h2>Trước lá đầu tiên</h2>
+          <ul>
+            <li>Bỏ qua bất kỳ lá nào, không cần giải thích.</li>
+            <li>Thoả thuận luật phạt trước, hoặc chơi không phạt.</li>
+            <li>Lá Tầm gửi luôn hỏi ý nhau trước khi chạm.</li>
+          </ul>
+          <button class="btn btn-ink" type="button" id="bStart">Rút lá đầu tiên</button>
+        </div>
+ 
+        <div class="panel dark" id="pMist">
+          <h2>Lá Tầm gửi đây rồi.</h2>
+          <p>Lá chất ♣ có những thử thách chạm nhẹ như nắm tay, ôm, tựa vai. Lá nào cũng có lựa chọn không cần chạm.</p>
+          <p>Cả bàn có muốn giữ lá Tầm gửi trong bộ không? Chỉ cần một người chưa muốn là bỏ ra, không cần giải thích.</p>
+          <button class="btn btn-white" type="button" id="bMistYes">Cả bàn muốn, giữ lại</button>
+          <button class="btn btn-ghost" type="button" id="bMistNo">Bỏ lá Tầm gửi ra</button>
+        </div>
+ 
+        <div class="panel" id="pEnd">
+          <div class="script">Merry Crush</div>
+          <h2>Hết lá rồi.</h2>
+          <p>Giáng sinh vui vẻ. Có ai đỏ mặt chưa?</p>
+          <button class="btn btn-ink" type="button" id="bAgain">Xáo bài, chơi lại</button>
+          <a class="btn btn-ghost-ink" href="/#decks">Xem bộ bài khác</a>
+        </div>
+      </div>
+ 
+      <div class="controls">
+        <button class="btn btn-ghost" type="button" id="bSkip">Bỏ qua</button>
+        <button class="btn btn-white" type="button" id="bNext">Lật lá bài</button>
+      </div>
+      <p class="note" id="note">Bỏ qua mọi lúc, không cần giải thích.</p>
+    </div>
+  </div>
+</header>
+ 
+<section class="info" id="ve-bo-bai">
+  <div class="wrap">
+    <h2>Về bộ Merry Crush ’26</h2>
+    <p class="sub">Phiên bản Noel giới hạn của UNMUTE. Một chút ấm áp, một chút liều, và quyền từ chối luôn trong tay bạn.</p>
+    <div class="two">
+      <div class="box"><h3>Dành cho</h3><p>Crush, cặp đôi mới quen, và hội bạn muốn mùa lễ năm nay có thêm vài câu chuyện đáng nhớ.</p></div>
+      <div class="box"><h3>Hợp nhất khi</h3><p>Tiệc Giáng sinh, buổi hẹn mùa đông, đêm 24/12 hay bữa tất niên với bạn bè.</p></div>
+    </div>
+  </div>
+</section>
+ 
+<section class="info" id="cach-choi">
+  <div class="wrap">
+    <h2>Bốn chất bài</h2>
+    <p class="sub">Đặt điện thoại giữa bàn, lần lượt rút lá và đọc to. Mặt sau cho biết chất bài trước khi lật.</p>
+    <div class="suits">
+      <div class="suit s-t"><svg class="ic" fill="#C8141E" aria-hidden="true"><use href="#s-heart"/></svg><b>TRUTH</b><h3>Nói thật</h3><p>Câu hỏi về crush, rung động và những điều chưa dám nói.</p></div>
+      <div class="suit s-d"><svg class="ic" fill="#FFFFFF" aria-hidden="true"><use href="#s-diamond"/></svg><b>DARE</b><h3>Liều một chút</h3><p>Thử thách vui, không ai phải làm điều mình không thoải mái.</p></div>
+      <div class="suit s-m"><svg class="ic" fill="#FFFFFF" aria-hidden="true"><use href="#s-club"/></svg><b>ASK FIRST</b><h3>Tầm gửi</h3><p>Chạm nhẹ khi cả hai cùng muốn. Luôn có lựa chọn không cần chạm.</p></div>
+      <div class="suit s-w"><svg class="ic" fill="#FFFFFF" aria-hidden="true"><use href="#s-star"/></svg><b>WISH</b><h3>Điều ước</h3><p>Điều bạn mong cho chuyện tình cảm và cho năm mới.</p></div>
+    </div>
+  </div>
+</section>
+ 
+<section class="info">
+  <div class="wrap">
+    <h2>Luật của bộ này</h2>
+    <p class="sub">Rung động chỉ đẹp khi ai cũng thấy an toàn.</p>
+    <div class="rules">
+      <div><h3><i></i>Hỏi trước, luôn luôn</h3><p>Lá Tầm gửi chỉ làm khi người kia cũng muốn. “Không” là một câu trả lời đẹp.</p></div>
+      <div><h3><i></i>Không lá nào bắt buộc hôn</h3><p>Chạm nhẹ nhất là nắm tay hay ôm, và lá nào cũng có lựa chọn thay thế.</p></div>
+      <div><h3><i></i>Bỏ qua mọi lúc</h3><p>Không cần lý do, không ai hỏi lại, không ai trêu.</p></div>
+      <div><h3><i></i>Không cần rượu bia</h3><p>Luật phạt là tuỳ chọn. Luôn có “Không phạt”.</p></div>
+    </div>
+  </div>
+</section>
+ 
+<section class="outro">
+  <svg class="grain" aria-hidden="true"><rect width="100%" height="100%" filter="url(#grain)"/></svg>
+  <div class="wrap">
+    <div class="merry" aria-hidden="true">Merry Crush</div>
+    <h2>Giáng sinh này, nói điều mình chưa dám nói.</h2>
+    <p>Mở trên điện thoại, đặt giữa bàn, rút một lá.</p>
+    <a class="btn btn-ink" href="#choi">Chơi Merry Crush</a>
+  </div>
+</section>
+</main>
+ 
+<footer>
+  <div class="wrap">
+    <a href="/" aria-label="UNMUTE, về trang chủ"><img src="../assets/logo-horizontal-white.png" alt="UNMUTE"></a>
+    <nav aria-label="Chân trang"><a href="/">Trang chủ</a><a href="/#decks">Các bộ bài</a><a href="/#faq">Hỏi đáp</a></nav>
+    <span>© 2026 UNMUTE · Bớt khách sáo. Chân thành hơn.</span>
+  </div>
+</footer>
+ 
+<script>
+(function(){
+  /* =====================================================================
+     NỘI DUNG BỘ BÀI — BẢN NHÁP, cần đọc to và duyệt trước khi phát hành.
+     s: 'T' Truth ♥ · 'D' Dare ♦ · 'M' Tầm gửi ♣ · 'W' Điều ước ★
+     ===================================================================== */
+  var CARDS = {
+    T: [
+      'Món quà Giáng sinh nào bạn muốn nhận từ crush nhất, mà chưa từng dám nói?',
+      'Khoảnh khắc nào khiến bạn biết mình bắt đầu “cảm” một người?',
+      'Bài hát Giáng sinh nào làm bạn nhớ đến một người?',
+      'Buổi hẹn mùa đông lý tưởng của bạn trông như thế nào?',
+      'Điều nhỏ nhất ai đó từng làm khiến bạn rung động là gì?',
+      'Bạn là người nhắn tin trước, hay ngồi chờ người ta nhắn?',
+      'Lần gần nhất bạn đỏ mặt vì một người là khi nào?',
+      'Bạn thích được tỏ tình kiểu gì: bất ngờ, nhẹ nhàng hay thẳng thắn?',
+      'Điều gì ở một người khiến bạn muốn gặp lại lần thứ hai?',
+      'Noel năm ngoái bạn ở đâu, và với ai?',
+      'Khi thích ai đó, bạn có thói quen “dễ thương mà hơi kỳ” nào?'
+    ],
+    D: [
+      'Gói một lời khen thật lòng thành “quà” và tặng người bên phải. Có nơ, không đùa.',
+      'Kể về crush đầu đời của bạn trong đúng 30 giây.',
+      'Đặt cho người đối diện một biệt danh Noel. Cả bàn gọi tên đó đến hết lượt sau.',
+      'Nói “Giáng sinh vui vẻ” theo cách bạn sẽ nói với crush, thật lòng nhất có thể.',
+      'Gửi cho người bên trái một lời chúc Noel dài đúng năm chữ.',
+      'Đoán món quà người đối diện thích nhất. Đoán đúng thì bạn chọn người rút lá tiếp.',
+      'Kể khoảnh khắc ngại nhất của bạn trong một buổi hẹn.',
+      'Tạo dáng chụp “ảnh thiệp Giáng sinh” cùng người bên cạnh, nếu cả hai muốn.',
+      'Nói một điều bạn để ý ở người đối diện tối nay mà họ chưa biết.',
+      'Ngân nga một đoạn nhạc Giáng sinh. Cả bàn đoán tên bài.'
+    ],
+    M: [
+      'Nắm tay người bên cạnh đến hết lượt sau, nếu cả hai cùng muốn. Không thì đập tay thật kêu.',
+      'Ôm người bạn chọn trong 5 giây, nếu họ đồng ý. Không thì cụng tay.',
+      'Tựa vai người bên cạnh đến hết lượt sau, nếu cả hai cùng muốn. Không thì kể một chuyện ấm áp.',
+      'Hỏi người bạn chọn: “Bạn có muốn một cái ôm Giáng sinh không?” Câu trả lời “không” cũng đẹp.',
+      'Ngồi sát người bên cạnh đến hết lượt sau, nếu cả hai thoải mái. Không thì đổi chỗ cho vui.',
+      'Choàng khăn hoặc áo khoác của bạn cho người bên cạnh, nếu họ muốn.',
+      'Nhìn vào mắt người bạn chọn 10 giây. Ai cười trước thì kể một bí mật nhỏ của mình.',
+      'Cùng người bên cạnh chọn một “cành tầm gửi” tưởng tượng trong phòng. Đứng dưới đó 5 giây, nếu cả hai muốn.'
+    ],
+    W: [
+      'Nếu đêm Noel năm nay được ước một điều cho chuyện tình cảm của mình, bạn ước gì?',
+      'Bạn muốn năm 2027 của mình có thêm điều gì?',
+      'Một điều bạn muốn làm cùng người thương trong mùa đông này?',
+      'Nếu được nhắn một tin cho crush mà không sợ gì, bạn sẽ viết gì?',
+      'Điều ước nhỏ nào mà nếu thành thật, bạn sẽ vui cả tuần?',
+      'Nếu được tự tặng mình một món quà Noel, đó là gì?',
+      'Ước một điều cho người ngồi bên phải. Nói to lên.',
+      'Ba năm nữa, bạn mong Giáng sinh của mình trông như thế nào?'
+    ]
+  };
+  var RANKS = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+ 
+  function track(name, props){
+    try{ window.dataLayer = window.dataLayer || []; window.dataLayer.push(Object.assign({event:name, deck:'merry-crush'}, props||{})); }catch(e){}
+  }
+ 
+  var $=function(id){ return document.getElementById(id); };
+  var stack=$('stack'), card=$('card'), faceBack=$('faceBack'), faceFront=$('faceFront'),
+      bNext=$('bNext'), bSkip=$('bSkip'), note=$('note'), pStart=$('pStart'), pMist=$('pMist'), pEnd=$('pEnd');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ 
+  /* Build the full deck with a rank per card */
+  var ALL=[];
+  Object.keys(CARDS).forEach(function(s){
+    CARDS[s].forEach(function(q,i){ ALL.push({s:s, q:q, rank:RANKS[i % RANKS.length], n:ALL.length+1}); });
+  });
+  $('factCount').textContent = ALL.length + ' lá · 4 chất bài';
+ 
+  /* Scale the 560×784 artwork to the card size */
+  function rescale(){ stack.style.setProperty('--s', (stack.clientWidth/560).toFixed(4)); }
+  rescale();
+  if('ResizeObserver' in window){ new ResizeObserver(rescale).observe(stack); } else { window.addEventListener('resize', rescale); }
+ 
+  function shuffle(a){ a=a.slice(); for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;} return a; }
+  var S={ pile:[], i:0, flipped:false, busy:false, mist:null };
+ 
+  function render(el, tplId){
+    el.innerHTML='';
+    el.appendChild(document.getElementById(tplId).content.cloneNode(true));
+  }
+  function fill(){
+    var c=S.pile[S.i]; if(!c) return;
+    render(faceBack, 'b-'+c.s);
+    render(faceFront, 'f-'+c.s);
+    faceFront.querySelectorAll('.rk').forEach(function(r){ r.textContent=c.rank; });
+    var q=faceFront.querySelector('.q'); q.textContent=c.q;
+    if(c.q.length>95) q.style.fontSize='26px'; else if(c.q.length>75) q.style.fontSize='28px';
+    faceFront.querySelector('.no').textContent='’26 · No. '+String(c.n).padStart(2,'0');
+  }
+  function show(panel){
+    [pStart,pMist,pEnd].forEach(function(p){ p.classList.toggle('show', p===panel); });
+    card.style.visibility = panel ? 'hidden' : '';
+    bNext.disabled = bSkip.disabled = !!panel;
+  }
+  function resetCard(){
+    card.classList.remove('flipped','out');
+    S.flipped=false; bNext.textContent='Lật lá bài'; card.setAttribute('aria-label','Lật lá bài');
+  }
+  function current(){
+    if(S.i>=S.pile.length){ show(pEnd); note.textContent=''; track('deck_completed'); return; }
+    var c=S.pile[S.i];
+    if(c.s==='M' && S.mist===null){ show(pMist); note.textContent=''; return; }
+    show(null); fill();
+  }
+  function flip(){
+    if(S.flipped||S.busy) return;
+    S.flipped=true; card.classList.add('flipped');
+    card.setAttribute('aria-label','Lá bài đã lật, chạm để rút lá tiếp');
+    bNext.textContent='Rút lá tiếp';
+    var s=S.pile[S.i].s;
+    note.textContent = s==='M' ? 'Tầm gửi: hỏi người kia trước. “Không” cũng là câu trả lời đẹp.' : s==='D' ? 'Dare: làm nếu bạn muốn.' : 'Trả lời theo cách của bạn.';
+    track('card_revealed',{suit:s});
+  }
+  function advance(skipped){
+    if(S.busy) return;
+    if(skipped) track('card_skipped',{suit:S.pile[S.i].s});
+    S.busy=true;
+    var go=function(){
+      S.i++; resetCard(); S.busy=false; current();
+      if(!pEnd.classList.contains('show') && !pMist.classList.contains('show')) note.textContent = skipped ? 'Đã bỏ qua. Không cần lý do.' : 'Mặt sau cho biết chất bài. Chạm để lật.';
+    };
+    if(reduce||!S.flipped) go(); else { card.classList.add('out'); setTimeout(go,330); }
+  }
+  function start(){
+    S.pile=shuffle(ALL); S.i=0; S.mist=null; resetCard(); current();
+    note.textContent='Mặt sau cho biết chất bài. Chạm để lật.';
+  }
+ 
+  $('bStart').addEventListener('click', function(){ start(); track('game_started'); });
+  $('bAgain').addEventListener('click', start);
+  $('bMistYes').addEventListener('click', function(){ S.mist=true; current(); note.textContent='Đã giữ lá Tầm gửi. Vẫn hỏi nhau trước mỗi lá.'; track('mistletoe_kept'); });
+  $('bMistNo').addEventListener('click', function(){
+    S.mist=false;
+    S.pile = S.pile.slice(0,S.i).concat(S.pile.slice(S.i).filter(function(c){ return c.s!=='M'; }));
+    current(); note.textContent='Đã bỏ lá Tầm gửi ra khỏi bộ.'; track('mistletoe_removed');
+  });
+ 
+  function act(){ S.flipped ? advance(false) : flip(); }
+  card.addEventListener('click', act);
+  card.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); act(); } });
+  bNext.addEventListener('click', act);
+  bSkip.addEventListener('click', function(){ advance(true); });
+ 
+  /* Preview: show a card back behind the start panel */
+  S.pile=[ALL[0]]; S.i=0; fill(); S.pile=[];
+  show(pStart);
+})();
+</script>
+</body>
+</html>
+ 

@@ -44,7 +44,7 @@ h3{font-size:22px;line-height:1.2}
 section{padding:88px 0}
  
 /* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 26px;border-radius:999px;font-family:var(--display);font-weight:800;font-size:17px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s ease}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 22px;border-radius:999px;font-family:var(--display);font-weight:800;font-size:16px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s ease}
 .btn:active{transform:scale(.97)}
 .btn-white{background:var(--white);color:var(--black)}
 .btn-black{background:var(--black);color:var(--white)}
@@ -125,7 +125,7 @@ section{padding:88px 0}
 .nav-links::-webkit-scrollbar{display:none}
 .nav-links a{text-decoration:none;color:var(--g600);white-space:nowrap;padding:6px 0;font-weight:500}
 .nav-links a:hover{color:var(--black)}
-.nav .btn{min-height:44px;padding:0 14px 0 20px;font-size:15px;border-radius:14px;margin-left:auto;gap:6px;background:var(--black);color:var(--white)}
+.nav .btn{min-height:42px;padding:0 12px 0 18px;font-size:15px;border-radius:14px;margin-left:auto;gap:6px;background:var(--black);color:var(--white)}
 .nav .btn svg{width:16px;height:16px}
 .nav-drop{background:none;border:0;cursor:pointer;color:var(--g600);font:inherit;font-size:15px;font-weight:500;display:inline-flex;align-items:center;gap:6px;padding:6px 0;white-space:nowrap}
 .nav-drop:hover,.nav-drop[aria-expanded="true"]{color:var(--black)}
@@ -215,7 +215,8 @@ section{padding:88px 0}
 .hx-face{position:absolute;inset:0;overflow:hidden;border-radius:calc(28px * var(--s,.5));backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 34px 70px rgba(0,0,0,.55),0 0 0 2px rgba(255,255,255,.08);--s:.5}
 .hx-face.f{transform:rotateY(180deg)}
 .hx-face .mc-art{position:absolute;left:0;top:0;width:560px;height:784px;transform:scale(var(--s));transform-origin:0 0;overflow:hidden;font-family:var(--body);text-align:left}
-.hx-cap{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:16px;font-size:14px;color:var(--g300);white-space:nowrap}
+.hx-cap{position:absolute;left:50%;top:calc(100% + 14px);transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:10px;font-size:14px;color:var(--g300);white-space:nowrap}
+.hx-c .hx-float{position:relative;width:var(--hx-c)}
 .hx-dots{display:flex;gap:5px}
 .hx-dots i{width:6px;height:6px;border-radius:50%;background:#444;transition:background .2s,width .2s}
 .hx-dots i.on{background:#fff;width:16px;border-radius:999px}
@@ -227,6 +228,37 @@ section{padding:88px 0}
 .hx-promo b{display:block;font-family:var(--display);font-size:17px}
 .hx-promo span.go{font-size:13px;color:#C8141E;font-weight:700}
 @media(prefers-reduced-motion:reduce){.hx-slot,.hx-float,.hx-promo{animation:none}.hx-par{transform:none}}
+ 
+/* ===== Câu chuyện của tôi ===== */
+.story{background:var(--white);color:var(--black);padding:96px 0;position:relative;overflow:hidden}
+.story .wrap{display:grid;gap:40px;align-items:center}
+@media(min-width:900px){.story .wrap{grid-template-columns:1.05fr .95fr;gap:64px}}
+.story .label{color:var(--g600);display:block;margin-bottom:18px}
+.story h2{font-size:clamp(46px,8vw,92px);line-height:.98;letter-spacing:-.03em}
+.story h2 .hrs{display:inline-block;background:#C8141E;color:#fff;padding:0 .18em .04em;border-radius:.14em;transform:rotate(-3deg);margin-left:.06em}
+.story h2 .strike{position:relative;white-space:nowrap}
+.story-body p{font-size:18px;line-height:1.65;color:#2a272d;margin-bottom:16px;max-width:34em}
+.story-body p.quiet{color:var(--g600)}
+.sign{display:flex;align-items:flex-end;gap:16px;margin-top:10px}
+.sign img{width:min(240px,55vw);height:auto;margin:-26px 0 -14px -10px}
+.sign span{font-size:14px;color:var(--g600);padding-bottom:34px;margin-left:-28px;line-height:1.4}
+.sign span b{display:block;color:var(--black);font-family:var(--display);font-size:16px}
+ 
+/* ===== CTA Merry Crush cuối trang ===== */
+.mc-end{position:relative;overflow:hidden;background:#C8141E;color:#fff;padding:88px 0}
+.mc-end::after{content:"CRUSH";position:absolute;left:-2vw;bottom:-6vw;font-family:'Archivo Black',sans-serif;font-size:clamp(140px,30vw,380px);line-height:.8;letter-spacing:-.06em;color:rgba(255,255,255,.1);pointer-events:none}
+.mc-end .wrap{position:relative;z-index:1;display:grid;gap:40px;align-items:center}
+@media(min-width:900px){.mc-end .wrap{grid-template-columns:1.2fr .8fr}}
+.mc-end .merry{font-family:'Mr Dafoe',cursive;font-size:clamp(56px,9vw,88px);line-height:1;color:#121010;transform:rotate(-8deg);display:inline-block;margin-bottom:18px}
+.mc-end h2{font-size:clamp(32px,5vw,52px);line-height:1.08;letter-spacing:-.02em;margin-bottom:14px}
+.mc-end p{color:#FFF3F0;max-width:30em;margin-bottom:26px;font-size:18px}
+.mc-end .row{display:flex;flex-wrap:wrap;gap:12px}
+.mc-duo{position:relative;height:clamp(300px,60vw,380px)}
+.mc-duo .mc-card{width:clamp(170px,34vw,230px);left:50%;top:50%}
+.mc-duo .mc-card.a{transform:translate(-80%,-50%) rotate(-10deg)}
+.mc-duo .mc-card.b{transform:translate(-20%,-46%) rotate(8deg)}
+.mc-duo:hover .mc-card.a{transform:translate(-88%,-52%) rotate(-13deg)}
+.mc-duo:hover .mc-card.b{transform:translate(-12%,-48%) rotate(11deg)}
  
 /* card demo */
 .demo{position:relative;max-width:360px;margin:0 auto;width:100%}
@@ -361,7 +393,7 @@ details p{padding:0 0 22px;color:var(--g600);max-width:40em}
 footer{background:var(--black);color:var(--g300);border-top:1px solid #222;padding:48px 0 calc(110px + env(safe-area-inset-bottom,0px));font-size:15px}
 @media(min-width:820px){footer{padding-bottom:48px}}
 footer .wrap{display:grid;gap:32px}
-@media(min-width:820px){footer .wrap{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+@media(min-width:820px){footer .wrap{grid-template-columns:1.4fr 1fr 1fr 1fr 1fr}}
 footer img{height:26px;width:auto;margin-bottom:12px}
 footer h4{color:var(--white);font-family:var(--display);font-weight:800;font-size:16px;margin-bottom:10px}
 footer ul{list-style:none;display:grid;gap:6px}
@@ -420,6 +452,7 @@ footer a:hover{color:var(--white)}
       <a href="#how">Cách chơi</a>
       <a href="#safe">An toàn</a>
       <a href="#faq">Hỏi đáp</a>
+      <a href="#lien-he">Liên hệ</a>
     </div>
     <a class="btn" href="/pha-bang/" data-track="deck_selected" data-deck="pha-bang">Chơi ngay<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
   </div>
@@ -479,12 +512,11 @@ footer a:hover{color:var(--white)}
   <div class="wrap hx-head">
       <a class="pill pill-new" href="/merry-crush/" data-track="deck_selected" data-deck="merry-crush"><i>★</i>Mới: Merry Crush ’26 · bộ bài Noel</a>
       <h1>Hết chuyện để nói? Rút một lá.</h1>
-      <p class="lede">Trò chơi thẻ bài trò chuyện cho buổi hẹn, hội bạn và sau giờ làm. <strong>Mở web trên điện thoại, đặt giữa bàn và bắt đầu</strong> — không cần tải app, không cần tài khoản.</p>
+      <p class="lede">Trò chơi thẻ bài trò chuyện cho buổi hẹn, hội bạn. <strong>Mở web trên điện thoại, đặt giữa bàn và bắt đầu</strong> — không cần tải app, chơi ngay trên web.</p>
       <div class="cta-row">
-        <a class="btn btn-q" href="/pha-bang/" data-track="deck_selected" data-deck="pha-bang">Chơi Phá Băng</a>
-        <a class="btn btn-ghost" href="#decks">Xem 4 bộ bài</a>
+        <a class="btn btn-q" href="/merry-crush/" data-track="deck_selected" data-deck="merry-crush">Chơi Merry Crush</a>
+        <a class="btn btn-ghost" href="#decks">Xem bộ bài</a>
       </div>
-      <p class="fine">2–8 người chơi. Bỏ qua bất kỳ lá nào, không cần lý do.</p>
   </div>
   <div class="hx-stage" id="hxStage">
     <div class="hx-line" aria-hidden="true"></div>
@@ -695,6 +727,25 @@ footer a:hover{color:var(--white)}
       <li><b>2</b><span>Câu hỏi đi từ nhẹ nhàng đến sâu hơn, nên cuộc trò chuyện tự mở ra mà không gượng.</span></li>
       <li><b>3</b><span>Mỗi câu được đọc to và chỉnh sửa trước khi vào bộ bài. Tò mò nhưng không tọc mạch.</span></li>
     </ul>
+  </div>
+</section>
+ 
+<!-- CÂU CHUYỆN CỦA TÔI -->
+<section class="story" id="cau-chuyen" aria-labelledby="storyTitle">
+  <div class="wrap">
+    <div>
+      <span class="label">Câu chuyện của tôi</span>
+      <h2 id="storyTitle">Too creative for a <span class="hrs">9–4.</span></h2>
+    </div>
+    <div class="story-body">
+      <p>Tôi là Joey. Tôi thích nghệ thuật, thích tự tay làm ra những thứ mới, và chưa bao giờ thấy mình vừa vặn với một khung giờ cố định.</p>
+      <p>UNMUTE ra đời từ chính điều đó: một dự án tôi làm vì muốn những cuộc gặp bớt khách sáo, và để sự sáng tạo có chỗ trên bàn. Từng bộ bài, từng màu sắc, từng câu hỏi ở đây đều là thứ tôi muốn tự mình rút ra cùng bạn bè.</p>
+      <p class="quiet">Nếu bạn cũng thấy cuộc trò chuyện là một loại nghệ thuật, chào mừng bạn đến bàn.</p>
+      <div class="sign">
+        <img src="assets/joey-signature.png" alt="Chữ ký của Joey" width="720" height="615" loading="lazy">
+        <span><b>Joey</b>Founder, UNMUTE</span>
+      </div>
+    </div>
   </div>
 </section>
  
@@ -932,6 +983,25 @@ footer a:hover{color:var(--white)}
   </div>
 </section>
  
+<!-- CTA MERRY CRUSH, ngay trên footer -->
+<section class="mc-end" aria-labelledby="mcEndTitle">
+  <div class="wrap">
+    <div>
+      <span class="merry" aria-hidden="true">Merry Crush ’26</span>
+      <h2 id="mcEndTitle">Giáng sinh này, nói điều mình chưa dám nói.</h2>
+      <p>Bộ bài Noel giới hạn: Truth, Dare, Tầm gửi và Điều ước cho crush và hội bạn. Mở trên điện thoại, đặt giữa bàn, rút một lá.</p>
+      <div class="row">
+        <a class="btn" style="background:#121010;color:#fff" href="/merry-crush/" data-track="deck_selected" data-deck="merry-crush">Chơi Merry Crush</a>
+        <a class="btn" style="background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.8)" href="/merry-crush/#cach-choi">Xem 4 chất bài</a>
+      </div>
+    </div>
+    <a class="mc-duo" href="/merry-crush/" aria-label="Xem bộ bài Merry Crush ’26">
+      <span class="mc-card a" data-tpl="hx-b-T" aria-hidden="true"></span>
+      <span class="mc-card b" data-tpl="hx-b-W" aria-hidden="true"></span>
+    </a>
+  </div>
+</section>
+ 
 </main>
  
 <footer>
@@ -950,7 +1020,12 @@ footer a:hover{color:var(--white)}
     </div>
     <div>
       <h4>Pháp lý</h4>
-      <ul><li><a href="#privacy">Quyền riêng tư</a></li><li><a href="#terms">Điều khoản</a></li><li><a href="#contact">Liên hệ</a></li></ul>
+      <ul><li><a href="#privacy">Quyền riêng tư</a></li><li><a href="#terms">Điều khoản</a></li><li><a href="#lien-he">Liên hệ</a></li></ul>
+    </div>
+    <div id="lien-he">
+      <h4>Liên hệ</h4>
+      <!-- TODO: thay # bằng link thật (email, Instagram, Facebook...) -->
+      <ul><li><a href="#">Email</a></li><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li></ul>
     </div>
     <p style="grid-column:1/-1;font-size:14px">© 2026 UNMUTE</p>
   </div>
@@ -1041,6 +1116,7 @@ footer a:hover{color:var(--white)}
   });
  
   /* ---------- Merry Crush: scale 560×784 artwork to each card ---------- */
+  document.querySelectorAll('.mc-card[data-tpl]').forEach(function(el){ var t=document.getElementById(el.dataset.tpl); if(t) el.appendChild(t.content.cloneNode(true)); });
   function mcScale(){ document.querySelectorAll('.mc-card, .hx-face').forEach(function(c){ if(c.clientWidth) c.style.setProperty('--s',(c.clientWidth/560).toFixed(4)); }); }
   mcScale();
   if('ResizeObserver' in window){ var mcRO=new ResizeObserver(function(){ mcScale(); }); document.querySelectorAll('.mc-card, .hx-mc').forEach(function(c){ mcRO.observe(c); }); } else { window.addEventListener('resize', mcScale); }

@@ -231,18 +231,17 @@ section{padding:88px 0}
  
 /* ===== Câu chuyện của tôi ===== */
 .story{background:var(--white);color:var(--black);padding:96px 0;position:relative;overflow:hidden}
-.story .wrap{display:grid;gap:40px;align-items:center}
-@media(min-width:900px){.story .wrap{grid-template-columns:1.05fr .95fr;gap:64px}}
-.story .label{color:var(--g600);display:block;margin-bottom:18px}
-.story h2{font-size:clamp(46px,8vw,92px);line-height:.98;letter-spacing:-.03em}
-.story h2 .hrs{display:inline-block;background:#C8141E;color:#fff;padding:0 .18em .04em;border-radius:.14em;transform:rotate(-3deg);margin-left:.06em}
-.story h2 .strike{position:relative;white-space:nowrap}
-.story-body p{font-size:18px;line-height:1.65;color:#2a272d;margin-bottom:16px;max-width:34em}
-.story-body p.quiet{color:var(--g600)}
-.sign{display:flex;align-items:flex-end;gap:16px;margin-top:10px}
-.sign img{width:min(240px,55vw);height:auto;margin:-26px 0 -14px -10px}
-.sign span{font-size:14px;color:var(--g600);padding-bottom:34px;margin-left:-28px;line-height:1.4}
-.sign span b{display:block;color:var(--black);font-family:var(--display);font-size:16px}
+.story .wrap{display:grid;gap:48px;align-items:center}
+@media(min-width:900px){.story .wrap{grid-template-columns:1fr 1fr;gap:72px}}
+.story .label{color:var(--g600);display:block;margin-bottom:22px}
+.story-body p{font-size:clamp(18px,2vw,21px);line-height:1.65;color:#2a272d;margin-bottom:18px;max-width:32em}
+.story-body p.quiet{color:var(--black);font-weight:600}
+.story-sign{position:relative;display:flex;flex-direction:column;align-items:flex-start}
+.story-sign h2{font-size:clamp(56px,9vw,104px);line-height:.95;letter-spacing:-.035em;position:relative;z-index:1}
+.story-sign mark{background:#C8141E;color:#fff;padding:0 .14em .06em;border-radius:.12em;display:inline-block;transform:rotate(-3deg)}
+.story-sign img{width:min(380px,80vw);height:auto;margin:-36px 0 -40px 18%}
+.story-sign .who{align-self:flex-end;margin-right:6%;font-size:14px;color:var(--g600);line-height:1.4;text-align:right}
+.story-sign .who b{display:block;color:var(--black);font-family:var(--display);font-size:17px}
  
 /* ===== CTA Merry Crush cuối trang ===== */
 .mc-end{position:relative;overflow:hidden;background:#C8141E;color:#fff;padding:88px 0}
@@ -733,18 +732,16 @@ footer a:hover{color:var(--white)}
 <!-- CÂU CHUYỆN CỦA TÔI -->
 <section class="story" id="cau-chuyen" aria-labelledby="storyTitle">
   <div class="wrap">
-    <div>
-      <span class="label">Câu chuyện của tôi</span>
-      <h2 id="storyTitle">Too creative for a <span class="hrs">9–4.</span></h2>
-    </div>
     <div class="story-body">
-      <p>Tôi là Joey. Tôi thích nghệ thuật, thích tự tay làm ra những thứ mới, và chưa bao giờ thấy mình vừa vặn với một khung giờ cố định.</p>
-      <p>UNMUTE ra đời từ chính điều đó: một dự án tôi làm vì muốn những cuộc gặp bớt khách sáo, và để sự sáng tạo có chỗ trên bàn. Từng bộ bài, từng màu sắc, từng câu hỏi ở đây đều là thứ tôi muốn tự mình rút ra cùng bạn bè.</p>
-      <p class="quiet">Nếu bạn cũng thấy cuộc trò chuyện là một loại nghệ thuật, chào mừng bạn đến bàn.</p>
-      <div class="sign">
-        <img src="assets/joey-signature.png" alt="Chữ ký của Joey" width="720" height="615" loading="lazy">
-        <span><b>Joey</b>Founder, UNMUTE</span>
-      </div>
+      <span class="label">Câu chuyện của tôi</span>
+      <p>Tớ là Joey. Tớ thích nghệ thuật, thích tự tay làm ra những thứ mới.</p>
+      <p>UNMUTE là một dự án tớ làm cho những cuộc gặp gỡ, và để sự sáng tạo có chỗ trên bàn. Từng bộ bài, từng màu sắc, từng câu hỏi ở đây đều là thứ tớ tự mình rút ra cùng bạn bè.</p>
+      <p class="quiet">Nếu bạn cũng thấy cuộc trò chuyện là một loại nghệ thuật, chào mừng bạn đến chung bàn!</p>
+    </div>
+    <div class="story-sign">
+      <h2 id="storyTitle">live and <mark>love</mark></h2>
+      <img src="assets/joey-signature.png" alt="Chữ ký của Joey" width="720" height="615" loading="lazy">
+      <span class="who"><b>Joey</b>Founder, UNMUTE</span>
     </div>
   </div>
 </section>
